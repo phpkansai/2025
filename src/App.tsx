@@ -55,7 +55,7 @@ function App() {
         <div className="hidden md:flex space-x-4">
           <div className="flex space-x-4">
             <a
-              href="https://fortee.jp/phpcon-kansai2025/proposals"
+              href="https://fortee.jp/phpcon-kansai2025/proposal/"
               target="_blank"
               rel="noopener noreferrer"
               className={`text-sm hover:underline ${
