@@ -1,16 +1,31 @@
 import { Users, Building2, PartyPopper, ExternalLink } from 'lucide-react';
 import noteIcon from './assets/note.svg';
 import XIcon from './assets/x.svg';
-import React, { useState } from 'react';
+import { useState, useEffect } from 'react';
 import elemaru from './assets/elemaru.png';
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
 
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > window.innerHeight);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
     <div className="min-h-screen bg-white">
       {/* Header */}
-      <header className="bg-[#46AA65] text-white py-4 px-6 flex justify-between items-center fixed w-full z-50">
+      <header
+        className={`py-4 px-6 flex justify-between items-center fixed w-full z-50 transition-all duration-300 ${
+          isScrolled ? 'bg-[#46AA65] text-white' : 'bg-white text-[#46AA65]'
+        }`}
+      >
         <div className="flex items-center space-x-4">
           <img src={elemaru} alt="えれ丸" className="h-12 w-12 object-contain" />
           <h1 className="text-xl font-bold">PHPカンファレンス関西2025</h1>
@@ -21,7 +36,9 @@ function App() {
               href="https://fortee.jp/phpcon-kansai2025/proposals"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-white text-sm hover:underline"
+              className={`text-sm hover:underline ${
+                isScrolled ? 'text-white' : 'text-[#46AA65]'
+              }`}
             >
               プロポーザル一覧
             </a>
@@ -29,7 +46,9 @@ function App() {
               href="https://note.com/phpcon_kansai"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-white text-sm hover:underline"
+              className={`text-sm hover:underline ${
+                isScrolled ? 'text-white' : 'text-[#46AA65]'
+              }`}
             >
               note
             </a>
@@ -37,7 +56,9 @@ function App() {
         </div>
         <div className="md:hidden relative">
           <button
-            className="text-white focus:outline-none"
+            className={`focus:outline-none ${
+              isScrolled ? 'text-white' : 'text-[#46AA65]'
+            }`}
             onClick={() => setMenuOpen(!menuOpen)}
           >
             <svg
