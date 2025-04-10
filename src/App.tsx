@@ -40,7 +40,7 @@ function App() {
       <header className="bg-[#46AA65] text-white py-4 px-6 flex justify-between items-center fixed w-full z-50">
         <div className="flex items-center space-x-4">
           <img src={elemaru} alt="えれ丸" className="h-12 w-12 object-contain" />
-          <h1 className="text-xl font-bold">PHP CONFERENCE KANSAI 2025</h1>
+          <h1 className="text-xl font-bold">PHPカンファレンス関西2025</h1>
         </div>
         <Countdown />
       </header>
@@ -55,18 +55,50 @@ function App() {
         <div className="absolute inset-0 bg-[#46AA65] opacity-70"></div>
         <div className="relative text-center space-y-6">
           <img src={elemaru} alt="えれ丸" className="mx-auto h-40 w-40 object-contain" />
-          <h1 className="text-5xl font-bold">PHP CONFERENCE KANSAI 2025</h1>
-          <p className="text-2xl">PHPでやってみよう</p>
+          <h1 className="text-5xl font-bold">PHPカンファレンス関西2025</h1>
+          <p className="text-2xl">PHPでやってみよう！</p>
           <p className="text-xl">2025年7月18日(金)・19日(土) 神戸駅前研修センター</p>
-          <button className="bg-[#FFC145] text-white px-8 py-3 rounded-full text-xl hover:bg-opacity-90 transition">
-            参加チケットはこちらから
-          </button>
+          <div className="flex flex-col space-y-4">
+            <div>
+              <a
+                href="https://fortee.jp/phpcon-kansai2025/sponsor/form"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center bg-[#FFC145] text-white px-6 py-2 rounded-full hover:bg-opacity-90 transition"
+              >
+                <ExternalLink className="w-4 h-4 mr-2" />
+                スポンサー募集中！
+              </a>
+            </div>
+            <div>
+              <a
+                href="https://fortee.jp/phpcon-kansai2025/speaker/proposal/cfp"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center bg-[#FFC145] text-white px-6 py-2 rounded-full hover:bg-opacity-90 transition"
+              >
+                <ExternalLink className="w-4 h-4 mr-2" />
+                プロポーザル募集中！
+              </a>
+            </div>
+            <div>
+              <a
+                href="https://fortee.jp/phpcon-kansai2025"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center bg-[#FFC145] text-white px-6 py-2 rounded-full hover:bg-opacity-90 transition"
+              >
+                <ExternalLink className="w-4 h-4 mr-2" />
+                参加チケットはこちらから
+              </a>
+            </div>
+          </div>
         </div>
       </div>
 
       {/* About Section */}
       <section className="py-20 px-6">
-        <h2 className="text-3xl font-bold text-[#46AA65] text-center mb-10">PHP CONFERENCE KANSAI 2025</h2>
+        <h2 className="text-3xl font-bold text-[#46AA65] text-center mb-10">PHPカンファレンス関西2025</h2>
         <div className="max-w-4xl mx-auto">
           <p className="text-lg mb-8">
             PHPカンファレンス関西は、PHPエンジニア（PHPer）がPHPやPHP周辺の技術的知識やノウハウ、体験を共有するための大規模技術カンファレンスです。2011年から過去9回開催されており、毎回その時のPHP最新情報やトレンドの話題で盛り上がります。関西や全国から集まったPHPerがお互いに情報を交換し、エンジニアとしてレベルアップをする場となるべく、6年ぶりの開催となった2024年に続き2025年も開催することになりました。イベント当日は一般公募で集まったエンジニアによる講演をはじめ、その他情報共有を行うための催しが行われます。
@@ -134,7 +166,7 @@ function App() {
         <div className="max-w-6xl mx-auto px-6">
           <div className="flex flex-col items-center mb-8">
             <img src={elemaru} alt="えれ丸" className="h-20 w-20 mb-4 object-contain" />
-            <h2 className="text-2xl font-bold">PHP CONFERENCE KANSAI 2025</h2>
+            <h2 className="text-2xl font-bold">PHPカンファレンス関西2025</h2>
           </div>
           <div className="flex justify-center space-x-4 mb-8">
             <a href="https://twitter.com/phpcon_kansai" target="_blank" rel="noopener noreferrer">
