@@ -1,28 +1,34 @@
 import React from 'react';
 import { Users, Building2, PartyPopper, ExternalLink, Twitter, File } from 'lucide-react';
+import elemaru from './assets/elemaru.png';
 
 // Countdown component
 const Countdown = () => {
-  const targetDate = new Date('2025-07-18');
+  const targetDate = new Date('2025-07-18T16:00:00+09:00');
   const [timeLeft, setTimeLeft] = React.useState(calculateTimeLeft());
 
   function calculateTimeLeft() {
     const difference = +targetDate - +new Date();
-    return {
-      days: Math.floor(difference / (1000 * 60 * 60 * 24)),
-    };
+    const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((difference / (1000 * 60 * 60)) % 24);
+    const minutes = Math.floor((difference / (1000 * 60)) % 60);
+    const seconds = Math.floor((difference / 1000) % 60);
+    return { days, hours, minutes, seconds };
   }
 
   React.useEffect(() => {
     const timer = setInterval(() => {
       setTimeLeft(calculateTimeLeft());
-    }, 1000 * 60 * 60 * 24);
+    }, 1000);
     return () => clearInterval(timer);
   }, []);
 
   return (
-    <div className="text-white text-xl">
-      開催まで: {timeLeft.days}日
+    <div className="text-white text-xl flex items-center space-x-2">
+      <span>開催まで:</span>
+      <span className="font-mono tabular-nums">
+        {timeLeft.days}日 {timeLeft.hours}時間 {timeLeft.minutes}分 {timeLeft.seconds}秒
+      </span>
     </div>
   );
 };
@@ -33,7 +39,7 @@ function App() {
       {/* Header */}
       <header className="bg-[#46AA65] text-white py-4 px-6 flex justify-between items-center fixed w-full z-50">
         <div className="flex items-center space-x-4">
-          <img src="https://2024.kphpug.jp/images/elephant.webp" alt="えれ丸" className="h-12 w-12" />
+          <img src={elemaru} alt="えれ丸" className="h-12 w-12 object-contain" />
           <h1 className="text-xl font-bold">PHP CONFERENCE KANSAI 2025</h1>
         </div>
         <Countdown />
@@ -48,7 +54,7 @@ function App() {
            }}>
         <div className="absolute inset-0 bg-[#46AA65] opacity-70"></div>
         <div className="relative text-center space-y-6">
-          <img src="https://2024.kphpug.jp/images/elephant.webp" alt="えれ丸" className="mx-auto h-40 w-40" />
+          <img src={elemaru} alt="えれ丸" className="mx-auto h-40 w-40 object-contain" />
           <h1 className="text-5xl font-bold">PHP CONFERENCE KANSAI 2025</h1>
           <p className="text-2xl">PHPでやってみよう</p>
           <p className="text-xl">2025年7月18日(金)・19日(土) 神戸駅前研修センター</p>
@@ -127,7 +133,7 @@ function App() {
       <footer className="bg-[#46AA65] text-white py-12">
         <div className="max-w-6xl mx-auto px-6">
           <div className="flex flex-col items-center mb-8">
-            <img src="https://2024.kphpug.jp/images/elephant.webp" alt="えれ丸" className="h-20 w-20 mb-4" />
+            <img src={elemaru} alt="えれ丸" className="h-20 w-20 mb-4 object-contain" />
             <h2 className="text-2xl font-bold">PHP CONFERENCE KANSAI 2025</h2>
           </div>
           <div className="flex justify-center space-x-4 mb-8">
