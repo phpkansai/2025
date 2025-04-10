@@ -61,7 +61,7 @@ function App() {
                 href="https://fortee.jp/phpcon-kansai2025/proposal/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 first:rounded-t-md last:rounded-b-md"
               >
                 プロポーザル一覧
               </a>
@@ -69,7 +69,8 @@ function App() {
                 href="https://note.com/phpcon_kansai"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100
+                first:rounded-t-md last:rounded-b-md"
               >
                 note
               </a>
