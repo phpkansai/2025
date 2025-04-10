@@ -14,14 +14,24 @@ function App() {
           <h1 className="text-xl font-bold">PHPカンファレンス関西2025</h1>
         </div>
         <div className="hidden md:flex space-x-4">
-          <a
-            href="https://fortee.jp/phpcon-kansai2025/proposal/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-white text-sm hover:underline"
-          >
-            プロポーザル一覧
-          </a>
+          <div className="flex space-x-4">
+            <a
+              href="https://fortee.jp/phpcon-kansai2025/proposals"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white text-sm hover:underline"
+            >
+              プロポーザル一覧
+            </a>
+            <a
+              href="https://note.com/phpcon_kansai"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white text-sm hover:underline"
+            >
+              note
+            </a>
+          </div>
         </div>
         <div className="md:hidden relative">
           <button
@@ -52,6 +62,14 @@ function App() {
                 className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
               >
                 プロポーザル一覧
+              </a>
+              <a
+                href="https://note.com/phpcon_kansai"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+              >
+                note
               </a>
             </div>
           )}
