@@ -1,4 +1,6 @@
-import { Users, Building2, PartyPopper, ExternalLink, Twitter, File } from 'lucide-react';
+import { Users, Building2, PartyPopper, ExternalLink } from 'lucide-react';
+import noteIcon from './assets/note.svg';
+import XIcon from './assets/x.svg';
 import React, { useState } from 'react';
 import elemaru from './assets/elemaru.png';
 
@@ -209,11 +211,11 @@ function App() {
             <h2 className="text-2xl font-bold">PHPカンファレンス関西2025</h2>
           </div>
           <div className="flex justify-center space-x-4 mb-8">
-            <a href="https://twitter.com/phpcon_kansai" target="_blank" rel="noopener noreferrer">
-              <Twitter className="w-6 h-6" />
+            <a href="https://x.com/phpcon_kansai" target="_blank" rel="noopener noreferrer">
+              <img src={XIcon} alt="X" className="w-6 h-6" />
             </a>
             <a href="https://note.com/phpcon_kansai" target="_blank" rel="noopener noreferrer">
-              <File className="w-6 h-6" />
+              <img src={noteIcon} alt="Note" className="w-6 h-6" />
             </a>
           </div>
           <div className="text-center">
