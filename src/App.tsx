@@ -1,5 +1,5 @@
 import React from 'react';
-import { Calendar, MapPin, Users, Building2, PartyPopper, ExternalLink, Twitter, BookOpen } from 'lucide-react';
+import { Users, Building2, PartyPopper, ExternalLink, Twitter, File } from 'lucide-react';
 
 // Countdown component
 const Countdown = () => {
@@ -51,7 +51,7 @@ function App() {
           <img src="https://2024.kphpug.jp/images/elephant.webp" alt="えれ丸" className="mx-auto h-40 w-40" />
           <h1 className="text-5xl font-bold">PHP CONFERENCE KANSAI 2025</h1>
           <p className="text-2xl">PHPでやってみよう</p>
-          <p className="text-xl">2025年7月18日(金)-19日(土) 神戸駅前研修センター</p>
+          <p className="text-xl">2025年7月18日(金)・19日(土) 神戸駅前研修センター</p>
           <button className="bg-[#FFC145] text-white px-8 py-3 rounded-full text-xl hover:bg-opacity-90 transition">
             参加チケットはこちらから
           </button>
@@ -63,7 +63,7 @@ function App() {
         <h2 className="text-3xl font-bold text-[#46AA65] text-center mb-10">PHP CONFERENCE KANSAI 2025</h2>
         <div className="max-w-4xl mx-auto">
           <p className="text-lg mb-8">
-            PHPカンファレンス関西は、PHPエンジニア（PHPer)がPHPやPHP周辺の技術的知識やノウハウ、体験を共有するための大規模技術カンファレンスです。2011年から過去9回開催されており、毎回その時のPHP最新情報やトレンドの話題で盛り上がります。関西や全国から集まったPHPerがお互いに情報を交換し、エンジニアとしてレベルアップをする場となるべく、6年ぶりの開催となった2024年に続き2025年も開催することになりました。イベント当日は一般公募で集まったエンジニアによる講演をはじめ、その他情報共有を行うための催しが行われます。
+            PHPカンファレンス関西は、PHPエンジニア（PHPer）がPHPやPHP周辺の技術的知識やノウハウ、体験を共有するための大規模技術カンファレンスです。2011年から過去9回開催されており、毎回その時のPHP最新情報やトレンドの話題で盛り上がります。関西や全国から集まったPHPerがお互いに情報を交換し、エンジニアとしてレベルアップをする場となるべく、6年ぶりの開催となった2024年に続き2025年も開催することになりました。イベント当日は一般公募で集まったエンジニアによる講演をはじめ、その他情報共有を行うための催しが行われます。
           </p>
           <h3 className="text-2xl font-bold text-[#46AA65] mb-4">参加資格</h3>
           <p className="text-lg">
@@ -99,7 +99,7 @@ function App() {
         <div className="max-w-4xl mx-auto">
           <div className="aspect-w-16 aspect-h-9 mb-8">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3280.8799772825826!2d135.1757!3d34.6899!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzTCsDQxJzIzLjYiTiAxMzXCsDEwJzMyLjUiRQ!5e0!3m2!1sja!2sjp!4v1635000000000!5m2!1sja!2sjp"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3281.0139140087717!2d135.1758444!3d34.679598299999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60008f4eaccbbf83%3A0x2bc6ac0770c503f8!2z56We5oi46aeF5YmN56CU5L-u44K744Oz44K_44O8!5e0!3m2!1sja!2sjp!4v1744291662358!5m2!1sja!2sjp"
               width="100%"
               height="450"
               style={{ border: 0 }}
@@ -109,9 +109,9 @@ function App() {
           </div>
           <div className="text-center">
             <h3 className="text-xl font-bold text-[#46AA65] mb-2">神戸駅前研修センター</h3>
-            <p className="mb-4">〒650-0001 兵庫県神戸市中央区加納町4丁目2-1</p>
+            <p className="mb-4">〒650-0027 兵庫県神戸市中央区中町通２丁目３−１</p>
             <a
-              href="https://goo.gl/maps/xxxxx"
+              href="https://maps.app.goo.gl/Xytu5L8wmibjbXbHA"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center bg-[#FFC145] text-white px-6 py-2 rounded-full hover:bg-opacity-90 transition"
@@ -135,7 +135,7 @@ function App() {
               <Twitter className="w-6 h-6" />
             </a>
             <a href="https://note.com/phpcon_kansai" target="_blank" rel="noopener noreferrer">
-              <BookOpen className="w-6 h-6" />
+              <File className="w-6 h-6" />
             </a>
           </div>
           <div className="text-center">
