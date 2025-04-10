@@ -103,7 +103,7 @@ function App() {
                 href="https://fortee.jp/phpcon-kansai2025/sponsor/form"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center bg-[#FFC145] text-white px-6 py-2 rounded-full hover:bg-opacity-90 transition"
+                className="inline-flex items-center bg-[#FFC145] text-white font-bold px-6 py-2 rounded-full hover:bg-opacity-90 transition"
               >
                 <ExternalLink className="w-4 h-4 mr-2" />
                 スポンサー募集中！
@@ -116,7 +116,7 @@ function App() {
                   href="https://fortee.jp/phpcon-kansai2025/speaker/proposal/cfp"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center bg-[#FFC145] text-white px-6 py-2 rounded-full hover:bg-opacity-90 transition"
+                  className="inline-flex items-center bg-[#FFC145] text-white font-bold px-6 py-2 rounded-full hover:bg-opacity-90 transition"
                 >
                   <ExternalLink className="w-4 h-4 mr-2" />
                   プロポーザル募集中！
@@ -128,7 +128,7 @@ function App() {
                 <p className="text-sm mb-1">Coming Soon</p>
                 <button
                   disabled
-                  className="inline-flex items-center bg-gray-400 text-white px-6 py-2 rounded-full text-opacity-70 cursor-not-allowed"
+                  className="inline-flex items-center bg-gray-400 text-white font-bold px-6 py-2 rounded-full text-opacity-70 cursor-not-allowed"
                 >
                   <ExternalLink className="w-4 h-4 mr-2" />
                   参加チケットはこちらから
@@ -195,7 +195,7 @@ function App() {
               href="https://maps.app.goo.gl/Xytu5L8wmibjbXbHA"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center bg-[#FFC145] text-white px-6 py-2 rounded-full hover:bg-opacity-90 transition"
+              className="inline-flex items-center bg-[#FFC145] text-white font-bold px-6 py-2 rounded-full hover:bg-opacity-90 transition"
             >
               <ExternalLink className="w-4 h-4 mr-2" />
               Googleマップを開く
