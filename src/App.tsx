@@ -70,27 +70,31 @@ function App() {
                 スポンサー募集中！
               </a>
             </div>
-            <div>
-              <a
-                href="https://fortee.jp/phpcon-kansai2025/speaker/proposal/cfp"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center bg-[#FFC145] text-white px-6 py-2 rounded-full hover:bg-opacity-90 transition"
-              >
-                <ExternalLink className="w-4 h-4 mr-2" />
-                プロポーザル募集中！
-              </a>
+            <div className="text-center">
+              <div>
+                <p className="text-sm mb-1">4月20日まで！！</p>
+                <a
+                  href="https://fortee.jp/phpcon-kansai2025/speaker/proposal/cfp"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center bg-[#FFC145] text-white px-6 py-2 rounded-full hover:bg-opacity-90 transition"
+                >
+                  <ExternalLink className="w-4 h-4 mr-2" />
+                  プロポーザル募集中！
+                </a>
+              </div>
             </div>
             <div>
-              <a
-                href="https://fortee.jp/phpcon-kansai2025"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center bg-[#FFC145] text-white px-6 py-2 rounded-full hover:bg-opacity-90 transition"
-              >
-                <ExternalLink className="w-4 h-4 mr-2" />
-                参加チケットはこちらから
-              </a>
+              <div className="text-center">
+                <p className="text-sm mb-1">Coming Soon</p>
+                <button
+                  disabled
+                  className="inline-flex items-center bg-gray-400 text-white px-6 py-2 rounded-full text-opacity-70 cursor-not-allowed"
+                >
+                  <ExternalLink className="w-4 h-4 mr-2" />
+                  参加チケットはこちらから
+                </button>
+              </div>
             </div>
           </div>
         </div>
