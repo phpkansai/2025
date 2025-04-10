@@ -219,6 +219,48 @@ function App() {
               <img src={noteIcon} alt="Note" className="w-6 h-6" />
             </a>
           </div>
+          <div className="text-center m-4 space-x-4">
+            <a
+              href="https://2015.kphpug.jp/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white text-sm hover:underline"
+            >
+              2015
+            </a>
+            <a
+              href="https://2016.kphpug.jp/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white text-sm hover:underline"
+            >
+              2016
+            </a>
+            <a
+              href="https://2017.kphpug.jp/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white text-sm hover:underline"
+            >
+              2017
+            </a>
+            <a
+              href="https://2018.kphpug.jp/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white text-sm hover:underline"
+            >
+              2018
+            </a>
+            <a
+              href="https://2024.kphpug.jp/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white text-sm hover:underline"
+            >
+              2024
+            </a>
+          </div>
           <div className="text-center">
             <p className="mb-2">PHPカンファレンス関西2025実行委員会</p>
             <p>Copyright © Kansai PHP Users Group</p>
