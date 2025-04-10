@@ -56,8 +56,13 @@ function App() {
         <div className="relative text-center space-y-6">
           <img src={elemaru} alt="えれ丸" className="mx-auto h-40 w-40 object-contain" />
           <h1 className="text-5xl font-bold">PHPカンファレンス関西2025</h1>
-          <p className="text-2xl">PHPでやってみよう！</p>
-          <p className="text-xl">2025年7月18日(金)・19日(土) 神戸駅前研修センター</p>
+          <p className="text-4xl">
+            2025年
+            <span className="font-bold text-5xl">7</span>月
+            <span className="font-bold text-5xl">18</span>日(金)・
+            <span className="font-bold text-5xl">19</span>日(土)
+          </p>
+          <p className="text-xl">神戸駅前研修センター</p>
           <div className="flex flex-col space-y-4">
             <div>
               <a
