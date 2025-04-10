@@ -125,12 +125,12 @@ function App() {
           <div className="text-center">
             <Users className="w-16 h-16 text-[#46AA65] mx-auto mb-4" />
             <h3 className="text-xl font-bold mb-4">セッション</h3>
-            <p>PHPに関する様々なトピックについて、エキスパートによる講演を行います。</p>
+            <p>PHPに関する様々なトピックについて、公募で選ばれたスピーカーによる講演を行います。</p>
           </div>
           <div className="text-center">
             <Building2 className="w-16 h-16 text-[#46AA65] mx-auto mb-4" />
             <h3 className="text-xl font-bold mb-4">ブース</h3>
-            <p>スポンサー企業による展示ブースで、最新技術や製品についての情報を得られます。</p>
+            <p>スポンサー企業様によるブース出展で、技術動向や製品についての情報を得られます。</p>
           </div>
           <div className="text-center">
             <PartyPopper className="w-16 h-16 text-[#46AA65] mx-auto mb-4" />
