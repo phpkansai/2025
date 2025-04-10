@@ -1,37 +1,5 @@
-import React from 'react';
 import { Users, Building2, PartyPopper, ExternalLink, Twitter, File } from 'lucide-react';
 import elemaru from './assets/elemaru.png';
-
-// Countdown component
-const Countdown = () => {
-  const targetDate = new Date('2025-07-18T16:00:00+09:00');
-  const [timeLeft, setTimeLeft] = React.useState(calculateTimeLeft());
-
-  function calculateTimeLeft() {
-    const difference = +targetDate - +new Date();
-    const days = Math.floor(difference / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((difference / (1000 * 60 * 60)) % 24);
-    const minutes = Math.floor((difference / (1000 * 60)) % 60);
-    const seconds = Math.floor((difference / 1000) % 60);
-    return { days, hours, minutes, seconds };
-  }
-
-  React.useEffect(() => {
-    const timer = setInterval(() => {
-      setTimeLeft(calculateTimeLeft());
-    }, 1000);
-    return () => clearInterval(timer);
-  }, []);
-
-  return (
-    <div className="text-white text-xl flex items-center space-x-2">
-      <span>開催まで:</span>
-      <span className="font-mono tabular-nums">
-        {timeLeft.days}日 {timeLeft.hours}時間 {timeLeft.minutes}分 {timeLeft.seconds}秒
-      </span>
-    </div>
-  );
-};
 
 function App() {
   return (
@@ -42,7 +10,14 @@ function App() {
           <img src={elemaru} alt="えれ丸" className="h-12 w-12 object-contain" />
           <h1 className="text-xl font-bold">PHPカンファレンス関西2025</h1>
         </div>
-        <Countdown />
+        <a
+          href="https://fortee.jp/phpcon-kansai2025/proposal/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-white text-sm hover:underline"
+        >
+          プロポーザル一覧
+        </a>
       </header>
 
       {/* Hero Section */}
