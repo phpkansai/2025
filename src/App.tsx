@@ -48,9 +48,9 @@ function App() {
           isScrolled ? 'bg-[#46AA65] text-white' : 'bg-white text-[#46AA65]'
         }`}
       >
-        <div className="flex items-center space-x-4">
-          <img src={elemaru} alt="えれ丸" className="h-12 w-12 object-contain" />
-          <h1 className="text-xl font-bold">PHPカンファレンス関西2025</h1>
+        <div className="flex items-center space-x-2 md:space-x-4">
+          <img src={elemaru} alt="えれ丸" className="h-8 w-8 md:h-12 md:w-12 object-contain" />
+          <h1 className="text-base md:text-xl font-bold">PHPカンファレンス関西2025</h1>
         </div>
         <div className="hidden md:flex space-x-4">
           <div className="flex space-x-4">
@@ -123,23 +123,23 @@ function App() {
       </header>
 
       {/* Hero Section */}
-      <div className="relative h-screen bg-[#46AA65] flex items-center justify-center text-white"
+      <div className="relative h-screen bg-[#46AA65] flex items-center justify-center text-white pt-16 md:pt-0"
            style={{
              backgroundImage: 'url(https://2018.kphpug.jp/assets/images/keyvisual.jpg)',
              backgroundSize: 'cover',
              backgroundPosition: 'center'
            }}>
         <div className="absolute inset-0 bg-[#46AA65] opacity-70"></div>
-        <div className="relative text-center space-y-6">
-          <img src={elemaru} alt="えれ丸" className="mx-auto h-40 w-40 object-contain" />
-          <h1 className="text-5xl font-bold">PHPカンファレンス関西2025</h1>
-          <p className="text-4xl">
+        <div className="relative text-center space-y-4 md:space-y-6">
+          <img src={elemaru} alt="えれ丸" className="mx-auto h-28 w-28 md:h-40 md:w-40 object-contain" />
+          <h1 className="text-3xl md:text-5xl font-bold">PHPカンファレンス関西2025</h1>
+          <p className="text-2xl md:text-4xl">
             2025年
-            <span className="font-bold text-5xl">7</span>月
-            <span className="font-bold text-5xl">18</span>日(金)・
-            <span className="font-bold text-5xl">19</span>日(土)
+            <span className="font-bold text-3xl md:text-5xl">7</span>月
+            <span className="font-bold text-3xl md:text-5xl">18</span>日(金)・
+            <span className="font-bold text-3xl md:text-5xl">19</span>日(土)
           </p>
-          <p className="text-xl">神戸駅前研修センター</p>
+          <p className="text-base md:text-xl">神戸駅前研修センター</p>
           <div className="flex flex-col space-y-4">
             <div>
               <a
