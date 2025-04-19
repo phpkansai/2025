@@ -12,7 +12,41 @@ function ProposalCountdown() {
   });
   
   const [isExpired, setIsExpired] = useState(false);
+  const [proposalCount, setProposalCount] = useState<number | null>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
 
+  // Fetch proposal count
+  useEffect(() => {
+    const fetchProposalCount = async () => {
+      try {
+        setLoading(true);
+        const response = await fetch('https://fortee.jp/phpcon-kansai2025/api/proposals');
+        if (!response.ok) {
+          throw new Error('APIからデータを取得できませんでした');
+        }
+        const data = await response.json();
+        setProposalCount(data.proposals.length);
+        setError(null);
+      } catch (err) {
+        console.error('提案数の取得に失敗しました:', err);
+        setError('提案数の取得に失敗しました');
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    // Initial fetch
+    fetchProposalCount();
+
+    // Set up interval to fetch every 10 seconds
+    const intervalId = setInterval(fetchProposalCount, 10000);
+
+    // Clean up interval on component unmount
+    return () => clearInterval(intervalId);
+  }, []);
+
+  // Countdown timer
   useEffect(() => {
     // Set deadline to April 20, 2025, 23:59:59 JST
     const deadline = new Date('2025-04-20T23:59:59+09:00');
@@ -109,6 +143,18 @@ function ProposalCountdown() {
                   <span className="font-bold text-[#46AA65]">2025年4月20日 23:59</span>
                   までです！
                 </p>
+                
+                {/* Proposal Count Display */}
+                <div className="bg-[#46AA65] text-white p-6 rounded-lg max-w-md mx-auto">
+                  <h3 className="text-xl font-bold mb-2">現在のプロポーザル応募数</h3>
+                  {loading ? (
+                    <p className="text-lg">読み込み中...</p>
+                  ) : error ? (
+                    <p className="text-lg text-red-200">{error}</p>
+                  ) : (
+                    <p className="text-4xl font-bold">{proposalCount !== null ? proposalCount : '-'}</p>
+                  )}
+                </div>
                 
                 <div>
                   <a
