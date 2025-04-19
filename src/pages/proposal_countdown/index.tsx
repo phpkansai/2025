@@ -57,7 +57,7 @@ function ProposalCountdown() {
       </header>
 
       {/* Main Content */}
-      <div className="pt-24 pb-20 px-6">
+      <div className="pt-32 pb-20 px-6">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-3xl md:text-4xl font-bold text-[#46AA65] text-center mb-8">
             プロポーザル募集締切カウントダウン
@@ -133,20 +133,62 @@ function ProposalCountdown() {
                   初めての登壇でも大丈夫です。実行委員会がサポートします。
                   ぜひ、あなたの経験や知識を共有してください！
                 </p>
-                <h3 className="text-lg font-bold text-[#46AA65] mb-2">募集テーマ例</h3>
+                <h3 className="text-lg font-bold text-[#46AA65] mb-2">開催テーマ</h3>
+                <p>今年の開催テーマは「PHPでやってみよう！」です。ぜひ、聴衆にもやってみようと思ってもらえるようなトークを期待します。</p>
+                <h3 className="text-lg font-bold text-[#46AA65] mb-2">優遇枠</h3>
+                <p className="mb-4">
+                PHPカンファレンス関西2025のテーマ「PHPでやってみよう」の実現ならびに、関西のPHPerコミュニティ活性化を図るために、以下の4つの枠での応募を特に歓迎いたします。
+                </p>
+                <div className="space-y-4 mb-6">
+                    <div className="bg-green-50 p-3 rounded-md border-l-4 border-[#46AA65]">
+                        <h4 className="font-bold">初心者向け枠</h4>
+                        <p>初心者PHPerのアクションに繋がるようなトークを歓迎する枠です。</p>
+                    </div>
+                    
+                    <div className="bg-green-50 p-3 rounded-md border-l-4 border-[#46AA65]">
+                        <h4 className="font-bold">関西枠</h4>
+                        <p>関西出身・関西在住の方を対象とする枠です。</p>
+                    </div>
+                    
+                    <div className="bg-green-50 p-3 rounded-md border-l-4 border-[#46AA65]">
+                        <h4 className="font-bold">初登壇枠</h4>
+                        <p>登壇経験がない方の「登壇にチャレンジしてみよう」という気持ちを押すための枠です。</p>
+                    </div>
+                    
+                    <div className="bg-green-50 p-3 rounded-md border-l-4 border-[#46AA65]">
+                        <h4 className="font-bold">しくじり枠</h4>
+                        <p>プロダクトなどでの失敗談を共有する枠です。<br/>
+                        失敗から得たことを次のアクションへ繋げられるようなトークを歓迎いたします。</p>
+                    </div>
+                </div>
+                <h3 className="text-lg font-bold text-[#46AA65] mb-2">トークテーマ例</h3>
                 <ul className="list-disc list-inside space-y-1 mb-4">
-                  <li>PHP 8.3/8.4の新機能</li>
-                  <li>フレームワーク（Laravel, Symfony, CakePHP など）</li>
+                  <li>PHPの新機能</li>
+                  <li>フレームワーク</li>
                   <li>テスト・CI/CD</li>
                   <li>セキュリティ</li>
                   <li>パフォーマンスチューニング</li>
                   <li>アーキテクチャ設計</li>
                   <li>PHPと他言語・技術との連携</li>
                   <li>PHPを使った実践事例</li>
+                  <li>好奇心をくすぐるニッチで深い話</li>
                 </ul>
                 <p>
                   上記以外のテーマでも、PHPに関連する内容であれば歓迎します！
                 </p>
+              </div>
+              <div className="text-center space-y-4">
+                <div>
+                  <a
+                    href="https://fortee.jp/phpcon-kansai2025/speaker/proposal/cfp"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center bg-[#FFC145] text-white font-bold px-6 py-2 rounded-full hover:bg-opacity-90 transition"
+                  >
+                    <ExternalLink className="w-4 h-4 mr-2" />
+                    今すぐプロポーザルを提出する
+                  </a>
+                </div>
               </div>
             </div>
           )}
