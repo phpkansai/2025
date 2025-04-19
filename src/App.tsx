@@ -2,6 +2,7 @@ import { Users, Building2, PartyPopper, ExternalLink } from 'lucide-react';
 import noteIcon from './assets/note.svg';
 import XIcon from './assets/x.svg';
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import elemaru from './assets/elemaru.png';
 
 function App() {
@@ -54,6 +55,14 @@ function App() {
         </div>
         <div className="hidden md:flex space-x-4">
           <div className="flex space-x-4">
+            <Link
+              to="/proposal_countdown"
+              className={`text-sm hover:underline ${
+                isScrolled ? 'text-white' : 'text-[#46AA65]'
+              }`}
+            >
+              プロポーザル締切カウントダウン
+            </Link>
             <a
               href="https://fortee.jp/phpcon-kansai2025/proposal/"
               target="_blank"
@@ -100,11 +109,17 @@ function App() {
           </button>
           {menuOpen && (
             <div className="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg z-50">
+              <Link
+                to="/proposal_countdown"
+                className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 first:rounded-t-md"
+              >
+                プロポーザル締切カウントダウン
+              </Link>
               <a
                 href="https://fortee.jp/phpcon-kansai2025/proposal/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 first:rounded-t-md last:rounded-b-md"
+                className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
               >
                 プロポーザル一覧
               </a>
@@ -112,8 +127,7 @@ function App() {
                 href="https://note.com/phpcon_kansai"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100
-                first:rounded-t-md last:rounded-b-md"
+                className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 last:rounded-b-md"
               >
                 note
               </a>
