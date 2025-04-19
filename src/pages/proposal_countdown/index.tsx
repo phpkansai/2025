@@ -3,6 +3,25 @@ import { ExternalLink } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import elemaru from '../../assets/elemaru.png';
 
+// Define the proposal type
+interface Proposal {
+  uuid: string;
+  url: string;
+  title: string;
+  abstract: string;
+  accepted: boolean;
+  speaker: {
+    name: string;
+    kana: string;
+    twitter: string;
+    avatar_url: string;
+  };
+  created: string;
+  feedback: {
+    open: boolean;
+  };
+}
+
 function ProposalCountdown() {
   const [timeLeft, setTimeLeft] = useState({
     days: 0,
@@ -12,13 +31,13 @@ function ProposalCountdown() {
   });
   
   const [isExpired, setIsExpired] = useState(false);
-  const [proposalCount, setProposalCount] = useState<number | null>(null);
+  const [proposals, setProposals] = useState<Proposal[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
-  // Fetch proposal count
+  // Fetch proposals
   useEffect(() => {
-    const fetchProposalCount = async () => {
+    const fetchProposals = async () => {
       try {
         setLoading(true);
         const response = await fetch('https://fortee.jp/phpcon-kansai2025/api/proposals');
@@ -26,21 +45,21 @@ function ProposalCountdown() {
           throw new Error('APIからデータを取得できませんでした');
         }
         const data = await response.json();
-        setProposalCount(data.proposals.length);
+        setProposals(data.proposals);
         setError(null);
       } catch (err) {
-        console.error('提案数の取得に失敗しました:', err);
-        setError('提案数の取得に失敗しました');
+        console.error('提案の取得に失敗しました:', err);
+        setError('提案の取得に失敗しました');
       } finally {
         setLoading(false);
       }
     };
 
     // Initial fetch
-    fetchProposalCount();
+    fetchProposals();
 
     // Set up interval to fetch every 10 seconds
-    const intervalId = setInterval(fetchProposalCount, 10000);
+    const intervalId = setInterval(fetchProposals, 10000);
 
     // Clean up interval on component unmount
     return () => clearInterval(intervalId);
@@ -152,9 +171,36 @@ function ProposalCountdown() {
                   ) : error ? (
                     <p className="text-lg text-red-200">{error}</p>
                   ) : (
-                    <p className="text-4xl font-bold">{proposalCount !== null ? proposalCount : '-'}</p>
+                    <p className="text-4xl font-bold">{proposals.length}</p>
                   )}
+                  <p className="text-sm mt-2">※10秒ごとに更新されます</p>
                 </div>
+                
+                {/* Newest Proposals Display */}
+                {!loading && !error && proposals.length > 0 && (
+                  <div className="bg-white border border-[#46AA65] p-6 rounded-lg mx-auto mt-6">
+                    <h3 className="text-xl font-bold text-[#46AA65] mb-4">新着プロポーザル</h3>
+                    <div className="space-y-4">
+                      {/* Sort proposals by creation date (newest first) and take the first 3 */}
+                      {[...proposals]
+                        .sort((a, b) => new Date(b.created).getTime() - new Date(a.created).getTime())
+                        .slice(0, 3)
+                        .map((proposal) => (
+                          <div key={proposal.uuid} className="border-b border-gray-200 pb-3 last:border-b-0">
+                            <a 
+                              href={proposal.url} 
+                              target="_blank" 
+                              rel="noopener noreferrer"
+                              className="block hover:text-[#46AA65] transition"
+                            >
+                              <h4 className="font-bold text-lg">{proposal.title}</h4>
+                              <p className="text-gray-600">発表者: {proposal.speaker.name}</p>
+                            </a>
+                          </div>
+                        ))}
+                    </div>
+                  </div>
+                )}
                 
                 <div>
                   <a
