@@ -175,7 +175,6 @@ function ProposalCountdown() {
                   ) : (
                     <p className="text-4xl font-bold">{proposals.length}</p>
                   )}
-                  <p className="text-sm mt-2">※10秒ごとに更新されます</p>
                 </div>
                 
                 {/* Newest Proposals Display */}
