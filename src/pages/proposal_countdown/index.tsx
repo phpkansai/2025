@@ -164,10 +164,12 @@ function ProposalCountdown() {
                 </p>
                 
                 {/* Proposal Count Display */}
-                <div className="bg-[#46AA65] text-white p-6 rounded-lg max-w-md mx-auto">
+                <div className="bg-[#46AA65] text-white p-6 rounded-lg mx-auto">
                   <h3 className="text-xl font-bold mb-2">現在のプロポーザル応募数</h3>
                   {loading ? (
-                    <p className="text-lg">読み込み中...</p>
+                    <div className="animate-pulse">
+                      <div className="h-12 bg-green-300 bg-opacity-40 rounded w-1/3 mx-auto"></div>
+                    </div>
                   ) : error ? (
                     <p className="text-lg text-red-200">{error}</p>
                   ) : (
@@ -177,12 +179,24 @@ function ProposalCountdown() {
                 </div>
                 
                 {/* Newest Proposals Display */}
-                {!loading && !error && proposals.length > 0 && (
-                  <div className="bg-white border border-[#46AA65] p-6 rounded-lg mx-auto mt-6">
-                    <h3 className="text-xl font-bold text-[#46AA65] mb-4">新着プロポーザル</h3>
-                    <div className="space-y-4">
-                      {/* Sort proposals by creation date (newest first) and take the first 3 */}
-                      {[...proposals]
+                <div className="bg-white border border-[#46AA65] p-6 rounded-lg mx-auto mt-6">
+                  <h3 className="text-xl font-bold text-[#46AA65] mb-4">新着プロポーザル</h3>
+                  <div className="space-y-4">
+                    {loading ? (
+                      // Skeleton loading UI
+                      <>
+                        {[1, 2, 3].map((item) => (
+                          <div key={item} className="border-b border-gray-200 pb-3 last:border-b-0 animate-pulse">
+                            <div className="h-6 bg-gray-200 rounded w-3/4 mb-2"></div>
+                            <div className="h-4 bg-gray-200 rounded w-1/2"></div>
+                          </div>
+                        ))}
+                      </>
+                    ) : error ? (
+                      <p className="text-red-500">データの取得に失敗しました</p>
+                    ) : proposals.length > 0 ? (
+                      // Sort proposals by creation date (newest first) and take the first 3
+                      [...proposals]
                         .sort((a, b) => new Date(b.created).getTime() - new Date(a.created).getTime())
                         .slice(0, 3)
                         .map((proposal) => (
@@ -197,10 +211,12 @@ function ProposalCountdown() {
                               <p className="text-gray-600">発表者: {proposal.speaker.name}</p>
                             </a>
                           </div>
-                        ))}
-                    </div>
+                        ))
+                    ) : (
+                      <p>プロポーザルがまだありません</p>
+                    )}
                   </div>
-                )}
+                </div>
                 
                 <div>
                   <a
