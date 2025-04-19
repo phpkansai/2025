@@ -65,6 +65,32 @@ function ProposalCountdown() {
     return () => clearInterval(intervalId);
   }, []);
 
+  // Set page-specific OGP meta tags
+  useEffect(() => {
+    // Update document title
+    document.title = "プロポーザル募集締切カウントダウン | PHPカンファレンス関西2025";
+    
+    // Update OGP meta tags
+    const metaTags = {
+      'og:title': 'プロポーザル募集締切カウントダウン | PHPカンファレンス関西2025',
+      'og:description': 'PHPカンファレンス関西2025のプロポーザル募集は2025年4月20日 23:59までです！',
+      'og:url': 'https://2025.kphpug.jp/proposal_countdown',
+      'twitter:title': 'プロポーザル募集締切カウントダウン | PHPカンファレンス関西2025',
+      'twitter:description': 'PHPカンファレンス関西2025のプロポーザル募集は2025年4月20日 23:59までです！',
+      'twitter:url': 'https://2025.kphpug.jp/proposal_countdown'
+    };
+    
+    // Update meta tags
+    Object.entries(metaTags).forEach(([property, content]) => {
+      const element = document.querySelector(`meta[property="${property}"]`);
+      if (element) {
+        element.setAttribute('content', content);
+      }
+    });
+    
+    // Clean up function not needed for meta tags as they persist
+  }, []);
+
   // Countdown timer
   useEffect(() => {
     // Set deadline to April 20, 2025, 23:59:59 JST
