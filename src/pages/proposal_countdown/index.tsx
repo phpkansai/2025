@@ -37,15 +37,31 @@ function ProposalCountdown() {
 
   // Fetch proposals
   useEffect(() => {
+    // Use a ref to keep track of previous proposal count
+    const previousProposalCountRef = { current: 0 };
+    
     const fetchProposals = async () => {
       try {
-        setLoading(true);
+        // Only show loading state on initial load
+        if (previousProposalCountRef.current === 0) {
+          setLoading(true);
+        }
+        
         const response = await fetch('https://fortee.jp/phpcon-kansai2025/api/proposals');
         if (!response.ok) {
           throw new Error('APIからデータを取得できませんでした');
         }
+        
         const data = await response.json();
-        setProposals(data.proposals);
+        const newProposals = data.proposals;
+        
+        // Only update state if the count has changed
+        if (newProposals.length !== previousProposalCountRef.current) {
+          console.log(`Proposal count changed: ${previousProposalCountRef.current} -> ${newProposals.length}`);
+          setProposals(newProposals);
+          previousProposalCountRef.current = newProposals.length;
+        }
+        
         setError(null);
       } catch (err) {
         console.error('提案の取得に失敗しました:', err);
@@ -63,7 +79,7 @@ function ProposalCountdown() {
 
     // Clean up interval on component unmount
     return () => clearInterval(intervalId);
-  }, []);
+  }, []); // No dependencies to avoid infinite loops
 
   // Set page-specific OGP meta tags
   useEffect(() => {
