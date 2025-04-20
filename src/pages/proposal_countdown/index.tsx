@@ -3,6 +3,22 @@ import { ExternalLink } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import elemaru from '../../assets/elemaru.png';
 
+// Toast component
+interface ToastProps {
+  message: string;
+  isVisible: boolean;
+}
+
+const Toast: React.FC<ToastProps> = ({ message, isVisible }) => {
+  if (!isVisible) return null;
+  
+  return (
+    <div className="fixed bottom-4 right-4 bg-[#46AA65] text-white px-4 py-2 rounded-lg shadow-lg z-50 animate-fade-in-up">
+      {message}
+    </div>
+  );
+};
+
 // Define the proposal type
 interface Proposal {
   uuid: string;
@@ -34,6 +50,8 @@ function ProposalCountdown() {
   const [proposals, setProposals] = useState<Proposal[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const [showToast, setShowToast] = useState(false);
+  const [toastMessage, setToastMessage] = useState('');
 
   // Fetch proposals
   useEffect(() => {
@@ -58,6 +76,18 @@ function ProposalCountdown() {
         // Only update state if the count has changed
         if (newProposals.length !== previousProposalCountRef.current) {
           console.log(`Proposal count changed: ${previousProposalCountRef.current} -> ${newProposals.length}`);
+          
+          // Show toast notification if count increased (and not initial load)
+          if (previousProposalCountRef.current > 0 && newProposals.length > previousProposalCountRef.current) {
+            setToastMessage(`新しいプロポーザルが投稿されました！`);
+            setShowToast(true);
+            
+            // Hide toast after 3 seconds
+            setTimeout(() => {
+              setShowToast(false);
+            }, 3000);
+          }
+          
           setProposals(newProposals);
           previousProposalCountRef.current = newProposals.length;
         }
@@ -141,6 +171,8 @@ function ProposalCountdown() {
 
   return (
     <div className="min-h-screen bg-white">
+      {/* Toast notification */}
+      <Toast message={toastMessage} isVisible={showToast} />
       {/* Header */}
       <header className="py-4 px-6 flex justify-between items-center bg-[#46AA65] text-white fixed w-full z-50">
         <div className="flex items-center space-x-2 md:space-x-4">
@@ -267,7 +299,7 @@ function ProposalCountdown() {
                     className="inline-flex items-center bg-[#FFC145] text-white font-bold px-6 py-2 rounded-full hover:bg-opacity-90 transition"
                   >
                     <ExternalLink className="w-4 h-4 mr-2" />
-                    今すぐプロポーザルを提出する
+                    今すぐプロポーザルを投稿する
                   </a>
                 </div>
               </div>
@@ -335,7 +367,7 @@ function ProposalCountdown() {
                     className="inline-flex items-center bg-[#FFC145] text-white font-bold px-6 py-2 rounded-full hover:bg-opacity-90 transition"
                   >
                     <ExternalLink className="w-4 h-4 mr-2" />
-                    今すぐプロポーザルを提出する
+                    今すぐプロポーザルを投稿する
                   </a>
                 </div>
               </div>
