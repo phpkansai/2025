@@ -166,20 +166,6 @@ function App() {
                 スポンサー募集中！
               </a>
             </div>
-            <div className="text-center">
-              <div>
-                <p className="text-sm mb-1">4月20日まで！！</p>
-                <a
-                  href="https://fortee.jp/phpcon-kansai2025/speaker/proposal/cfp"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center bg-[#FFC145] text-white font-bold px-6 py-2 rounded-full hover:bg-opacity-90 transition"
-                >
-                  <ExternalLink className="w-4 h-4 mr-2" />
-                  プロポーザル募集中！
-                </a>
-              </div>
-            </div>
             <div>
               <div className="text-center">
                 <p className="text-sm mb-1">Coming Soon</p>
@@ -226,8 +212,34 @@ function App() {
         </div>
       </section>
 
+      {/* Keynote Section */}
+      <section className="py-20 px-6 bg-gray-50">
+        <h2 className="text-3xl font-bold text-[#46AA65] text-center mb-10">基調講演</h2>
+        <div className="max-w-4xl mx-auto flex flex-col md:flex-row gap-8">
+          <div className="md:w-1/3">
+            <div className="rounded-lg overflow-hidden shadow-md">
+              <img 
+                src={elemaru} 
+                alt="基調講演者" 
+                className="w-full h-auto object-cover"
+              />
+            </div>
+          </div>
+          <div className="md:w-2/3">
+            <h3 className="text-2xl font-bold text-[#46AA65] mb-2">ここに講演のタイトルが入ります。</h3>
+            <p className="text-lg">
+            ここに講演の概要が入ります。ここに講演の概要が入ります。ここに講演の概要が入ります。ここに講演の概要が入ります。ここに講演の概要が入ります。ここに講演の概要が入ります。ここに講演の概要が入ります。ここに講演の概要が入ります。ここに講演の概要が入ります。
+            </p>
+            <h3 className="text-xl font-bold text-[#46AA65] mt-4">講演者名</h3>
+            <p className="text-base mb-6">
+              ここに講演者のプロフィールや経歴などの紹介文が入ります。ここに講演者のプロフィールや経歴などの紹介文が入ります。
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Features */}
-      <section className="bg-gray-50 py-20 px-6">
+      <section className="py-20 px-6">
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10">
           <div className="text-center">
             <Users className="w-16 h-16 text-[#46AA65] mx-auto mb-4" />
@@ -248,7 +260,7 @@ function App() {
       </section>
 
       {/* Access */}
-      <section className="py-20 px-6">
+      <section className="bg-gray-50 py-20 px-6">
         <h2 className="text-3xl font-bold text-[#46AA65] text-center mb-10">ACCESS</h2>
         <div className="max-w-4xl mx-auto">
           <div className="aspect-w-16 aspect-h-9 mb-8">
