@@ -217,11 +217,11 @@ function App() {
         <h2 className="text-3xl font-bold text-[#46AA65] text-center mb-10">基調講演</h2>
         <div className="max-w-4xl mx-auto flex flex-col md:flex-row gap-8">
           <div className="md:w-1/3">
-            <div className="rounded-lg overflow-hidden shadow-md">
+            <div className="rounded-lg overflow-hidden">
               <img 
                 src={elemaru} 
                 alt="基調講演者" 
-                className="w-full h-auto object-cover"
+                className="md:w-full h-auto mx-auto object-cover"
               />
             </div>
           </div>
