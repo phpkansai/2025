@@ -183,7 +183,7 @@ function App() {
       </div>
 
       {/* News Section */}
-      <section className="py-20 px-6 bg-gray-100">
+      <section id="news" className="py-20 px-6 bg-gray-100 scroll-mt-16">
         <h2 className="text-3xl font-bold text-[#46AA65] text-center mb-10">お知らせ</h2>
         <div className="max-w-4xl mx-auto space-y-6">
           {news.map((item) => (
@@ -199,7 +199,7 @@ function App() {
         </div>
       </section>
 
-      <section className="py-20 px-6">
+      <section id="about" className="py-20 px-6 scroll-mt-16">
         <h2 className="text-3xl font-bold text-[#46AA65] text-center mb-10">PHPカンファレンス関西2025</h2>
         <div className="max-w-4xl mx-auto">
           <p className="text-lg mb-8">
@@ -213,7 +213,7 @@ function App() {
       </section>
 
       {/* Keynote Section */}
-      <section className="py-20 px-6 bg-gray-50">
+      <section id="keynote" className="py-20 px-6 bg-gray-50 scroll-mt-16">
         <h2 className="text-3xl font-bold text-[#46AA65] text-center mb-10">基調講演</h2>
         <div className="max-w-4xl mx-auto flex flex-col md:flex-row gap-8">
           <div className="md:w-1/3">
@@ -239,7 +239,7 @@ function App() {
       </section>
 
       {/* Features */}
-      <section className="py-20 px-6">
+      <section id="features" className="py-20 px-6 scroll-mt-16">
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10">
           <div className="text-center">
             <Users className="w-16 h-16 text-[#46AA65] mx-auto mb-4" />
@@ -260,7 +260,7 @@ function App() {
       </section>
 
       {/* Access */}
-      <section className="bg-gray-50 py-20 px-6">
+      <section id="access" className="bg-gray-50 py-20 px-6 scroll-mt-16">
         <h2 className="text-3xl font-bold text-[#46AA65] text-center mb-10">ACCESS</h2>
         <div className="max-w-4xl mx-auto">
           <div className="aspect-w-16 aspect-h-9 mb-8">
