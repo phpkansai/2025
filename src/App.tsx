@@ -277,6 +277,135 @@ function App() {
         </div>
       </section>
 
+      {/* Sponsors */}
+      <section className="py-20 px-6 bg-[#46AA65] ">
+        <h2 className="text-2xl font-bold text-white text-center mb-10">SPONSORS</h2>
+        <div className="max-w-4xl mx-auto">
+          <p className="text-lg mb-8">
+            PHPカンファレンス関西2025は、スポンサー企業様のご協力により開催されます。スポンサー企業様のご支援を心より感謝申し上げます。
+          </p>
+          <p className="text-1xl font-bold text-white text-center mb-10">プラチナスポンサー</p>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-10">
+            <div className="flex items-center justify-center">
+              <img
+                src="https://via.placeholder.com/150"
+                alt="スポンサー企業ロゴ"
+                className="h-16 w-auto object-contain"
+              />
+            </div>
+            <div className="flex items-center justify-center">
+              <img
+                src="https://via.placeholder.com/150"
+                alt="スポンサー企業ロゴ"
+                className="h-16 w-auto object-contain"
+              />
+            </div>
+            <div className="flex items-center justify-center">
+              <img
+                src="https://via.placeholder.com/150"
+                alt="スポンサー企業ロゴ"
+                className="h-16 w-auto object-contain"
+              />
+            </div>
+            <div className="flex items-center justify-center">
+              <img
+                src="https://via.placeholder.com/150"
+                alt="スポンサー企業ロゴ"
+                className="h-16 w-auto object-contain"
+              />
+            </div>
+          </div>
+          <p className="text-1xl font-bold text-white text-center mb-10">ゴールドスポンサー</p>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-10">
+            <div className="flex items-center justify-center">
+              <img
+                src="https://via.placeholder.com/150"
+                alt="スポンサー企業ロゴ"
+                className="h-16 w-auto object-contain"
+              />
+            </div>
+            <div className="flex items-center justify-center">
+              <img
+                src="https://via.placeholder.com/150"
+                alt="スポンサー企業ロゴ"
+                className="h-16 w-auto object-contain"
+              />
+            </div>
+            <div className="flex items-center justify-center">
+              <img
+                src="https://via.placeholder.com/150"
+                alt="スポンサー企業ロゴ"
+                className="h-16 w-auto object-contain"
+              />
+            </div>
+            <div className="flex items-center justify-center">
+              <img
+                src="https://via.placeholder.com/150"
+                alt="スポンサー企業ロゴ"
+                className="h-16 w-auto object-contain"
+              />
+            </div>
+          </div>
+          <p className="text-1xl font-bold text-white text-center mb-10">シルバースポンサー</p>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-10">
+            <div className="flex items-center justify-center">
+              <img
+                src="https://via.placeholder.com/150"
+                alt="スポンサー企業ロゴ"
+                className="h-16 w-auto object-contain"
+              />
+            </div>
+            <div className="flex items-center justify-center">
+              <img
+                src="https://via.placeholder.com/150"
+                alt="スポンサー企業ロゴ"
+                className="h-16 w-auto object-contain"
+              />
+            </div>
+            <div className="flex items-center justify-center">
+              <img
+                src="https://via.placeholder.com/150"
+                alt="スポンサー企業ロゴ"
+                className="h-16 w-auto object-contain"
+              />
+            </div>
+            <div className="flex items-center justify-center">
+              <img
+                src="https://via.placeholder.com/150"
+                alt="スポンサー企業ロゴ"
+                className="h-16 w-auto object-contain"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Speaker */}
+      <section className="bg-[#AED850] py-20 px-6">
+        <h2 className="text-3xl font-bold text-white text-center mb-10">SPEAKER</h2>
+        <div className="max-w-4xl mx-auto">
+          <p className="text-lg mb-8">
+            PHPカンファレンス関西2025では、PHPに関する様々なトピックについて、公募で選ばれたスピーカーによる講演を行います。スピーカーの皆様のご協力に感謝申し上げます。
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+            <div className="flex items-center justify-center">
+              <img
+                src="https://via.placeholder.com/150"
+                alt="スピーカー"
+                className="h-16 w-auto object-contain"
+              />
+            </div>
+            <div className="flex items-center justify-center">
+              <img
+                src="https://via.placeholder.com/150"
+                alt="スピーカー"
+                className="h-16 w-auto object-contain"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Footer */}
       <footer className="bg-[#46AA65] text-white py-12">
         <div className="max-w-6xl mx-auto px-6">
