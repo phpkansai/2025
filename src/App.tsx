@@ -285,95 +285,162 @@ function App() {
             PHPカンファレンス関西2025は、スポンサー企業様のご協力により開催されます。スポンサー企業様のご支援を心より感謝申し上げます。
           </p>
           <p className="text-1xl font-bold text-white text-center mb-10">プラチナスポンサー</p>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-10">
+          <div className="flex justify-center mb-16">
             <div className="flex items-center justify-center">
               <img
-                src="https://via.placeholder.com/150"
+                src="https://placehold.jp/300x150.png"
                 alt="スポンサー企業ロゴ"
-                className="h-16 w-auto object-contain"
-              />
-            </div>
-            <div className="flex items-center justify-center">
-              <img
-                src="https://via.placeholder.com/150"
-                alt="スポンサー企業ロゴ"
-                className="h-16 w-auto object-contain"
-              />
-            </div>
-            <div className="flex items-center justify-center">
-              <img
-                src="https://via.placeholder.com/150"
-                alt="スポンサー企業ロゴ"
-                className="h-16 w-auto object-contain"
-              />
-            </div>
-            <div className="flex items-center justify-center">
-              <img
-                src="https://via.placeholder.com/150"
-                alt="スポンサー企業ロゴ"
-                className="h-16 w-auto object-contain"
+                className="h-32 w-auto object-contain"
               />
             </div>
           </div>
           <p className="text-1xl font-bold text-white text-center mb-10">ゴールドスポンサー</p>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-10">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-10 mb-16">
             <div className="flex items-center justify-center">
               <img
-                src="https://via.placeholder.com/150"
+                src="https://placehold.jp/300x150.png"
+                alt="スポンサー企業ロゴ"
+                className="h-24 w-auto object-contain"
+              />
+            </div>
+            <div className="flex items-center justify-center">
+              <img
+                src="https://placehold.jp/300x150.png"
+                alt="スポンサー企業ロゴ"
+                className="h-24 w-auto object-contain"
+              />
+            </div>
+            <div className="flex items-center justify-center">
+              <img
+                src="https://placehold.jp/300x150.png"
+                alt="スポンサー企業ロゴ"
+                className="h-24 w-auto object-contain"
+              />
+            </div>
+            <div className="flex items-center justify-center">
+              <img
+                src="https://placehold.jp/300x150.png"
+                alt="スポンサー企業ロゴ"
+                className="h-24 w-auto object-contain"
+              />
+            </div>
+          </div>
+          <p className="text-1xl font-bold text-white text-center mb-10">シルバースポンサー</p>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-10 mb-16">
+            <div className="flex items-center justify-center">
+              <img
+                src="https://placehold.jp/300x150.png"
                 alt="スポンサー企業ロゴ"
                 className="h-16 w-auto object-contain"
               />
             </div>
             <div className="flex items-center justify-center">
               <img
-                src="https://via.placeholder.com/150"
+                src="https://placehold.jp/300x150.png"
                 alt="スポンサー企業ロゴ"
                 className="h-16 w-auto object-contain"
               />
             </div>
             <div className="flex items-center justify-center">
               <img
-                src="https://via.placeholder.com/150"
+                src="https://placehold.jp/300x150.png"
                 alt="スポンサー企業ロゴ"
                 className="h-16 w-auto object-contain"
               />
             </div>
             <div className="flex items-center justify-center">
               <img
-                src="https://via.placeholder.com/150"
+                src="https://placehold.jp/300x150.png"
                 alt="スポンサー企業ロゴ"
                 className="h-16 w-auto object-contain"
               />
             </div>
           </div>
-          <p className="text-1xl font-bold text-white text-center mb-10">シルバースポンサー</p>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-10">
+          
+          <p className="text-1xl font-bold text-white text-center mb-10">ブロンズスポンサー</p>
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-6">
             <div className="flex items-center justify-center">
               <img
-                src="https://via.placeholder.com/150"
+                src="https://placehold.jp/300x150.png"
                 alt="スポンサー企業ロゴ"
-                className="h-16 w-auto object-contain"
+                className="h-12 w-auto object-contain"
               />
             </div>
             <div className="flex items-center justify-center">
               <img
-                src="https://via.placeholder.com/150"
+                src="https://placehold.jp/300x150.png"
                 alt="スポンサー企業ロゴ"
-                className="h-16 w-auto object-contain"
+                className="h-12 w-auto object-contain"
               />
             </div>
             <div className="flex items-center justify-center">
               <img
-                src="https://via.placeholder.com/150"
+                src="https://placehold.jp/300x150.png"
                 alt="スポンサー企業ロゴ"
-                className="h-16 w-auto object-contain"
+                className="h-12 w-auto object-contain"
               />
             </div>
             <div className="flex items-center justify-center">
               <img
-                src="https://via.placeholder.com/150"
+                src="https://placehold.jp/300x150.png"
                 alt="スポンサー企業ロゴ"
-                className="h-16 w-auto object-contain"
+                className="h-12 w-auto object-contain"
+              />
+            </div>
+            <div className="flex items-center justify-center">
+              <img
+                src="https://placehold.jp/300x150.png"
+                alt="スポンサー企業ロゴ"
+                className="h-12 w-auto object-contain"
+              />
+            </div>
+            <div className="flex items-center justify-center">
+              <img
+                src="https://placehold.jp/300x150.png"
+                alt="スポンサー企業ロゴ"
+                className="h-12 w-auto object-contain"
+              />
+            </div>
+            <div className="flex items-center justify-center">
+              <img
+                src="https://placehold.jp/300x150.png"
+                alt="スポンサー企業ロゴ"
+                className="h-12 w-auto object-contain"
+              />
+            </div>
+            <div className="flex items-center justify-center">
+              <img
+                src="https://placehold.jp/300x150.png"
+                alt="スポンサー企業ロゴ"
+                className="h-12 w-auto object-contain"
+              />
+            </div>
+            <div className="flex items-center justify-center">
+              <img
+                src="https://placehold.jp/300x150.png"
+                alt="スポンサー企業ロゴ"
+                className="h-12 w-auto object-contain"
+              />
+            </div>
+            <div className="flex items-center justify-center">
+              <img
+                src="https://placehold.jp/300x150.png"
+                alt="スポンサー企業ロゴ"
+                className="h-12 w-auto object-contain"
+              />
+            </div>
+            <div className="flex items-center justify-center">
+              <img
+                src="https://placehold.jp/300x150.png"
+                alt="スポンサー企業ロゴ"
+                className="h-12 w-auto object-contain"
+              />
+            </div>
+            <div className="flex items-center justify-center">
+              <img
+                src="https://placehold.jp/300x150.png"
+                alt="スポンサー企業ロゴ"
+                className="h-12 w-auto object-contain"
               />
             </div>
           </div>
@@ -383,24 +450,177 @@ function App() {
       {/* Speaker */}
       <section className="bg-[#AED850] py-20 px-6">
         <h2 className="text-3xl font-bold text-white text-center mb-10">SPEAKER</h2>
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-6xl mx-auto">
           <p className="text-lg mb-8">
             PHPカンファレンス関西2025では、PHPに関する様々なトピックについて、公募で選ばれたスピーカーによる講演を行います。スピーカーの皆様のご協力に感謝申し上げます。
           </p>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-            <div className="flex items-center justify-center">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6">
+            {/* Row 1 */}
+            <div className="flex flex-col items-center justify-center">
               <img
-                src="https://via.placeholder.com/150"
-                alt="スピーカー"
-                className="h-16 w-auto object-contain"
+                src="https://placehold.jp/200x200.png"
+                alt="スピーカー1"
+                className="h-24 w-24 object-cover rounded-full mb-2"
               />
+              <p className="text-sm font-medium text-white text-center">スピーカー名1</p>
             </div>
-            <div className="flex items-center justify-center">
+            <div className="flex flex-col items-center justify-center">
               <img
-                src="https://via.placeholder.com/150"
-                alt="スピーカー"
-                className="h-16 w-auto object-contain"
+                src="https://placehold.jp/200x200.png"
+                alt="スピーカー2"
+                className="h-24 w-24 object-cover rounded-full mb-2"
               />
+              <p className="text-sm font-medium text-white text-center">スピーカー名2</p>
+            </div>
+            <div className="flex flex-col items-center justify-center">
+              <img
+                src="https://placehold.jp/200x200.png"
+                alt="スピーカー3"
+                className="h-24 w-24 object-cover rounded-full mb-2"
+              />
+              <p className="text-sm font-medium text-white text-center">スピーカー名3</p>
+            </div>
+            <div className="flex flex-col items-center justify-center">
+              <img
+                src="https://placehold.jp/200x200.png"
+                alt="スピーカー4"
+                className="h-24 w-24 object-cover rounded-full mb-2"
+              />
+              <p className="text-sm font-medium text-white text-center">スピーカー名4</p>
+            </div>
+            <div className="flex flex-col items-center justify-center">
+              <img
+                src="https://placehold.jp/200x200.png"
+                alt="スピーカー5"
+                className="h-24 w-24 object-cover rounded-full mb-2"
+              />
+              <p className="text-sm font-medium text-white text-center">スピーカー名5</p>
+            </div>
+            
+            {/* Row 2 */}
+            <div className="flex flex-col items-center justify-center">
+              <img
+                src="https://placehold.jp/200x200.png"
+                alt="スピーカー6"
+                className="h-24 w-24 object-cover rounded-full mb-2"
+              />
+              <p className="text-sm font-medium text-white text-center">スピーカー名6</p>
+            </div>
+            <div className="flex flex-col items-center justify-center">
+              <img
+                src="https://placehold.jp/200x200.png"
+                alt="スピーカー7"
+                className="h-24 w-24 object-cover rounded-full mb-2"
+              />
+              <p className="text-sm font-medium text-white text-center">スピーカー名7</p>
+            </div>
+            <div className="flex flex-col items-center justify-center">
+              <img
+                src="https://placehold.jp/200x200.png"
+                alt="スピーカー8"
+                className="h-24 w-24 object-cover rounded-full mb-2"
+              />
+              <p className="text-sm font-medium text-white text-center">スピーカー名8</p>
+            </div>
+            <div className="flex flex-col items-center justify-center">
+              <img
+                src="https://placehold.jp/200x200.png"
+                alt="スピーカー9"
+                className="h-24 w-24 object-cover rounded-full mb-2"
+              />
+              <p className="text-sm font-medium text-white text-center">スピーカー名9</p>
+            </div>
+            <div className="flex flex-col items-center justify-center">
+              <img
+                src="https://placehold.jp/200x200.png"
+                alt="スピーカー10"
+                className="h-24 w-24 object-cover rounded-full mb-2"
+              />
+              <p className="text-sm font-medium text-white text-center">スピーカー名10</p>
+            </div>
+            
+            {/* Row 3 */}
+            <div className="flex flex-col items-center justify-center">
+              <img
+                src="https://placehold.jp/200x200.png"
+                alt="スピーカー11"
+                className="h-24 w-24 object-cover rounded-full mb-2"
+              />
+              <p className="text-sm font-medium text-white text-center">スピーカー名11</p>
+            </div>
+            <div className="flex flex-col items-center justify-center">
+              <img
+                src="https://placehold.jp/200x200.png"
+                alt="スピーカー12"
+                className="h-24 w-24 object-cover rounded-full mb-2"
+              />
+              <p className="text-sm font-medium text-white text-center">スピーカー名12</p>
+            </div>
+            <div className="flex flex-col items-center justify-center">
+              <img
+                src="https://placehold.jp/200x200.png"
+                alt="スピーカー13"
+                className="h-24 w-24 object-cover rounded-full mb-2"
+              />
+              <p className="text-sm font-medium text-white text-center">スピーカー名13</p>
+            </div>
+            <div className="flex flex-col items-center justify-center">
+              <img
+                src="https://placehold.jp/200x200.png"
+                alt="スピーカー14"
+                className="h-24 w-24 object-cover rounded-full mb-2"
+              />
+              <p className="text-sm font-medium text-white text-center">スピーカー名14</p>
+            </div>
+            <div className="flex flex-col items-center justify-center">
+              <img
+                src="https://placehold.jp/200x200.png"
+                alt="スピーカー15"
+                className="h-24 w-24 object-cover rounded-full mb-2"
+              />
+              <p className="text-sm font-medium text-white text-center">スピーカー名15</p>
+            </div>
+            
+            {/* Row 4 */}
+            <div className="flex flex-col items-center justify-center">
+              <img
+                src="https://placehold.jp/200x200.png"
+                alt="スピーカー16"
+                className="h-24 w-24 object-cover rounded-full mb-2"
+              />
+              <p className="text-sm font-medium text-white text-center">スピーカー名16</p>
+            </div>
+            <div className="flex flex-col items-center justify-center">
+              <img
+                src="https://placehold.jp/200x200.png"
+                alt="スピーカー17"
+                className="h-24 w-24 object-cover rounded-full mb-2"
+              />
+              <p className="text-sm font-medium text-white text-center">スピーカー名17</p>
+            </div>
+            <div className="flex flex-col items-center justify-center">
+              <img
+                src="https://placehold.jp/200x200.png"
+                alt="スピーカー18"
+                className="h-24 w-24 object-cover rounded-full mb-2"
+              />
+              <p className="text-sm font-medium text-white text-center">スピーカー名18</p>
+            </div>
+            <div className="flex flex-col items-center justify-center">
+              <img
+                src="https://placehold.jp/200x200.png"
+                alt="スピーカー19"
+                className="h-24 w-24 object-cover rounded-full mb-2"
+              />
+              <p className="text-sm font-medium text-white text-center">スピーカー名19</p>
+            </div>
+            <div className="flex flex-col items-center justify-center">
+              <img
+                src="https://placehold.jp/200x200.png"
+                alt="スピーカー20"
+                className="h-24 w-24 object-cover rounded-full mb-2"
+              />
+              <p className="text-sm font-medium text-white text-center">スピーカー名20</p>
             </div>
           </div>
         </div>
