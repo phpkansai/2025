@@ -450,7 +450,7 @@ function App() {
       {/* Speaker */}
       <section className="bg-[#AED850] py-20 px-6">
         <h2 className="text-3xl font-bold text-white text-center mb-10">SPEAKER</h2>
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-4xl mx-auto">
           <p className="text-lg mb-8">
             PHPカンファレンス関西2025では、PHPに関する様々なトピックについて、公募で選ばれたスピーカーによる講演を行います。スピーカーの皆様のご協力に感謝申し上げます。
           </p>
