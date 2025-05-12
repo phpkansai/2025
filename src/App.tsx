@@ -4,6 +4,12 @@ import XIcon from './assets/x.svg';
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import elemaru from './assets/elemaru.png';
+import babyjob_logo_yoko from './assets/babyjob_logo_yoko.png';
+import vaddy_logo from './assets/vaddy_logo.png';
+import kokucho_logo from './assets/kokucho_web.png';
+import LKGlogo from './assets/LKGlogo.png';
+import horizontal_blue from './assets/horizontal_blue.png';
+
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -329,7 +335,7 @@ function App() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-10 mb-16">
             <div className="flex items-center justify-center">
               <img
-                src="https://placehold.jp/300x150.png"
+                src={horizontal_blue}
                 alt="スポンサー企業ロゴ"
                 className="h-16 w-auto object-contain"
               />
@@ -361,28 +367,28 @@ function App() {
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-6">
             <div className="flex items-center justify-center">
               <img
-                src="https://placehold.jp/300x150.png"
+                src={babyjob_logo_yoko}
                 alt="スポンサー企業ロゴ"
                 className="h-12 w-auto object-contain"
               />
             </div>
             <div className="flex items-center justify-center">
               <img
-                src="https://placehold.jp/300x150.png"
+                src={vaddy_logo}
                 alt="スポンサー企業ロゴ"
                 className="h-12 w-auto object-contain"
               />
             </div>
             <div className="flex items-center justify-center">
               <img
-                src="https://placehold.jp/300x150.png"
+                src={kokucho_logo}
                 alt="スポンサー企業ロゴ"
                 className="h-12 w-auto object-contain"
               />
             </div>
             <div className="flex items-center justify-center">
               <img
-                src="https://placehold.jp/300x150.png"
+                src={LKGlogo}
                 alt="スポンサー企業ロゴ"
                 className="h-12 w-auto object-contain"
               />
