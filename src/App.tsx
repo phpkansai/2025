@@ -626,6 +626,31 @@ function App() {
         </div>
       </section>
 
+     {/* Staff */}
+      <section className="py-20 px-6">
+        <h2 className="text-3xl font-bold text-[#46AA65] text-center mb-10">STAFF</h2>
+        <div className="max-w-4xl mx-auto">
+          <p className="text-lg mb-8">
+            PHPカンファレンス関西2025は、実行委員会メンバーのボランティアによって運営されています。運営メンバーは、PHPに関する様々なトピックについての知識や経験を持つエンジニアたちです。彼らの情熱と努力によって、PHPカンファレンス関西2025が成功することを願っています。
+          </p>
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6">
+            {[...Array(20)].map((_, i) => (
+              <div key={i} className="flex flex-col items-center justify-center">
+                <img
+                  src="https://placehold.jp/200x200.png"
+                  alt={`スタッフ${i + 1}`}
+                  className="h-24 w-24 object-cover rounded-full mb-2"
+                />
+                <p className="text-sm font-medium text-black text-center">
+                  スタッフ名{i + 1}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+
       {/* Footer */}
       <footer className="bg-[#46AA65] text-white py-12">
         <div className="max-w-6xl mx-auto px-6">
