@@ -4,12 +4,14 @@ import XIcon from './assets/x.svg';
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import elemaru from './assets/elemaru.png';
-import babyjob_logo_yoko from './assets/babyjob_logo_yoko.png';
-import vaddy_logo from './assets/vaddy_logo.png';
-import kokucho_logo from './assets/kokucho_web.png';
-import LKGlogo from './assets/LKGlogo.png';
-import horizontal_blue from './assets/horizontal_blue.png';
-
+import babyjob_logo_yoko from './assets/babyjob_bro_logo.png';
+import vaddy_logo from './assets/vaddy_bro_logo.png';
+import kokucho_logo from './assets/kokucho_bro_logo.png';
+import LKGlogo from './assets/LKG_bro_logo.png';
+import horizontal_blue from './assets/horizontal_silv_logo.png';
+import HireRoo_silv_logo from './assets/HireRoo_silv_logo.png';
+import iplug_silv_logo from './assets/iplug_silv_logo.png';
+import kaonavi_silv_logo from './assets/kaonavi_silv_logo.png';
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -336,28 +338,28 @@ function App() {
             <div className="flex items-center justify-center">
               <img
                 src={horizontal_blue}
-                alt="スポンサー企業ロゴ"
+                alt="株式会社coco"
                 className="h-16 w-auto object-contain"
               />
             </div>
             <div className="flex items-center justify-center">
               <img
-                src="https://placehold.jp/300x150.png"
-                alt="スポンサー企業ロゴ"
+                src={HireRoo_silv_logo}
+                alt="株式会社ハイヤールー"
                 className="h-16 w-auto object-contain"
               />
             </div>
             <div className="flex items-center justify-center">
               <img
-                src="https://placehold.jp/300x150.png"
-                alt="スポンサー企業ロゴ"
+                src={iplug_silv_logo}
+                alt="株式会社i-plug"
                 className="h-16 w-auto object-contain"
               />
             </div>
             <div className="flex items-center justify-center">
               <img
-                src="https://placehold.jp/300x150.png"
-                alt="スポンサー企業ロゴ"
+                src={kaonavi_silv_logo}
+                alt="株式会社カオナビ"
                 className="h-16 w-auto object-contain"
               />
             </div>
@@ -368,28 +370,28 @@ function App() {
             <div className="flex items-center justify-center">
               <img
                 src={babyjob_logo_yoko}
-                alt="スポンサー企業ロゴ"
+                alt="BABY JOB株式会社"
                 className="h-12 w-auto object-contain"
               />
             </div>
             <div className="flex items-center justify-center">
               <img
                 src={vaddy_logo}
-                alt="スポンサー企業ロゴ"
+                alt="株式会社ビットフォレスト"
                 className="h-12 w-auto object-contain"
               />
             </div>
             <div className="flex items-center justify-center">
               <img
                 src={kokucho_logo}
-                alt="スポンサー企業ロゴ"
+                alt="株式会社コクチョウ"
                 className="h-12 w-auto object-contain"
               />
             </div>
             <div className="flex items-center justify-center">
               <img
                 src={LKGlogo}
-                alt="スポンサー企業ロゴ"
+                alt="株式会社リンケージ"
                 className="h-12 w-auto object-contain"
               />
             </div>
