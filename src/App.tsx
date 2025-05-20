@@ -12,6 +12,8 @@ import horizontal_blue from './assets/horizontal_silv_logo.png';
 import HireRoo_silv_logo from './assets/HireRoo_silv_logo.png';
 import iplug_silv_logo from './assets/iplug_silv_logo.png';
 import kaonavi_silv_logo from './assets/kaonavi_silv_logo.png';
+import sakura_logo from './assets/sakura_gold_logo.png';
+import gigmatch_logo from './assets/gigmatch_snac_logo .png'
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -302,12 +304,13 @@ function App() {
               />
             </div>
           </div>
+
           <p className="text-1xl font-bold text-white text-center mb-10">ゴールドスポンサー</p>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-10 mb-16">
             <div className="flex items-center justify-center">
               <img
-                src="https://placehold.jp/300x150.png"
-                alt="スポンサー企業ロゴ"
+                src={sakura_logo}
+                alt="さくらインターネット株式会社"
                 className="h-24 w-auto object-contain"
               />
             </div>
@@ -333,6 +336,71 @@ function App() {
               />
             </div>
           </div>
+
+          <p className="text-1xl font-bold text-white text-center mb-10">ドリンクスポンサー</p>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-10 mb-16">
+            <div className="flex items-center justify-center">
+              <img
+                src="https://placehold.jp/300x150.png"
+                alt="スポンサー企業ロゴ"
+                className="h-20 w-auto object-contain"
+              />
+            </div>
+            <div className="flex items-center justify-center">
+              <img
+                src="https://placehold.jp/300x150.png"
+                alt="スポンサー企業ロゴ"
+                className="h-20 w-auto object-contain"
+              />
+            </div>
+            <div className="flex items-center justify-center">
+              <img
+                src="https://placehold.jp/300x150.png"
+                alt="スポンサー企業ロゴ"
+                className="h-20 w-auto object-contain"
+              />
+            </div>
+            <div className="flex items-center justify-center">
+              <img
+                src="https://placehold.jp/300x150.png"
+                alt="スポンサー企業ロゴ"
+                className="h-20 w-auto object-contain"
+              />
+            </div>
+          </div>
+
+          <p className="text-1xl font-bold text-white text-center mb-10">おやつスポンサー</p>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-10 mb-16">
+            <div className="flex items-center justify-center">
+              <img
+                src={gigmatch_logo}
+                alt="株式会社YUZURIHA"
+                className="h-20 w-auto object-contain"
+              />
+            </div>
+            <div className="flex items-center justify-center">
+              <img
+                src="https://placehold.jp/300x150.png"
+                alt="スポンサー企業ロゴ"
+                className="h-20 w-auto object-contain"
+              />
+            </div>
+            <div className="flex items-center justify-center">
+              <img
+                src="https://placehold.jp/300x150.png"
+                alt="スポンサー企業ロゴ"
+                className="h-20 w-auto object-contain"
+              />
+            </div>
+            <div className="flex items-center justify-center">
+              <img
+                src="https://placehold.jp/300x150.png"
+                alt="スポンサー企業ロゴ"
+                className="h-20 w-auto object-contain"
+              />
+            </div>
+          </div>
+
           <p className="text-1xl font-bold text-white text-center mb-10">シルバースポンサー</p>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-10 mb-16">
             <div className="flex items-center justify-center">
