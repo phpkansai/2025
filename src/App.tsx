@@ -347,7 +347,7 @@ function App() {
       </section>
 
       {/* Keynote Section */}
-      <section id="keynote" className="py-20 px-6 bg-gray-50 scroll-mt-16">
+      {/* <section id="keynote" className="py-20 px-6 bg-gray-50 scroll-mt-16">
         <h2 className="text-3xl font-bold text-[#46AA65] text-center mb-10">基調講演</h2>
         <div className="max-w-4xl mx-auto flex flex-col md:flex-row gap-8">
           <div className="md:w-1/3">
@@ -370,28 +370,7 @@ function App() {
             </p>
           </div>
         </div>
-      </section>
-
-      {/* Features */}
-      <section id="features" className="py-20 px-6 scroll-mt-16">
-        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10">
-          <div className="text-center">
-            <Users className="w-16 h-16 text-[#46AA65] mx-auto mb-4" />
-            <h3 className="text-xl font-bold mb-4">セッション</h3>
-            <p>PHPに関する様々なトピックについて、公募で選ばれたスピーカーによる講演を行います。</p>
-          </div>
-          <div className="text-center">
-            <Building2 className="w-16 h-16 text-[#46AA65] mx-auto mb-4" />
-            <h3 className="text-xl font-bold mb-4">ブース</h3>
-            <p>スポンサー企業様によるブース出展で、技術動向や製品についての情報を得られます。</p>
-          </div>
-          <div className="text-center">
-            <PartyPopper className="w-16 h-16 text-[#46AA65] mx-auto mb-4" />
-            <h3 className="text-xl font-bold mb-4">懇親会</h3>
-            <p>参加者同士の交流を深める懇親会を開催します。</p>
-          </div>
-        </div>
-      </section>
+      </section> */}
 
       {/* Access */}
       <section id="access" className="bg-gray-50 py-20 px-6 scroll-mt-16">
