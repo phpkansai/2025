@@ -14,6 +14,8 @@ import iplug_silv_logo from './assets/iplug_silv_logo.png';
 import kaonavi_silv_logo from './assets/kaonavi_silv_logo.png';
 import sakura_logo from './assets/sakura_gold_logo.png';
 import gigmatch_logo from './assets/gigmatch_snac_logo .png'
+import open_logo from './assets/open.png';
+import completed_logo from './assets/completed.png';
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -54,7 +56,7 @@ function App() {
   // スポンサー情報を配列で管理
   const platinumSponsors = [
     {
-      src: 'https://placehold.jp/300x150.png',
+      src: completed_logo,
       alt: 'スポンサー企業ロゴ',
       className: 'h-32 w-auto object-contain',
     },
@@ -65,21 +67,27 @@ function App() {
       alt: 'さくらインターネット株式会社',
       className: 'h-24 w-auto object-contain',
     },
-    { src: 'https://placehold.jp/300x150.png', alt: 'スポンサー企業ロゴ', className: 'h-24 w-auto object-contain' },
-    { src: 'https://placehold.jp/300x150.png', alt: 'スポンサー企業ロゴ', className: 'h-24 w-auto object-contain' },
-    { src: 'https://placehold.jp/300x150.png', alt: 'スポンサー企業ロゴ', className: 'h-24 w-auto object-contain' },
+    {
+      src: open_logo,
+      alt: 'スポンサー企業ロゴ',
+      className: 'h-24 w-auto object-contain',
+    },
+    {
+      src: open_logo,
+      alt: 'スポンサー企業ロゴ',
+      className: 'h-24 w-auto object-contain',
+    },
+    {
+      src: open_logo,
+      alt: 'スポンサー企業ロゴ',
+      className: 'h-24 w-auto object-contain',
+    },
   ];
   const drinkSponsors = [
-    { src: 'https://placehold.jp/300x150.png', alt: 'スポンサー企業ロゴ', className: 'h-20 w-auto object-contain' },
-    { src: 'https://placehold.jp/300x150.png', alt: 'スポンサー企業ロゴ', className: 'h-20 w-auto object-contain' },
-    { src: 'https://placehold.jp/300x150.png', alt: 'スポンサー企業ロゴ', className: 'h-20 w-auto object-contain' },
-    { src: 'https://placehold.jp/300x150.png', alt: 'スポンサー企業ロゴ', className: 'h-20 w-auto object-contain' },
+    { src: open_logo, alt: 'スポンサー企業ロゴ', className: 'h-20 w-auto object-contain' },
   ];
   const snackSponsors = [
     { src: gigmatch_logo, alt: '株式会社YUZURIHA', className: 'h-20 w-auto object-contain' },
-    { src: 'https://placehold.jp/300x150.png', alt: 'スポンサー企業ロゴ', className: 'h-20 w-auto object-contain' },
-    { src: 'https://placehold.jp/300x150.png', alt: 'スポンサー企業ロゴ', className: 'h-20 w-auto object-contain' },
-    { src: 'https://placehold.jp/300x150.png', alt: 'スポンサー企業ロゴ', className: 'h-20 w-auto object-contain' },
   ];
   const silverSponsors = [
     { src: horizontal_blue, alt: '株式会社coco', className: 'h-16 w-auto object-contain' },
@@ -92,14 +100,14 @@ function App() {
     { src: vaddy_logo, alt: '株式会社ビットフォレスト', className: 'h-12 w-auto object-contain' },
     { src: kokucho_logo, alt: '株式会社コクチョウ', className: 'h-12 w-auto object-contain' },
     { src: LKGlogo, alt: '株式会社リンケージ', className: 'h-12 w-auto object-contain' },
-    { src: 'https://placehold.jp/300x150.png', alt: 'スポンサー企業ロゴ', className: 'h-12 w-auto object-contain' },
-    { src: 'https://placehold.jp/300x150.png', alt: 'スポンサー企業ロゴ', className: 'h-12 w-auto object-contain' },
-    { src: 'https://placehold.jp/300x150.png', alt: 'スポンサー企業ロゴ', className: 'h-12 w-auto object-contain' },
-    { src: 'https://placehold.jp/300x150.png', alt: 'スポンサー企業ロゴ', className: 'h-12 w-auto object-contain' },
-    { src: 'https://placehold.jp/300x150.png', alt: 'スポンサー企業ロゴ', className: 'h-12 w-auto object-contain' },
-    { src: 'https://placehold.jp/300x150.png', alt: 'スポンサー企業ロゴ', className: 'h-12 w-auto object-contain' },
-    { src: 'https://placehold.jp/300x150.png', alt: 'スポンサー企業ロゴ', className: 'h-12 w-auto object-contain' },
-    { src: 'https://placehold.jp/300x150.png', alt: 'スポンサー企業ロゴ', className: 'h-12 w-auto object-contain' },
+    { src: open_logo, alt: 'スポンサー企業ロゴ', className: 'h-12 w-auto object-contain' },
+    { src: open_logo, alt: 'スポンサー企業ロゴ', className: 'h-12 w-auto object-contain' },
+    { src: open_logo, alt: 'スポンサー企業ロゴ', className: 'h-12 w-auto object-contain' },
+    { src: open_logo, alt: 'スポンサー企業ロゴ', className: 'h-12 w-auto object-contain' },
+    { src: open_logo, alt: 'スポンサー企業ロゴ', className: 'h-12 w-auto object-contain' },
+    { src: open_logo, alt: 'スポンサー企業ロゴ', className: 'h-12 w-auto object-contain' },
+    { src: open_logo, alt: 'スポンサー企業ロゴ', className: 'h-12 w-auto object-contain' },
+    { src: open_logo, alt: 'スポンサー企業ロゴ', className: 'h-12 w-auto object-contain' },
   ];
 
   return (
@@ -582,7 +590,7 @@ function App() {
         <h2 className="text-3xl font-bold text-[#46AA65] text-center mb-10">STAFF</h2>
         <div className="max-w-4xl mx-auto">
           <p className="text-lg mb-8">
-            PHPカンファレンス関西2025は、実行委員会メンバーのボランティアによって運営されています。運営メンバーは、PHPに関する様々なトピックについての知識や経験を持つエンジニアたちです。彼らの情熱と努力によって、PHPカンファレンス関西2025が成功することを願っています。
+            PHPカンファレンス関西2025のスタッフは、エンジニアを中心とするボランティアメンバーで構成されています。
           </p>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6">
             {[...Array(20)].map((_, i) => (
