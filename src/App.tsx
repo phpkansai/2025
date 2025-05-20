@@ -299,30 +299,17 @@ function App() {
                 スポンサー募集中！
               </a>
             </div>
-            <div className="text-center">
-              <div>
-                <p className="text-sm mb-1">4月20日まで！！</p>
+            <div>
+              <div className="text-center">
                 <a
-                  href="https://fortee.jp/phpcon-kansai2025/speaker/proposal/cfp"
+                  href="https://fortee.jp/phpcon-kansai2025/ticket-shop/index"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center bg-[#FFC145] text-white font-bold px-6 py-2 rounded-full hover:bg-opacity-90 transition"
                 >
                   <ExternalLink className="w-4 h-4 mr-2" />
-                  プロポーザル募集中！
-                </a>
-              </div>
-            </div>
-            <div>
-              <div className="text-center">
-                <p className="text-sm mb-1">Coming Soon</p>
-                <button
-                  disabled
-                  className="inline-flex items-center bg-gray-400 text-white font-bold px-6 py-2 rounded-full text-opacity-70 cursor-not-allowed"
-                >
-                  <ExternalLink className="w-4 h-4 mr-2" />
                   参加チケットはこちらから
-                </button>
+                </a>
               </div>
             </div>
           </div>
