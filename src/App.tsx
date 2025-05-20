@@ -4,7 +4,53 @@ import XIcon from './assets/x.svg';
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import elemaru from './assets/elemaru.png';
+import babyjob_logo_yoko from './assets/babyjob_bro_logo.png';
+import vaddy_logo from './assets/vaddy_bro_logo.png';
+import kokucho_logo from './assets/kokucho_bro_logo.png';
+import LKGlogo from './assets/LKG_bro_logo.png';
+import horizontal_blue from './assets/horizontal_silv_logo.png';
+import HireRoo_silv_logo from './assets/HireRoo_silv_logo.png';
+import iplug_silv_logo from './assets/iplug_silv_logo.png';
+import kaonavi_silv_logo from './assets/kaonavi_silv_logo.png';
+import sakura_logo from './assets/sakura_gold_logo.png';
+import gigmatch_logo from './assets/gigmatch_snac_logo .png'
+import open_logo from './assets/open.png';
+import completed_logo from './assets/completed.png';
 
+interface StaffMember {
+  id: string;
+  name: string;
+  url?: string;
+  avatar_url: string;
+}
+
+interface StaffData {
+  [category: string]: StaffMember[];
+}
+
+interface Speaker {
+  name: string;
+  kana?: string;
+  twitter?: string;
+  avatar_url: string;
+}
+
+interface Timetable {
+  track: string;
+  starts_at: string;
+  length_min: number;
+}
+
+interface Proposal {
+  uuid: string;
+  url: string;
+  title: string;
+  abstract: string;
+  accepted: boolean;
+  speaker: Speaker;
+  created: string;
+  timetable?: Timetable;
+}
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -17,6 +63,8 @@ function App() {
   }
 
   const [news, setNews] = useState<NewsItem[]>([]);
+  const [staff, setStaff] = useState<StaffData>({});
+  const [speakers, setSpeakers] = useState<Proposal[]>([]);
 
   useEffect(() => {
     const fetchNews = async () => {
@@ -33,6 +81,34 @@ function App() {
   }, []);
 
   useEffect(() => {
+    const fetchStaff = async () => {
+      try {
+        const response = await fetch('https://fortee.jp/phpcon-kansai2025/api/staff?type=simple');
+        const data = await response.json();
+        setStaff(data.staff);
+      } catch (error) {
+        console.error('Failed to fetch staff:', error);
+      }
+    };
+
+    fetchStaff();
+  }, []);
+
+  useEffect(() => {
+    const fetchSpeakers = async () => {
+      try {
+        const response = await fetch('https://fortee.jp/phpcon-kansai2025/api/proposals/accepted');
+        const data = await response.json();
+        setSpeakers(data.proposals);
+      } catch (error) {
+        console.error('Failed to fetch speakers:', error);
+      }
+    };
+
+    fetchSpeakers();
+  }, []);
+
+  useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > window.innerHeight);
     };
@@ -40,6 +116,63 @@ function App() {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  // スポンサー情報を配列で管理
+  const platinumSponsors = [
+    {
+      src: completed_logo,
+      alt: 'スポンサー企業ロゴ',
+      className: 'h-32 w-auto object-contain',
+    },
+  ];
+  const goldSponsors = [
+    {
+      src: sakura_logo,
+      alt: 'さくらインターネット株式会社',
+      className: 'h-24 w-auto object-contain',
+    },
+    {
+      src: open_logo,
+      alt: 'スポンサー企業ロゴ',
+      className: 'h-24 w-auto object-contain',
+    },
+    {
+      src: open_logo,
+      alt: 'スポンサー企業ロゴ',
+      className: 'h-24 w-auto object-contain',
+    },
+    {
+      src: open_logo,
+      alt: 'スポンサー企業ロゴ',
+      className: 'h-24 w-auto object-contain',
+    },
+  ];
+  const drinkSponsors = [
+    { src: open_logo, alt: 'スポンサー企業ロゴ', className: 'h-20 w-auto object-contain' },
+  ];
+  const snackSponsors = [
+    { src: gigmatch_logo, alt: '株式会社YUZURIHA', className: 'h-20 w-auto object-contain' },
+  ];
+  const silverSponsors = [
+    { src: horizontal_blue, alt: '株式会社coco', className: 'h-16 w-auto object-contain' },
+    { src: HireRoo_silv_logo, alt: '株式会社ハイヤールー', className: 'h-16 w-auto object-contain' },
+    { src: iplug_silv_logo, alt: '株式会社i-plug', className: 'h-16 w-auto object-contain' },
+    { src: kaonavi_silv_logo, alt: '株式会社カオナビ', className: 'h-16 w-auto object-contain' },
+  ];
+  const bronzeSponsors = [
+    { src: babyjob_logo_yoko, alt: 'BABY JOB株式会社', className: 'h-12 w-auto object-contain' },
+    { src: vaddy_logo, alt: '株式会社ビットフォレスト', className: 'h-12 w-auto object-contain' },
+    { src: kokucho_logo, alt: '株式会社コクチョウ', className: 'h-12 w-auto object-contain' },
+    { src: LKGlogo, alt: '株式会社リンケージ', className: 'h-12 w-auto object-contain' },
+    { src: open_logo, alt: 'スポンサー企業ロゴ', className: 'h-12 w-auto object-contain' },
+    { src: open_logo, alt: 'スポンサー企業ロゴ', className: 'h-12 w-auto object-contain' },
+    { src: open_logo, alt: 'スポンサー企業ロゴ', className: 'h-12 w-auto object-contain' },
+    { src: open_logo, alt: 'スポンサー企業ロゴ', className: 'h-12 w-auto object-contain' },
+    { src: open_logo, alt: 'スポンサー企業ロゴ', className: 'h-12 w-auto object-contain' },
+    { src: open_logo, alt: 'スポンサー企業ロゴ', className: 'h-12 w-auto object-contain' },
+    { src: open_logo, alt: 'スポンサー企業ロゴ', className: 'h-12 w-auto object-contain' },
+    { src: open_logo, alt: 'スポンサー企業ロゴ', className: 'h-12 w-auto object-contain' },
+  ];
 
   return (
     <div className="min-h-screen bg-white">
@@ -166,30 +299,17 @@ function App() {
                 スポンサー募集中！
               </a>
             </div>
-            <div className="text-center">
-              <div>
-                <p className="text-sm mb-1">4月20日まで！！</p>
+            <div>
+              <div className="text-center">
                 <a
-                  href="https://fortee.jp/phpcon-kansai2025/speaker/proposal/cfp"
+                  href="https://fortee.jp/phpcon-kansai2025/ticket-shop/index"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center bg-[#FFC145] text-white font-bold px-6 py-2 rounded-full hover:bg-opacity-90 transition"
                 >
                   <ExternalLink className="w-4 h-4 mr-2" />
-                  プロポーザル募集中！
-                </a>
-              </div>
-            </div>
-            <div>
-              <div className="text-center">
-                <p className="text-sm mb-1">Coming Soon</p>
-                <button
-                  disabled
-                  className="inline-flex items-center bg-gray-400 text-white font-bold px-6 py-2 rounded-full text-opacity-70 cursor-not-allowed"
-                >
-                  <ExternalLink className="w-4 h-4 mr-2" />
                   参加チケットはこちらから
-                </button>
+                </a>
               </div>
             </div>
           </div>
@@ -197,7 +317,7 @@ function App() {
       </div>
 
       {/* News Section */}
-      <section className="py-20 px-6 bg-gray-100">
+      <section id="news" className="py-20 px-6 bg-gray-100 scroll-mt-16">
         <h2 className="text-3xl font-bold text-[#46AA65] text-center mb-10">お知らせ</h2>
         <div className="max-w-4xl mx-auto space-y-6">
           {news.map((item) => (
@@ -213,7 +333,7 @@ function App() {
         </div>
       </section>
 
-      <section className="py-20 px-6">
+      <section id="about" className="py-20 px-6 scroll-mt-16">
         <h2 className="text-3xl font-bold text-[#46AA65] text-center mb-10">PHPカンファレンス関西2025</h2>
         <div className="max-w-4xl mx-auto">
           <p className="text-lg mb-8">
@@ -226,8 +346,34 @@ function App() {
         </div>
       </section>
 
+      {/* Keynote Section */}
+      <section id="keynote" className="py-20 px-6 bg-gray-50 scroll-mt-16">
+        <h2 className="text-3xl font-bold text-[#46AA65] text-center mb-10">基調講演</h2>
+        <div className="max-w-4xl mx-auto flex flex-col md:flex-row gap-8">
+          <div className="md:w-1/3">
+            <div className="rounded-lg overflow-hidden">
+              <img 
+                src={elemaru} 
+                alt="基調講演者" 
+                className="md:w-full h-auto mx-auto object-cover"
+              />
+            </div>
+          </div>
+          <div className="md:w-2/3">
+            <h3 className="text-2xl font-bold text-[#46AA65] mb-2">ここに講演のタイトルが入ります。</h3>
+            <p className="text-lg">
+            ここに講演の概要が入ります。ここに講演の概要が入ります。ここに講演の概要が入ります。ここに講演の概要が入ります。ここに講演の概要が入ります。ここに講演の概要が入ります。ここに講演の概要が入ります。ここに講演の概要が入ります。ここに講演の概要が入ります。
+            </p>
+            <h3 className="text-xl font-bold text-[#46AA65] mt-4">講演者名</h3>
+            <p className="text-base mb-6">
+              ここに講演者のプロフィールや経歴などの紹介文が入ります。ここに講演者のプロフィールや経歴などの紹介文が入ります。
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Features */}
-      <section className="bg-gray-50 py-20 px-6">
+      <section id="features" className="py-20 px-6 scroll-mt-16">
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10">
           <div className="text-center">
             <Users className="w-16 h-16 text-[#46AA65] mx-auto mb-4" />
@@ -248,7 +394,7 @@ function App() {
       </section>
 
       {/* Access */}
-      <section className="py-20 px-6">
+      <section id="access" className="bg-gray-50 py-20 px-6 scroll-mt-16">
         <h2 className="text-3xl font-bold text-[#46AA65] text-center mb-10">ACCESS</h2>
         <div className="max-w-4xl mx-auto">
           <div className="aspect-w-16 aspect-h-9 mb-8">
@@ -276,6 +422,129 @@ function App() {
           </div>
         </div>
       </section>
+
+      {/* Sponsors */}
+      <section className="py-20 px-6 bg-[#46AA65] ">
+        <h2 className="text-2xl font-bold text-white text-center mb-10">SPONSORS</h2>
+        <div className="max-w-4xl mx-auto">
+          <p className="text-lg mb-8">
+            PHPカンファレンス関西2025は、スポンサー企業様のご協力により開催されます。スポンサー企業様のご支援を心より感謝申し上げます。
+          </p>
+          <p className="text-1xl font-bold text-white text-center mb-10">プラチナスポンサー</p>
+          <div className="flex justify-center mb-16">
+            {platinumSponsors.map((s, i) => (
+              <div key={i} className="flex items-center justify-center">
+                <img src={s.src} alt={s.alt} className={s.className} />
+              </div>
+            ))}
+          </div>
+
+          <p className="text-1xl font-bold text-white text-center mb-10">ゴールドスポンサー</p>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-10 mb-16">
+            {goldSponsors.map((s, i) => (
+              <div key={i} className="flex items-center justify-center">
+                <img src={s.src} alt={s.alt} className={s.className} />
+              </div>
+            ))}
+          </div>
+
+          <div className="flex flex-wrap justify-center gap-10 mb-16">
+            {drinkSponsors[0] && (
+              <div className="flex flex-col items-center justify-center">
+                <span className="mb-2 text-white font-bold">ドリンクスポンサー</span>
+                <img src={drinkSponsors[0].src} alt={drinkSponsors[0].alt} className={drinkSponsors[0].className} />
+              </div>
+            )}
+            {snackSponsors[0] && (
+              <div className="flex flex-col items-center justify-center">
+                <span className="mb-2 text-white font-bold">おやつスポンサー</span>
+                <img src={snackSponsors[0].src} alt={snackSponsors[0].alt} className={snackSponsors[0].className} />
+              </div>
+            )}
+          </div>
+
+          <p className="text-1xl font-bold text-white text-center mb-10">シルバースポンサー</p>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-10 mb-16">
+            {silverSponsors.map((s, i) => (
+              <div key={i} className="flex items-center justify-center">
+                <img src={s.src} alt={s.alt} className={s.className} />
+              </div>
+            ))}
+          </div>
+          
+          <p className="text-1xl font-bold text-white text-center mb-10">ブロンズスポンサー</p>
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-6">
+            {bronzeSponsors.map((s, i) => (
+              <div key={i} className="flex items-center justify-center">
+                <img src={s.src} alt={s.alt} className={s.className} />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Speaker */}
+      <section className="bg-[#AED850] py-20 px-6">
+        <h2 className="text-3xl font-bold text-white text-center mb-10">SPEAKER</h2>
+        <div className="max-w-4xl mx-auto">
+          <p className="text-lg mb-8">
+            PHPカンファレンス関西2025では、PHPに関する様々なトピックについて、公募で選ばれたスピーカーによる講演を行います。スピーカーの皆様のご協力に感謝申し上げます。
+          </p>
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6">
+            {speakers.map((proposal) => (
+              <div key={proposal.uuid} className="flex flex-col items-center justify-center">
+                <a href={proposal.url} target="_blank" rel="noopener noreferrer" className="block">
+                  <img
+                    src={proposal.speaker.avatar_url || "https://placehold.jp/200x200.png"}
+                    alt={proposal.speaker.name}
+                    className="h-24 w-24 object-cover rounded-full mb-2"
+                  />
+                  <p className="text-sm font-medium text-white text-center">
+                    {proposal.speaker.name}
+                  </p>
+                  {proposal.speaker.twitter && (
+                    <p className="text-xs text-white text-center">
+                      @{proposal.speaker.twitter}
+                    </p>
+                  )}
+                </a>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+     {/* Staff */}
+      <section className="py-20 px-6">
+        <h2 className="text-3xl font-bold text-[#46AA65] text-center mb-10">STAFF</h2>
+        <div className="max-w-4xl mx-auto">
+          <p className="text-lg mb-8">
+            PHPカンファレンス関西2025のスタッフは、エンジニアを中心とするボランティアメンバーで構成されています。
+          </p>
+          {Object.entries(staff).map(([category, members]) => (
+            <div key={category} className="mb-12">
+              <h3 className="text-xl font-bold text-[#46AA65] mb-6 text-center">{category}</h3>
+              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6">
+                {members.map((member) => (
+                  <div key={member.id} className="flex flex-col items-center justify-center">
+                    <a href={member.url} target="_blank" rel="noopener noreferrer" className="block">
+                      <img
+                        src={member.avatar_url || "https://placehold.jp/200x200.png"}
+                        alt={member.name}
+                        className="h-24 w-24 object-cover rounded-full mb-2"
+                      />
+                      <p className="text-sm font-medium text-black text-center">
+                        {member.name}
+                      </p>
+                    </a>
+                  </div>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
 
       {/* Footer */}
       <footer className="bg-[#46AA65] text-white py-12">
