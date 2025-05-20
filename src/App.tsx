@@ -17,6 +17,40 @@ import gigmatch_logo from './assets/gigmatch_snac_logo .png'
 import open_logo from './assets/open.png';
 import completed_logo from './assets/completed.png';
 
+interface StaffMember {
+  id: string;
+  name: string;
+  url?: string;
+  avatar_url: string;
+}
+
+interface StaffData {
+  [category: string]: StaffMember[];
+}
+
+interface Speaker {
+  name: string;
+  kana?: string;
+  twitter?: string;
+  avatar_url: string;
+}
+
+interface Timetable {
+  track: string;
+  starts_at: string;
+  length_min: number;
+}
+
+interface Proposal {
+  uuid: string;
+  url: string;
+  title: string;
+  abstract: string;
+  accepted: boolean;
+  speaker: Speaker;
+  created: string;
+  timetable?: Timetable;
+}
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -29,6 +63,8 @@ function App() {
   }
 
   const [news, setNews] = useState<NewsItem[]>([]);
+  const [staff, setStaff] = useState<StaffData>({});
+  const [speakers, setSpeakers] = useState<Proposal[]>([]);
 
   useEffect(() => {
     const fetchNews = async () => {
@@ -42,6 +78,34 @@ function App() {
     };
 
     fetchNews();
+  }, []);
+
+  useEffect(() => {
+    const fetchStaff = async () => {
+      try {
+        const response = await fetch('https://fortee.jp/phpcon-kansai2025/api/staff?type=simple');
+        const data = await response.json();
+        setStaff(data.staff);
+      } catch (error) {
+        console.error('Failed to fetch staff:', error);
+      }
+    };
+
+    fetchStaff();
+  }, []);
+
+  useEffect(() => {
+    const fetchSpeakers = async () => {
+      try {
+        const response = await fetch('https://fortee.jp/phpcon-kansai2025/api/proposals/accepted');
+        const data = await response.json();
+        setSpeakers(data.proposals);
+      } catch (error) {
+        console.error('Failed to fetch speakers:', error);
+      }
+    };
+
+    fetchSpeakers();
   }, []);
 
   useEffect(() => {
@@ -414,173 +478,25 @@ function App() {
             PHPカンファレンス関西2025では、PHPに関する様々なトピックについて、公募で選ばれたスピーカーによる講演を行います。スピーカーの皆様のご協力に感謝申し上げます。
           </p>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6">
-            {/* Row 1 */}
-            <div className="flex flex-col items-center justify-center">
-              <img
-                src="https://placehold.jp/200x200.png"
-                alt="スピーカー1"
-                className="h-24 w-24 object-cover rounded-full mb-2"
-              />
-              <p className="text-sm font-medium text-white text-center">スピーカー名1</p>
-            </div>
-            <div className="flex flex-col items-center justify-center">
-              <img
-                src="https://placehold.jp/200x200.png"
-                alt="スピーカー2"
-                className="h-24 w-24 object-cover rounded-full mb-2"
-              />
-              <p className="text-sm font-medium text-white text-center">スピーカー名2</p>
-            </div>
-            <div className="flex flex-col items-center justify-center">
-              <img
-                src="https://placehold.jp/200x200.png"
-                alt="スピーカー3"
-                className="h-24 w-24 object-cover rounded-full mb-2"
-              />
-              <p className="text-sm font-medium text-white text-center">スピーカー名3</p>
-            </div>
-            <div className="flex flex-col items-center justify-center">
-              <img
-                src="https://placehold.jp/200x200.png"
-                alt="スピーカー4"
-                className="h-24 w-24 object-cover rounded-full mb-2"
-              />
-              <p className="text-sm font-medium text-white text-center">スピーカー名4</p>
-            </div>
-            <div className="flex flex-col items-center justify-center">
-              <img
-                src="https://placehold.jp/200x200.png"
-                alt="スピーカー5"
-                className="h-24 w-24 object-cover rounded-full mb-2"
-              />
-              <p className="text-sm font-medium text-white text-center">スピーカー名5</p>
-            </div>
-            
-            {/* Row 2 */}
-            <div className="flex flex-col items-center justify-center">
-              <img
-                src="https://placehold.jp/200x200.png"
-                alt="スピーカー6"
-                className="h-24 w-24 object-cover rounded-full mb-2"
-              />
-              <p className="text-sm font-medium text-white text-center">スピーカー名6</p>
-            </div>
-            <div className="flex flex-col items-center justify-center">
-              <img
-                src="https://placehold.jp/200x200.png"
-                alt="スピーカー7"
-                className="h-24 w-24 object-cover rounded-full mb-2"
-              />
-              <p className="text-sm font-medium text-white text-center">スピーカー名7</p>
-            </div>
-            <div className="flex flex-col items-center justify-center">
-              <img
-                src="https://placehold.jp/200x200.png"
-                alt="スピーカー8"
-                className="h-24 w-24 object-cover rounded-full mb-2"
-              />
-              <p className="text-sm font-medium text-white text-center">スピーカー名8</p>
-            </div>
-            <div className="flex flex-col items-center justify-center">
-              <img
-                src="https://placehold.jp/200x200.png"
-                alt="スピーカー9"
-                className="h-24 w-24 object-cover rounded-full mb-2"
-              />
-              <p className="text-sm font-medium text-white text-center">スピーカー名9</p>
-            </div>
-            <div className="flex flex-col items-center justify-center">
-              <img
-                src="https://placehold.jp/200x200.png"
-                alt="スピーカー10"
-                className="h-24 w-24 object-cover rounded-full mb-2"
-              />
-              <p className="text-sm font-medium text-white text-center">スピーカー名10</p>
-            </div>
-            
-            {/* Row 3 */}
-            <div className="flex flex-col items-center justify-center">
-              <img
-                src="https://placehold.jp/200x200.png"
-                alt="スピーカー11"
-                className="h-24 w-24 object-cover rounded-full mb-2"
-              />
-              <p className="text-sm font-medium text-white text-center">スピーカー名11</p>
-            </div>
-            <div className="flex flex-col items-center justify-center">
-              <img
-                src="https://placehold.jp/200x200.png"
-                alt="スピーカー12"
-                className="h-24 w-24 object-cover rounded-full mb-2"
-              />
-              <p className="text-sm font-medium text-white text-center">スピーカー名12</p>
-            </div>
-            <div className="flex flex-col items-center justify-center">
-              <img
-                src="https://placehold.jp/200x200.png"
-                alt="スピーカー13"
-                className="h-24 w-24 object-cover rounded-full mb-2"
-              />
-              <p className="text-sm font-medium text-white text-center">スピーカー名13</p>
-            </div>
-            <div className="flex flex-col items-center justify-center">
-              <img
-                src="https://placehold.jp/200x200.png"
-                alt="スピーカー14"
-                className="h-24 w-24 object-cover rounded-full mb-2"
-              />
-              <p className="text-sm font-medium text-white text-center">スピーカー名14</p>
-            </div>
-            <div className="flex flex-col items-center justify-center">
-              <img
-                src="https://placehold.jp/200x200.png"
-                alt="スピーカー15"
-                className="h-24 w-24 object-cover rounded-full mb-2"
-              />
-              <p className="text-sm font-medium text-white text-center">スピーカー名15</p>
-            </div>
-            
-            {/* Row 4 */}
-            <div className="flex flex-col items-center justify-center">
-              <img
-                src="https://placehold.jp/200x200.png"
-                alt="スピーカー16"
-                className="h-24 w-24 object-cover rounded-full mb-2"
-              />
-              <p className="text-sm font-medium text-white text-center">スピーカー名16</p>
-            </div>
-            <div className="flex flex-col items-center justify-center">
-              <img
-                src="https://placehold.jp/200x200.png"
-                alt="スピーカー17"
-                className="h-24 w-24 object-cover rounded-full mb-2"
-              />
-              <p className="text-sm font-medium text-white text-center">スピーカー名17</p>
-            </div>
-            <div className="flex flex-col items-center justify-center">
-              <img
-                src="https://placehold.jp/200x200.png"
-                alt="スピーカー18"
-                className="h-24 w-24 object-cover rounded-full mb-2"
-              />
-              <p className="text-sm font-medium text-white text-center">スピーカー名18</p>
-            </div>
-            <div className="flex flex-col items-center justify-center">
-              <img
-                src="https://placehold.jp/200x200.png"
-                alt="スピーカー19"
-                className="h-24 w-24 object-cover rounded-full mb-2"
-              />
-              <p className="text-sm font-medium text-white text-center">スピーカー名19</p>
-            </div>
-            <div className="flex flex-col items-center justify-center">
-              <img
-                src="https://placehold.jp/200x200.png"
-                alt="スピーカー20"
-                className="h-24 w-24 object-cover rounded-full mb-2"
-              />
-              <p className="text-sm font-medium text-white text-center">スピーカー名20</p>
-            </div>
+            {speakers.map((proposal) => (
+              <div key={proposal.uuid} className="flex flex-col items-center justify-center">
+                <a href={proposal.url} target="_blank" rel="noopener noreferrer" className="block">
+                  <img
+                    src={proposal.speaker.avatar_url || "https://placehold.jp/200x200.png"}
+                    alt={proposal.speaker.name}
+                    className="h-24 w-24 object-cover rounded-full mb-2"
+                  />
+                  <p className="text-sm font-medium text-white text-center">
+                    {proposal.speaker.name}
+                  </p>
+                  {proposal.speaker.twitter && (
+                    <p className="text-xs text-white text-center">
+                      @{proposal.speaker.twitter}
+                    </p>
+                  )}
+                </a>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -592,20 +508,27 @@ function App() {
           <p className="text-lg mb-8">
             PHPカンファレンス関西2025のスタッフは、エンジニアを中心とするボランティアメンバーで構成されています。
           </p>
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6">
-            {[...Array(20)].map((_, i) => (
-              <div key={i} className="flex flex-col items-center justify-center">
-                <img
-                  src="https://placehold.jp/200x200.png"
-                  alt={`スタッフ${i + 1}`}
-                  className="h-24 w-24 object-cover rounded-full mb-2"
-                />
-                <p className="text-sm font-medium text-black text-center">
-                  スタッフ名{i + 1}
-                </p>
+          {Object.entries(staff).map(([category, members]) => (
+            <div key={category} className="mb-12">
+              <h3 className="text-xl font-bold text-[#46AA65] mb-6 text-center">{category}</h3>
+              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6">
+                {members.map((member) => (
+                  <div key={member.id} className="flex flex-col items-center justify-center">
+                    <a href={member.url} target="_blank" rel="noopener noreferrer" className="block">
+                      <img
+                        src={member.avatar_url || "https://placehold.jp/200x200.png"}
+                        alt={member.name}
+                        className="h-24 w-24 object-cover rounded-full mb-2"
+                      />
+                      <p className="text-sm font-medium text-black text-center">
+                        {member.name}
+                      </p>
+                    </a>
+                  </div>
+                ))}
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
       </section>
 
