@@ -471,28 +471,29 @@ function App() {
           </p>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6">
             {speakers.map((proposal) => (
-              <div key={proposal.uuid} className="flex flex-col items-center justify-center">
-                <a href={proposal.url} target="_blank" rel="noopener noreferrer" className="block">
+              <div key={proposal.uuid} className="flex flex-col items-center justify-start text-center min-h-[160px]">
+                <a
+                  href={proposal.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex flex-col items-center justify-start"
+                >
                   <img
                     src={proposal.speaker.avatar_url || "https://placehold.jp/200x200.png"}
                     alt={proposal.speaker.name}
                     className="h-24 w-24 object-cover rounded-full mb-2"
                   />
-                  <p className="text-sm font-medium text-white text-center">
-                    {proposal.speaker.name}
+                  <p className="text-sm font-medium text-white">{proposal.speaker.name}</p>
+                  <p className="text-xs text-white min-h-[1.25rem]">
+                    {proposal.speaker.twitter ? `@${proposal.speaker.twitter}` : '\u00A0'}
                   </p>
-                  {proposal.speaker.twitter && (
-                    <p className="text-xs text-white text-center">
-                      @{proposal.speaker.twitter}
-                    </p>
-                  )}
                 </a>
               </div>
             ))}
           </div>
         </div>
       </section>
-
+      
      {/* Staff */}
       <section className="py-20 px-6">
         <h2 className="text-3xl font-bold text-[#46AA65] text-center mb-10">STAFF</h2>
