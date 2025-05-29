@@ -125,6 +125,7 @@ function App() {
       src: completed_logo,
       alt: 'スポンサー企業ロゴ',
       className: 'h-32 w-auto object-contain',
+      linkUrl: 'https://2025.kphpug.jp/',
     },
   ];
   const goldSponsors = [
@@ -132,48 +133,133 @@ function App() {
       src: sakura_logo,
       alt: 'さくらインターネット株式会社',
       className: 'h-24 w-auto object-contain',
+      linkUrl: 'https://www.sakura.ad.jp/',
     },
     {
       src: samuraism_gold_logo,
       alt: '株式会社サムライズム',
       className: 'h-24 w-auto object-contain',
+      linkUrl: 'https://samuraism.com/',
     },
     {
       src: open_logo,
       alt: 'スポンサー企業ロゴ',
       className: 'h-24 w-auto object-contain',
+      linkUrl: 'https://2025.kphpug.jp/',
     },
     {
       src: open_logo,
       alt: 'スポンサー企業ロゴ',
       className: 'h-24 w-auto object-contain',
+      linkUrl: 'https://2025.kphpug.jp/',
     },
-  ];
-  const drinkSponsors = [
-    { src: open_logo, alt: 'スポンサー企業ロゴ', className: 'h-20 w-auto object-contain' },
   ];
   const snackSponsors = [
-    { src: gigmatch_logo, alt: '株式会社YUZURIHA', className: 'h-20 w-auto object-contain' },
+    { 
+      src: gigmatch_logo, 
+      alt: '株式会社YUZURIHA', 
+      className: 'h-20 w-auto object-contain',
+      linkUrl: 'https://yzrh.jp/', 
+    },
   ];
   const silverSponsors = [
-    { src: horizontal_blue, alt: '株式会社coco', className: 'h-16 w-auto object-contain' },
-    { src: HireRoo_silv_logo, alt: '株式会社ハイヤールー', className: 'h-16 w-auto object-contain' },
-    { src: iplug_silv_logo, alt: '株式会社i-plug', className: 'h-16 w-auto object-contain' },
-    { src: kaonavi_silv_logo, alt: '株式会社カオナビ', className: 'h-16 w-auto object-contain' },
+    { 
+      src: horizontal_blue, 
+      alt: '株式会社coco', 
+      className: 'h-16 w-auto object-contain',
+      linkUrl: 'https://thecoco.jp/', 
+    },
+    { src: HireRoo_silv_logo, 
+      alt: '株式会社ハイヤールー', 
+      className: 'h-16 w-auto object-contain',
+      linkUrl: 'https://hireroo.io/', 
+    },
+    { 
+      src: iplug_silv_logo, 
+      alt: '株式会社i-plug', 
+      className: 'h-16 w-auto object-contain',
+      linkUrl: 'https://i-plug.co.jp/', 
+    },
+    { 
+      src: kaonavi_silv_logo, 
+      alt: '株式会社カオナビ', 
+      className: 'h-16 w-auto object-contain',
+      linkUrl: 'https://corp.kaonavi.jp/', 
+    },
   ];
   const bronzeSponsors = [
-    { src: babyjob_logo_yoko, alt: 'BABY JOB株式会社', className: 'h-12 w-auto object-contain' },
-    { src: vaddy_logo, alt: '株式会社ビットフォレスト', className: 'h-12 w-auto object-contain' },
-    { src: kokucho_logo, alt: '株式会社コクチョウ', className: 'h-12 w-auto object-contain' },
-    { src: LKGlogo, alt: '株式会社リンケージ', className: 'h-12 w-auto object-contain' },
-    { src: karabiner_bro_logo, alt: 'カラビナテクノロジー株式会社', className: 'h-12 w-auto object-contain' },
-    { src: open_logo, alt: 'スポンサー企業ロゴ', className: 'h-12 w-auto object-contain' },
-    { src: open_logo, alt: 'スポンサー企業ロゴ', className: 'h-12 w-auto object-contain' },
-    { src: open_logo, alt: 'スポンサー企業ロゴ', className: 'h-12 w-auto object-contain' },
-    { src: open_logo, alt: 'スポンサー企業ロゴ', className: 'h-12 w-auto object-contain' },
-    { src: open_logo, alt: 'スポンサー企業ロゴ', className: 'h-12 w-auto object-contain' },
-    { src: open_logo, alt: 'スポンサー企業ロゴ', className: 'h-12 w-auto object-contain' },
-    { src: open_logo, alt: 'スポンサー企業ロゴ', className: 'h-12 w-auto object-contain' },
+    { 
+      src: babyjob_logo_yoko, 
+      alt: 'BABY JOB株式会社', 
+      className: 'h-12 w-auto object-contain',
+      linkUrl: 'https://www.b-tm.co.jp/', 
+    },
+    { 
+      src: vaddy_logo, 
+      alt: '株式会社ビットフォレスト', 
+      className: 'h-12 w-auto object-contain',
+      linkUrl: 'https://www.bitforest.jp/', 
+    },
+    { 
+      src: kokucho_logo, 
+      alt: '株式会社コクチョウ', 
+      className: 'h-12 w-auto object-contain',
+      linkUrl: 'https://kokuchou.net/', 
+    },
+    { 
+      src: LKGlogo, 
+      alt: '株式会社リンケージ', 
+      className: 'h-12 w-auto object-contain',
+      linkUrl: 'https://linkage-inc.co.jp/', 
+    },
+    { 
+      src: karabiner_bro_logo, 
+      alt: 'カラビナテクノロジー株式会社', 
+      className: 'h-12 w-auto object-contain',
+      linkUrl: 'https://karabiner.tech/', 
+    },
+    { 
+      src: open_logo, 
+      alt: 'スポンサー企業ロゴ', 
+      className: 'h-12 w-auto object-contain',
+      linkUrl: 'https://2025.kphpug.jp/', 
+    },
+    { 
+      src: open_logo, 
+      alt: 'スポンサー企業ロゴ', 
+      className: 'h-12 w-auto object-contain',
+      linkUrl: 'https://2025.kphpug.jp/', 
+    },
+    { 
+      src: open_logo, 
+      alt: 'スポンサー企業ロゴ', 
+      className: 'h-12 w-auto object-contain',
+      linkUrl: 'https://2025.kphpug.jp/', 
+    },
+    { 
+      src: open_logo, 
+      alt: 'スポンサー企業ロゴ', 
+      className: 'h-12 w-auto object-contain',
+      linkUrl: 'https://2025.kphpug.jp/',
+     },
+    { 
+      src: open_logo, 
+      alt: 'スポンサー企業ロゴ', 
+      className: 'h-12 w-auto object-contain',
+      linkUrl: 'https://2025.kphpug.jp/', 
+    },
+    { 
+      src: open_logo, 
+      alt: 'スポンサー企業ロゴ', 
+      className: 'h-12 w-auto object-contain',
+      linkUrl: 'https://2025.kphpug.jp/', 
+    },
+    { 
+      src: open_logo, 
+      alt: 'スポンサー企業ロゴ', 
+      className: 'h-12 w-auto object-contain',
+      linkUrl: 'https://2025.kphpug.jp/', 
+    },
   ];
 
   return (
@@ -415,7 +501,9 @@ function App() {
           <div className="flex justify-center mb-16">
             {platinumSponsors.map((s, i) => (
               <div key={i} className="flex items-center justify-center">
-                <img src={s.src} alt={s.alt} className={s.className} />
+                <a href={s.linkUrl}>
+                  <img src={s.src} alt={s.alt} className={s.className} />
+                </a>
               </div>
             ))}
           </div>
@@ -424,22 +512,20 @@ function App() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-10 mb-16">
             {goldSponsors.map((s, i) => (
               <div key={i} className="flex items-center justify-center">
-                <img src={s.src} alt={s.alt} className={s.className} />
+                <a href={s.linkUrl}>
+                  <img src={s.src} alt={s.alt} className={s.className} />
+                </a>
               </div>
             ))}
           </div>
 
           <div className="flex flex-wrap justify-center gap-10 mb-16">
-            {drinkSponsors[0] && (
-              <div className="flex flex-col items-center justify-center">
-                <span className="mb-2 text-white font-bold">ドリンクスポンサー</span>
-                <img src={drinkSponsors[0].src} alt={drinkSponsors[0].alt} className={drinkSponsors[0].className} />
-              </div>
-            )}
             {snackSponsors[0] && (
               <div className="flex flex-col items-center justify-center">
                 <span className="mb-2 text-white font-bold">おやつスポンサー</span>
-                <img src={snackSponsors[0].src} alt={snackSponsors[0].alt} className={snackSponsors[0].className} />
+                <a href={snackSponsors[0].linkUrl}>
+                  <img src={snackSponsors[0].src} alt={snackSponsors[0].alt} className={snackSponsors[0].className} />
+                </a>
               </div>
             )}
           </div>
@@ -448,7 +534,9 @@ function App() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-10 mb-16">
             {silverSponsors.map((s, i) => (
               <div key={i} className="flex items-center justify-center">
-                <img src={s.src} alt={s.alt} className={s.className} />
+                <a href={s.linkUrl}>
+                  <img src={s.src} alt={s.alt} className={s.className} />
+                </a>
               </div>
             ))}
           </div>
@@ -457,7 +545,9 @@ function App() {
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-6">
             {bronzeSponsors.map((s, i) => (
               <div key={i} className="flex items-center justify-center">
-                <img src={s.src} alt={s.alt} className={s.className} />
+                <a href={s.linkUrl}>
+                  <img src={s.src} alt={s.alt} className={s.className} />
+                </a>
               </div>
             ))}
           </div>
