@@ -32,7 +32,7 @@ export default function Keynote() {
 
         {/* Presentation content below */}
         <div>
-          <h3 className="text-2xl font-bold text-[#46AA65] mb-4">ソフトウェア・デザインに向かおう <br/> ～ 世界を（ちょっとだけ）変えるソフトウェアを目指して ～</h3>
+          <h3 className="text-2xl font-bold text-[#46AA65] mb-4">ソフトウェア・デザインに向かおう <br/> <span className="text-xl">～ 世界を（ちょっとだけ）変えるソフトウェアを目指して ～</span></h3>
           <div className="text-lg space-y-4">
             <p>
               ソフトウェアを作る仕事は労苦以外の何物でもありません。
