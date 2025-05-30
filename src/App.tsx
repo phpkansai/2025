@@ -2,7 +2,6 @@ import { ExternalLink } from 'lucide-react';
 import noteIcon from './assets/note.svg';
 import XIcon from './assets/x.svg';
 import { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
 import elemaru from './assets/elemaru.png';
 import babyjob_logo_yoko from './assets/babyjob_bro_logo.png';
 import vaddy_logo from './assets/vaddy_bro_logo.png';
@@ -153,31 +152,32 @@ function App() {
     },
   ];
   const snackSponsors = [
-    { 
-      src: gigmatch_logo, 
+    {
+      src: gigmatch_logo,
       alt: '株式会社YUZURIHA',
-      linkUrl: 'https://yzrh.jp/', 
+      linkUrl: 'https://yzrh.jp/',
     },
   ];
   const silverSponsors = [
-    { 
-      src: horizontal_blue, 
+    {
+      src: horizontal_blue,
       alt: '株式会社coco',
-      linkUrl: 'https://thecoco.jp/', 
+      linkUrl: 'https://thecoco.jp/',
     },
-    { src: HireRoo_silv_logo, 
+    {
+      src: HireRoo_silv_logo,
       alt: '株式会社ハイヤールー',
-      linkUrl: 'https://hireroo.io/', 
+      linkUrl: 'https://hireroo.io/',
     },
-    { 
-      src: iplug_silv_logo, 
+    {
+      src: iplug_silv_logo,
       alt: '株式会社i-plug',
-      linkUrl: 'https://i-plug.co.jp/', 
+      linkUrl: 'https://i-plug.co.jp/',
     },
-    { 
-      src: kaonavi_silv_logo, 
+    {
+      src: kaonavi_silv_logo,
       alt: '株式会社カオナビ',
-      linkUrl: 'https://corp.kaonavi.jp/', 
+      linkUrl: 'https://corp.kaonavi.jp/',
     },
     {
       src: completed_logo,
@@ -205,65 +205,65 @@ function App() {
     },
   ];
   const bronzeSponsors = [
-    { 
-      src: babyjob_logo_yoko, 
+    {
+      src: babyjob_logo_yoko,
       alt: 'BABY JOB株式会社',
-      linkUrl: 'https://www.b-tm.co.jp/', 
+      linkUrl: 'https://www.b-tm.co.jp/',
     },
-    { 
-      src: vaddy_logo, 
+    {
+      src: vaddy_logo,
       alt: '株式会社ビットフォレスト',
-      linkUrl: 'https://www.bitforest.jp/', 
+      linkUrl: 'https://www.bitforest.jp/',
     },
-    { 
-      src: kokucho_logo, 
+    {
+      src: kokucho_logo,
       alt: '株式会社コクチョウ',
-      linkUrl: 'https://kokuchou.net/', 
+      linkUrl: 'https://kokuchou.net/',
     },
-    { 
-      src: LKGlogo, 
+    {
+      src: LKGlogo,
       alt: '株式会社リンケージ',
-      linkUrl: 'https://linkage-inc.co.jp/', 
+      linkUrl: 'https://linkage-inc.co.jp/',
     },
-    { 
-      src: karabiner_bro_logo, 
+    {
+      src: karabiner_bro_logo,
       alt: 'カラビナテクノロジー株式会社',
-      linkUrl: 'https://karabiner.tech/', 
+      linkUrl: 'https://karabiner.tech/',
     },
-    { 
+    {
       src: rakko_bro_logo,
       alt: 'ラッコ株式会社',
       linkUrl: 'https://rakko.inc/',
     },
-    { 
+    {
       src: phpnintei_bro_logo,
       alt: 'PHP技術者認定機構',
       linkUrl: 'https://www.phpexam.jp/',
     },
-    { 
-      src: open_logo, 
-      alt: 'スポンサー企業ロゴ',
-      linkUrl: 'https://2025.kphpug.jp/', 
-    },
-    { 
-      src: open_logo, 
+    {
+      src: open_logo,
       alt: 'スポンサー企業ロゴ',
       linkUrl: 'https://2025.kphpug.jp/',
-     },
-    { 
-      src: open_logo, 
-      alt: 'スポンサー企業ロゴ',
-      linkUrl: 'https://2025.kphpug.jp/', 
     },
-    { 
-      src: open_logo, 
+    {
+      src: open_logo,
       alt: 'スポンサー企業ロゴ',
-      linkUrl: 'https://2025.kphpug.jp/', 
+      linkUrl: 'https://2025.kphpug.jp/',
     },
-    { 
-      src: open_logo, 
+    {
+      src: open_logo,
       alt: 'スポンサー企業ロゴ',
-      linkUrl: 'https://2025.kphpug.jp/', 
+      linkUrl: 'https://2025.kphpug.jp/',
+    },
+    {
+      src: open_logo,
+      alt: 'スポンサー企業ロゴ',
+      linkUrl: 'https://2025.kphpug.jp/',
+    },
+    {
+      src: open_logo,
+      alt: 'スポンサー企業ロゴ',
+      linkUrl: 'https://2025.kphpug.jp/',
     },
   ];
 
@@ -280,42 +280,39 @@ function App() {
           <h1 className="text-base md:text-xl font-bold">PHPカンファレンス関西2025</h1>
         </div>
         <div className="hidden md:flex space-x-4">
-          <div className="flex space-x-4">
-            <Link
-              to="/proposal_countdown"
-              className={`text-sm hover:underline ${
-                isScrolled ? 'text-white' : 'text-[#46AA65]'
-              }`}
-            >
-              プロポーザル締切カウントダウン
-            </Link>
+          <div className="flex space-x-4 items-center">
             <a
-              href="https://fortee.jp/phpcon-kansai2025/proposal/"
+              href="https://fortee.jp/phpcon-kansai2025/timetable/"
               target="_blank"
               rel="noopener noreferrer"
-              className={`text-sm hover:underline ${
-                isScrolled ? 'text-white' : 'text-[#46AA65]'
-              }`}
+              className={`text-sm font-bold ${isScrolled ? 'text-white' : 'text-[#46AA65]'}`}
             >
-              プロポーザル一覧
+              タイムテーブル
             </a>
             <a
               href="https://note.com/phpcon_kansai"
               target="_blank"
               rel="noopener noreferrer"
-              className={`text-sm hover:underline ${
-                isScrolled ? 'text-white' : 'text-[#46AA65]'
-              }`}
+              className={`text-sm font-bold ${isScrolled ? 'text-white' : 'text-[#46AA65]'}`}
             >
               note
+            </a>
+            <a
+              href="https://fortee.jp/phpcon-kansai2025/ticket-shop/index"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`inline-flex items-center bg-[#FFC145] text-white font-bold px-4 py-1 rounded-full hover:bg-opacity-90 transition ${
+                isScrolled ? 'text-white' : 'text-white'
+              }`}
+            >
+              <ExternalLink className="w-4 h-4 mr-2" />
+              チケット購入
             </a>
           </div>
         </div>
         <div className="md:hidden relative">
           <button
-            className={`focus:outline-none ${
-              isScrolled ? 'text-white' : 'text-[#46AA65]'
-            }`}
+            className={`focus:outline-none ${isScrolled ? 'text-white' : 'text-[#46AA65]'}`}
             onClick={() => setMenuOpen(!menuOpen)}
           >
             <svg
@@ -325,37 +322,34 @@ function App() {
               viewBox="0 0 24 24"
               xmlns="http://www.w3.org/2000/svg"
             >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M4 6h16M4 12h16m-7 6h7"
-              ></path>
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16m-7 6h7"></path>
             </svg>
           </button>
           {menuOpen && (
             <div className="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg z-50">
-              <Link
-                to="/proposal_countdown"
-                className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 first:rounded-t-md"
-              >
-                プロポーザル締切カウントダウン
-              </Link>
               <a
-                href="https://fortee.jp/phpcon-kansai2025/proposal/"
+                href="https://fortee.jp/phpcon-kansai2025/timetable/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                className="block px-4 py-2 text-sm font-bold text-gray-700 hover:bg-gray-100 first:rounded-t-md"
               >
-                プロポーザル一覧
+                タイムテーブル
               </a>
               <a
                 href="https://note.com/phpcon_kansai"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 last:rounded-b-md"
+                className="block px-4 py-2 text-sm font-bold text-gray-700 hover:bg-gray-100"
               >
                 note
+              </a>
+              <a
+                href="https://fortee.jp/phpcon-kansai2025/ticket-shop/index"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block px-4 py-2 text-sm font-bold text-gray-700 hover:bg-gray-100 last:rounded-b-md"
+              >
+                チケット購入
               </a>
             </div>
           )}
@@ -363,12 +357,14 @@ function App() {
       </header>
 
       {/* Hero Section */}
-      <div className="relative h-screen bg-[#46AA65] flex items-center justify-center text-white pt-16 md:pt-0"
-           style={{
-             backgroundImage: 'url(https://2018.kphpug.jp/assets/images/keyvisual.jpg)',
-             backgroundSize: 'cover',
-             backgroundPosition: 'center'
-           }}>
+      <div
+        className="relative h-screen bg-[#46AA65] flex items-center justify-center text-white pt-16 md:pt-0"
+        style={{
+          backgroundImage: 'url(https://2018.kphpug.jp/assets/images/keyvisual.jpg)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      >
         <div className="absolute inset-0 bg-[#46AA65] opacity-70"></div>
         <div className="relative text-center space-y-4 md:space-y-6">
           <img src={elemaru} alt="えれ丸" className="mx-auto h-28 w-28 md:h-40 md:w-40 object-contain" />
@@ -383,27 +379,14 @@ function App() {
           <div className="flex flex-col space-y-4">
             <div>
               <a
-                href="https://fortee.jp/phpcon-kansai2025/sponsor/form"
+                href="https://fortee.jp/phpcon-kansai2025/ticket-shop/index"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center bg-[#FFC145] text-white font-bold px-6 py-2 rounded-full hover:bg-opacity-90 transition"
+                className="inline-flex items-center bg-[#FFC145] text-white font-bold px-8 py-3 text-lg md:text-xl rounded-full hover:bg-opacity-90 transition"
               >
-                <ExternalLink className="w-4 h-4 mr-2" />
-                スポンサー募集中！
+                <ExternalLink className="w-5 h-5 mr-2" />
+                参加チケットはこちらから
               </a>
-            </div>
-            <div>
-              <div className="text-center">
-                <a
-                  href="https://fortee.jp/phpcon-kansai2025/ticket-shop/index"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center bg-[#FFC145] text-white font-bold px-6 py-2 rounded-full hover:bg-opacity-90 transition"
-                >
-                  <ExternalLink className="w-4 h-4 mr-2" />
-                  参加チケットはこちらから
-                </a>
-              </div>
             </div>
           </div>
         </div>
@@ -576,7 +559,7 @@ function App() {
                   className="flex flex-col items-center justify-start"
                 >
                   <img
-                    src={proposal.speaker.avatar_url || "https://placehold.jp/200x200.png"}
+                    src={proposal.speaker.avatar_url || 'https://placehold.jp/200x200.png'}
                     alt={proposal.speaker.name}
                     className="h-24 w-24 object-cover rounded-full mb-2"
                   />
@@ -591,7 +574,7 @@ function App() {
         </div>
       </section>
 
-     {/* Staff */}
+      {/* Staff */}
       <section className="py-20 px-6">
         <h2 className="text-3xl font-bold text-[#46AA65] text-center mb-10">STAFF</h2>
         <div className="max-w-4xl mx-auto">
@@ -606,13 +589,11 @@ function App() {
                   <div key={member.id} className="flex flex-col items-center justify-center text-center min-h-[160px]">
                     <a href={member.url} target="_blank" rel="noopener noreferrer" className="block">
                       <img
-                        src={member.avatar_url || "https://placehold.jp/200x200.png"}
+                        src={member.avatar_url || 'https://placehold.jp/200x200.png'}
                         alt={member.name}
                         className="h-24 w-24 object-cover rounded-full mb-2"
                       />
-                      <p className="text-sm font-medium text-black text-center">
-                        {member.name}
-                      </p>
+                      <p className="text-sm font-medium text-black text-center">{member.name}</p>
                     </a>
                   </div>
                 ))}
@@ -621,7 +602,6 @@ function App() {
           ))}
         </div>
       </section>
-
 
       {/* Footer */}
       <footer className="bg-[#46AA65] text-white py-12">
