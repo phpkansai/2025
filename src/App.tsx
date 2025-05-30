@@ -1,4 +1,4 @@
-import { Users, Building2, PartyPopper, ExternalLink } from 'lucide-react';
+import { ExternalLink } from 'lucide-react';
 import noteIcon from './assets/note.svg';
 import XIcon from './assets/x.svg';
 import { useState, useEffect } from 'react';
@@ -127,7 +127,6 @@ function App() {
     {
       src: RouteZero_pla_logo,
       alt: '株式会社ルートゼロ',
-      className: 'h-32 w-auto object-contain',
       linkUrl: 'https://route-zero.com/recruit/',
     },
   ];
@@ -135,58 +134,49 @@ function App() {
     {
       src: sakura_logo,
       alt: 'さくらインターネット株式会社',
-      className: 'h-24 w-auto object-contain',
       linkUrl: 'https://www.sakura.ad.jp/',
     },
     {
       src: samuraism_gold_logo,
       alt: '株式会社サムライズム',
-      className: 'h-24 w-auto object-contain',
       linkUrl: 'https://samuraism.com/',
     },
     {
       src: completed_logo,
       alt: 'スポンサー企業ロゴ',
-      className: 'h-24 w-auto object-contain',
       linkUrl: 'https://2025.kphpug.jp/',
     },
     {
       src: completed_logo,
       alt: 'スポンサー企業ロゴ',
-      className: 'h-24 w-auto object-contain',
       linkUrl: 'https://2025.kphpug.jp/',
     },
   ];
   const snackSponsors = [
     { 
       src: gigmatch_logo, 
-      alt: '株式会社YUZURIHA', 
-      className: 'h-20 w-auto object-contain',
+      alt: '株式会社YUZURIHA',
       linkUrl: 'https://yzrh.jp/', 
     },
   ];
   const silverSponsors = [
     { 
       src: horizontal_blue, 
-      alt: '株式会社coco', 
-      className: 'h-16 w-auto object-contain',
+      alt: '株式会社coco',
       linkUrl: 'https://thecoco.jp/', 
     },
     { src: HireRoo_silv_logo, 
-      alt: '株式会社ハイヤールー', 
-      className: 'h-16 w-auto object-contain',
+      alt: '株式会社ハイヤールー',
       linkUrl: 'https://hireroo.io/', 
     },
     { 
       src: iplug_silv_logo, 
-      alt: '株式会社i-plug', 
-      className: 'h-16 w-auto object-contain',
+      alt: '株式会社i-plug',
       linkUrl: 'https://i-plug.co.jp/', 
     },
     { 
       src: kaonavi_silv_logo, 
-      alt: '株式会社カオナビ', 
-      className: 'h-16 w-auto object-contain',
+      alt: '株式会社カオナビ',
       linkUrl: 'https://corp.kaonavi.jp/', 
     },
     {
@@ -217,74 +207,62 @@ function App() {
   const bronzeSponsors = [
     { 
       src: babyjob_logo_yoko, 
-      alt: 'BABY JOB株式会社', 
-      className: 'h-12 w-auto object-contain',
+      alt: 'BABY JOB株式会社',
       linkUrl: 'https://www.b-tm.co.jp/', 
     },
     { 
       src: vaddy_logo, 
-      alt: '株式会社ビットフォレスト', 
-      className: 'h-12 w-auto object-contain',
+      alt: '株式会社ビットフォレスト',
       linkUrl: 'https://www.bitforest.jp/', 
     },
     { 
       src: kokucho_logo, 
-      alt: '株式会社コクチョウ', 
-      className: 'h-12 w-auto object-contain',
+      alt: '株式会社コクチョウ',
       linkUrl: 'https://kokuchou.net/', 
     },
     { 
       src: LKGlogo, 
-      alt: '株式会社リンケージ', 
-      className: 'h-12 w-auto object-contain',
+      alt: '株式会社リンケージ',
       linkUrl: 'https://linkage-inc.co.jp/', 
     },
     { 
       src: karabiner_bro_logo, 
-      alt: 'カラビナテクノロジー株式会社', 
-      className: 'h-12 w-auto object-contain',
+      alt: 'カラビナテクノロジー株式会社',
       linkUrl: 'https://karabiner.tech/', 
     },
     { 
-      src: rakko_bro_logo, 
-      alt: 'ラッコ株式会社', 
-      className: 'h-12 w-auto object-contain',
-      linkUrl: 'https://rakko.inc/', 
+      src: rakko_bro_logo,
+      alt: 'ラッコ株式会社',
+      linkUrl: 'https://rakko.inc/',
     },
     { 
-      src: phpnintei_bro_logo, 
-      alt: 'PHP技術者認定機構', 
-      className: 'h-12 w-auto object-contain',
-      linkUrl: 'https://www.phpexam.jp/', 
+      src: phpnintei_bro_logo,
+      alt: 'PHP技術者認定機構',
+      linkUrl: 'https://www.phpexam.jp/',
     },
     { 
       src: open_logo, 
-      alt: 'スポンサー企業ロゴ', 
-      className: 'h-12 w-auto object-contain',
+      alt: 'スポンサー企業ロゴ',
       linkUrl: 'https://2025.kphpug.jp/', 
     },
     { 
       src: open_logo, 
-      alt: 'スポンサー企業ロゴ', 
-      className: 'h-12 w-auto object-contain',
+      alt: 'スポンサー企業ロゴ',
       linkUrl: 'https://2025.kphpug.jp/',
      },
     { 
       src: open_logo, 
-      alt: 'スポンサー企業ロゴ', 
-      className: 'h-12 w-auto object-contain',
+      alt: 'スポンサー企業ロゴ',
       linkUrl: 'https://2025.kphpug.jp/', 
     },
     { 
       src: open_logo, 
-      alt: 'スポンサー企業ロゴ', 
-      className: 'h-12 w-auto object-contain',
+      alt: 'スポンサー企業ロゴ',
       linkUrl: 'https://2025.kphpug.jp/', 
     },
     { 
       src: open_logo, 
-      alt: 'スポンサー企業ロゴ', 
-      className: 'h-12 w-auto object-contain',
+      alt: 'スポンサー企業ロゴ',
       linkUrl: 'https://2025.kphpug.jp/', 
     },
   ];
@@ -519,9 +497,9 @@ function App() {
 
       {/* Sponsors */}
       <section className="py-20 px-6 bg-[#46AA65] ">
-        <h2 className="text-2xl font-bold text-white text-center mb-10">SPONSORS</h2>
+        <h2 className="text-3xl font-bold text-white text-center mb-10">SPONSORS</h2>
         <div className="max-w-4xl mx-auto">
-          <p className="text-lg mb-8">
+          <p className="text-lg text-white mb-8">
             PHPカンファレンス関西2025は、スポンサー企業様のご協力により開催されます。スポンサー企業様のご支援を心より感謝申し上げます。
           </p>
           <p className="text-1xl font-bold text-white text-center mb-10">プラチナスポンサー</p>
@@ -529,7 +507,7 @@ function App() {
             {platinumSponsors.map((s, i) => (
               <div key={i} className="flex items-center justify-center">
                 <a href={s.linkUrl}>
-                  <img src={s.src} alt={s.alt} className={s.className} />
+                  <img src={s.src} alt={s.alt} className="h-32 w-auto object-contain" />
                 </a>
               </div>
             ))}
@@ -540,7 +518,7 @@ function App() {
             {goldSponsors.map((s, i) => (
               <div key={i} className="flex items-center justify-center">
                 <a href={s.linkUrl}>
-                  <img src={s.src} alt={s.alt} className={s.className} />
+                  <img src={s.src} alt={s.alt} className="h-24 w-auto object-contain" />
                 </a>
               </div>
             ))}
@@ -551,7 +529,7 @@ function App() {
               <div className="flex flex-col items-center justify-center">
                 <span className="mb-2 text-white font-bold">おやつスポンサー</span>
                 <a href={snackSponsors[0].linkUrl}>
-                  <img src={snackSponsors[0].src} alt={snackSponsors[0].alt} className={snackSponsors[0].className} />
+                  <img src={snackSponsors[0].src} alt={snackSponsors[0].alt} className="h-20 w-auto object-contain" />
                 </a>
               </div>
             )}
@@ -562,18 +540,18 @@ function App() {
             {silverSponsors.map((s, i) => (
               <div key={i} className="flex items-center justify-center">
                 <a href={s.linkUrl}>
-                  <img src={s.src} alt={s.alt} className={s.className} />
+                  <img src={s.src} alt={s.alt} className="h-16 w-auto object-contain" />
                 </a>
               </div>
             ))}
           </div>
-          
+
           <p className="text-1xl font-bold text-white text-center mb-10">ブロンズスポンサー</p>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-6">
             {bronzeSponsors.map((s, i) => (
               <div key={i} className="flex items-center justify-center">
                 <a href={s.linkUrl}>
-                  <img src={s.src} alt={s.alt} className={s.className} />
+                  <img src={s.src} alt={s.alt} className="h-12 w-auto object-contain" />
                 </a>
               </div>
             ))}
@@ -582,8 +560,8 @@ function App() {
       </section>
 
       {/* Speaker */}
-      <section className="bg-[#AED850] py-20 px-6">
-        <h2 className="text-3xl font-bold text-white text-center mb-10">SPEAKER</h2>
+      <section className="bg-gray-50 py-20 px-6">
+        <h2 className="text-3xl font-bold text-center mb-10 text-[#46AA65]">SPEAKER</h2>
         <div className="max-w-4xl mx-auto">
           <p className="text-lg mb-8">
             PHPカンファレンス関西2025では、PHPに関する様々なトピックについて、公募で選ばれたスピーカーによる講演を行います。スピーカーの皆様のご協力に感謝申し上げます。
@@ -592,7 +570,7 @@ function App() {
             {speakers.map((proposal) => (
               <div key={proposal.uuid} className="flex flex-col items-center justify-start text-center min-h-[160px]">
                 <a
-                  href={proposal.url}
+                  href={proposal.speaker.twitter ? `https://x.com/${proposal.speaker.twitter}` : proposal.url}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex flex-col items-center justify-start"
@@ -602,8 +580,8 @@ function App() {
                     alt={proposal.speaker.name}
                     className="h-24 w-24 object-cover rounded-full mb-2"
                   />
-                  <p className="text-sm font-medium text-white">{proposal.speaker.name}</p>
-                  <p className="text-xs text-white min-h-[1.25rem]">
+                  <p className="text-sm font-medium">{proposal.speaker.name}</p>
+                  <p className="text-xs min-h-[1.25rem]">
                     {proposal.speaker.twitter ? `@${proposal.speaker.twitter}` : '\u00A0'}
                   </p>
                 </a>
