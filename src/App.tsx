@@ -486,8 +486,22 @@ function App() {
             PHPカンファレンス関西2025は、スポンサー企業様のご協力により開催されます。スポンサー企業様のご支援を心より感謝申し上げます。
           </p>
           <p className="text-1xl font-bold text-white text-center mb-10">プラチナスポンサー</p>
-          <div className="flex justify-center mb-16">
+          <div className="flex flex-wrap justify-center gap-16 mb-16">
             {platinumSponsors.map((s, i) => (
+              <div
+                key={i}
+                className="flex items-center justify-center transform transition-all duration-300 hover:scale-105"
+              >
+                <a href={s.linkUrl}>
+                  <img src={s.src} alt={s.alt} className="h-72 w-auto object-contain" />
+                </a>
+              </div>
+            ))}
+          </div>
+
+          <p className="text-1xl font-bold text-white text-center mb-10">ゴールドスポンサー</p>
+          <div className="flex flex-wrap justify-center gap-16 mb-16">
+            {goldSponsors.map((s, i) => (
               <div
                 key={i}
                 className="flex items-center justify-center transform transition-all duration-300 hover:scale-105"
@@ -499,54 +513,40 @@ function App() {
             ))}
           </div>
 
-          <p className="text-1xl font-bold text-white text-center mb-10">ゴールドスポンサー</p>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-10 mb-16">
-            {goldSponsors.map((s, i) => (
-              <div
-                key={i}
-                className="flex items-center justify-center transform transition-all duration-300 hover:scale-105"
-              >
-                <a href={s.linkUrl}>
-                  <img src={s.src} alt={s.alt} className="h-32 w-auto object-contain" />
-                </a>
-              </div>
-            ))}
-          </div>
-
           <p className="text-1xl font-bold text-white text-center mb-10">おやつスポンサー</p>
           <div className="flex flex-wrap justify-center gap-10 mb-16">
             {snackSponsors[0] && (
               <div className="flex flex-col items-center justify-center transform transition-all duration-300 hover:scale-105">
                 <a href={snackSponsors[0].linkUrl}>
-                  <img src={snackSponsors[0].src} alt={snackSponsors[0].alt} className="h-28 w-auto object-contain" />
+                  <img src={snackSponsors[0].src} alt={snackSponsors[0].alt} className="h-32 w-auto object-contain" />
                 </a>
               </div>
             )}
           </div>
 
           <p className="text-1xl font-bold text-white text-center mb-10">シルバースポンサー</p>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-10 mb-16">
+          <div className="flex flex-wrap justify-center gap-16 mb-16">
             {silverSponsors.map((s, i) => (
               <div
                 key={i}
                 className="flex items-center justify-center transform transition-all duration-300 hover:scale-105"
               >
                 <a href={s.linkUrl}>
-                  <img src={s.src} alt={s.alt} className="h-24 w-auto object-contain" />
+                  <img src={s.src} alt={s.alt} className="h-28 w-auto object-contain" />
                 </a>
               </div>
             ))}
           </div>
 
           <p className="text-1xl font-bold text-white text-center mb-10">ブロンズスポンサー</p>
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-6">
+          <div className="flex flex-wrap justify-center gap-16 mb-16">
             {bronzeSponsors.map((s, i) => (
               <div
                 key={i}
                 className="flex items-center justify-center transform transition-all duration-300 hover:scale-105"
               >
                 <a href={s.linkUrl}>
-                  <img src={s.src} alt={s.alt} className="h-16 w-auto object-contain" />
+                  <img src={s.src} alt={s.alt} className="h-20 w-auto object-contain" />
                 </a>
               </div>
             ))}
