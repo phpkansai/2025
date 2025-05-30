@@ -403,9 +403,9 @@ function App() {
           {news.map((item) => (
             <div key={item.id} className="bg-white p-6 rounded-lg shadow-md">
               <h3 className="text-xl font-bold text-[#46AA65] mb-2">{item.title}</h3>
-              <p className="text-sm text-gray-500 mb-4">{new Date(item.published).toLocaleDateString()}</p>
+              <p className="text-sm text-gray-500">{new Date(item.published).toLocaleDateString()}</p>
               <div
-                className="prose prose-a:text-[#46AA65] prose-a:hover:underline"
+                className={`prose prose-a:text-[#46AA65] prose-a:hover:underline ${item.body_html ? 'mt-4' : ''}`}
                 dangerouslySetInnerHTML={{ __html: item.body_html }}
               />
             </div>
