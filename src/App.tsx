@@ -367,11 +367,7 @@ function App() {
       >
         <div className="absolute inset-0 bg-[#46AA65] opacity-70"></div>
         <div className="relative text-center space-y-4 md:space-y-6">
-          <img
-            src={elemaru}
-            alt="えれ丸"
-            className="mx-auto h-28 w-28 md:h-40 md:w-40 object-contain animate-bounce-slow"
-          />
+          <img src={elemaru} alt="えれ丸" className="mx-auto h-28 w-28 md:h-40 md:w-40 object-contain animate-float" />
           <h1 className="text-3xl md:text-5xl font-bold animate-slide-up">PHPカンファレンス関西2025</h1>
           <p className="text-2xl md:text-4xl animate-slide-up-delay-1">
             2025年
@@ -628,7 +624,7 @@ function App() {
       <footer className="bg-[#46AA65] text-white py-12">
         <div className="max-w-6xl mx-auto px-6">
           <div className="flex flex-col items-center mb-8">
-            <img src={elemaru} alt="えれ丸" className="h-20 w-20 mb-4 object-contain animate-bounce-slow" />
+            <img src={elemaru} alt="えれ丸" className="h-20 w-20 mb-4 object-contain" />
             <h2 className="text-2xl font-bold">PHPカンファレンス関西2025</h2>
           </div>
           <div className="flex justify-center space-x-4 mb-8">
@@ -697,6 +693,20 @@ function App() {
           </div>
         </div>
       </footer>
+
+      <style>{`
+        @keyframes float {
+          0%, 100% {
+            transform: translateY(0);
+          }
+          50% {
+            transform: translateY(-20px);
+          }
+        }
+        .animate-float {
+          animation: float 3s ease-in-out infinite;
+        }
+      `}</style>
     </div>
   );
 }
