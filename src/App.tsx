@@ -401,10 +401,7 @@ function App() {
         <h2 className="text-3xl font-bold text-[#46AA65] text-center mb-10">お知らせ</h2>
         <div className="max-w-4xl mx-auto space-y-6">
           {news.map((item) => (
-            <div
-              key={item.id}
-              className="bg-white p-6 rounded-lg shadow-md transform transition-all duration-300 hover:scale-105"
-            >
+            <div key={item.id} className="bg-white p-6 rounded-lg shadow-md">
               <h3 className="text-xl font-bold text-[#46AA65] mb-2">{item.title}</h3>
               <p className="text-sm text-gray-500 mb-4">{new Date(item.published).toLocaleDateString()}</p>
               <div
