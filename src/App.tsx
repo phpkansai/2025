@@ -32,6 +32,13 @@ interface StaffData {
   [category: string]: StaffMember[];
 }
 
+interface NewsItem {
+  id: string;
+  title: string;
+  published: string;
+  body_html: string;
+}
+
 interface Speaker {
   name: string;
   kana?: string;
@@ -55,17 +62,10 @@ interface Proposal {
   created: string;
   timetable?: Timetable;
 }
+
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
-
   const [isScrolled, setIsScrolled] = useState(false);
-  interface NewsItem {
-    id: string;
-    title: string;
-    published: string;
-    body_html: string;
-  }
-
   const [news, setNews] = useState<NewsItem[]>([]);
   const [staff, setStaff] = useState<StaffData>({});
   const [speakers, setSpeakers] = useState<Proposal[]>([]);
@@ -367,22 +367,26 @@ function App() {
       >
         <div className="absolute inset-0 bg-[#46AA65] opacity-70"></div>
         <div className="relative text-center space-y-4 md:space-y-6">
-          <img src={elemaru} alt="えれ丸" className="mx-auto h-28 w-28 md:h-40 md:w-40 object-contain" />
-          <h1 className="text-3xl md:text-5xl font-bold">PHPカンファレンス関西2025</h1>
-          <p className="text-2xl md:text-4xl">
+          <img
+            src={elemaru}
+            alt="えれ丸"
+            className="mx-auto h-28 w-28 md:h-40 md:w-40 object-contain animate-bounce-slow"
+          />
+          <h1 className="text-3xl md:text-5xl font-bold animate-slide-up">PHPカンファレンス関西2025</h1>
+          <p className="text-2xl md:text-4xl animate-slide-up-delay-1">
             2025年
             <span className="font-bold text-3xl md:text-5xl">7</span>月
             <span className="font-bold text-3xl md:text-5xl">18</span>日(金)・
             <span className="font-bold text-3xl md:text-5xl">19</span>日(土)
           </p>
-          <p className="text-base md:text-xl">神戸駅前研修センター</p>
-          <div className="flex flex-col space-y-4">
+          <p className="text-base md:text-xl animate-slide-up-delay-2">神戸駅前研修センター</p>
+          <div className="flex flex-col space-y-4 animate-slide-up-delay-3">
             <div>
               <a
                 href="https://fortee.jp/phpcon-kansai2025/ticket-shop/index"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center bg-[#FFC145] text-white font-bold px-8 py-3 text-lg md:text-xl rounded-full hover:bg-opacity-90 transition"
+                className="inline-flex items-center bg-[#FFC145] text-white font-bold px-8 py-3 text-lg md:text-xl rounded-full hover:bg-opacity-90 transition-all duration-300 hover:scale-105"
               >
                 <ExternalLink className="w-5 h-5 mr-2" />
                 参加チケットはこちらから
@@ -397,7 +401,10 @@ function App() {
         <h2 className="text-3xl font-bold text-[#46AA65] text-center mb-10">お知らせ</h2>
         <div className="max-w-4xl mx-auto space-y-6">
           {news.map((item) => (
-            <div key={item.id} className="bg-white p-6 rounded-lg shadow-md">
+            <div
+              key={item.id}
+              className="bg-white p-6 rounded-lg shadow-md transform transition-all duration-300 hover:scale-105"
+            >
               <h3 className="text-xl font-bold text-[#46AA65] mb-2">{item.title}</h3>
               <p className="text-sm text-gray-500 mb-4">{new Date(item.published).toLocaleDateString()}</p>
               <div
@@ -416,7 +423,7 @@ function App() {
             PHPカンファレンス関西は、PHPエンジニア（PHPer）がPHPやPHP周辺の技術的知識やノウハウ、体験を共有するための大規模技術カンファレンスです。2011年から過去9回開催されており、毎回その時のPHP最新情報やトレンドの話題で盛り上がります。関西や全国から集まったPHPerがお互いに情報を交換し、エンジニアとしてレベルアップをする場となるべく、6年ぶりの開催となった2024年に続き2025年も開催することになりました。イベント当日は一般公募で集まったエンジニアによる講演をはじめ、その他情報共有を行うための催しが行われます。
           </p>
           <h3 className="text-2xl font-bold text-[#46AA65] mb-4">参加資格</h3>
-          <p className="text-lg">
+          <p>
             PHPを使っている人、PHPを使っていた人、PHPに興味がある人など、PHPに関係する人全てに参加資格があります。自身の情報アップデートのためにもぜひお越しください！
           </p>
         </div>
@@ -469,7 +476,7 @@ function App() {
               href="https://maps.app.goo.gl/Xytu5L8wmibjbXbHA"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center bg-[#FFC145] text-white font-bold px-6 py-2 rounded-full hover:bg-opacity-90 transition"
+              className="inline-flex items-center bg-[#FFC145] text-white font-bold px-6 py-2 rounded-full hover:bg-opacity-90 transition-all duration-300 hover:scale-105"
             >
               <ExternalLink className="w-4 h-4 mr-2" />
               Googleマップを開く
@@ -479,7 +486,7 @@ function App() {
       </section>
 
       {/* Sponsors */}
-      <section className="py-20 px-6 bg-[#46AA65] ">
+      <section className="py-20 px-6 bg-[#46AA65]">
         <h2 className="text-3xl font-bold text-white text-center mb-10">SPONSORS</h2>
         <div className="max-w-4xl mx-auto">
           <p className="text-lg text-white mb-8">
@@ -488,9 +495,12 @@ function App() {
           <p className="text-1xl font-bold text-white text-center mb-10">プラチナスポンサー</p>
           <div className="flex justify-center mb-16">
             {platinumSponsors.map((s, i) => (
-              <div key={i} className="flex items-center justify-center">
+              <div
+                key={i}
+                className="flex items-center justify-center transform transition-all duration-300 hover:scale-105"
+              >
                 <a href={s.linkUrl}>
-                  <img src={s.src} alt={s.alt} className="h-32 w-auto object-contain" />
+                  <img src={s.src} alt={s.alt} className="h-40 w-auto object-contain" />
                 </a>
               </div>
             ))}
@@ -499,20 +509,23 @@ function App() {
           <p className="text-1xl font-bold text-white text-center mb-10">ゴールドスポンサー</p>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-10 mb-16">
             {goldSponsors.map((s, i) => (
-              <div key={i} className="flex items-center justify-center">
+              <div
+                key={i}
+                className="flex items-center justify-center transform transition-all duration-300 hover:scale-105"
+              >
                 <a href={s.linkUrl}>
-                  <img src={s.src} alt={s.alt} className="h-24 w-auto object-contain" />
+                  <img src={s.src} alt={s.alt} className="h-32 w-auto object-contain" />
                 </a>
               </div>
             ))}
           </div>
 
+          <p className="text-1xl font-bold text-white text-center mb-10">おやつスポンサー</p>
           <div className="flex flex-wrap justify-center gap-10 mb-16">
             {snackSponsors[0] && (
-              <div className="flex flex-col items-center justify-center">
-                <span className="mb-2 text-white font-bold">おやつスポンサー</span>
+              <div className="flex flex-col items-center justify-center transform transition-all duration-300 hover:scale-105">
                 <a href={snackSponsors[0].linkUrl}>
-                  <img src={snackSponsors[0].src} alt={snackSponsors[0].alt} className="h-20 w-auto object-contain" />
+                  <img src={snackSponsors[0].src} alt={snackSponsors[0].alt} className="h-28 w-auto object-contain" />
                 </a>
               </div>
             )}
@@ -521,9 +534,12 @@ function App() {
           <p className="text-1xl font-bold text-white text-center mb-10">シルバースポンサー</p>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-10 mb-16">
             {silverSponsors.map((s, i) => (
-              <div key={i} className="flex items-center justify-center">
+              <div
+                key={i}
+                className="flex items-center justify-center transform transition-all duration-300 hover:scale-105"
+              >
                 <a href={s.linkUrl}>
-                  <img src={s.src} alt={s.alt} className="h-16 w-auto object-contain" />
+                  <img src={s.src} alt={s.alt} className="h-24 w-auto object-contain" />
                 </a>
               </div>
             ))}
@@ -532,9 +548,12 @@ function App() {
           <p className="text-1xl font-bold text-white text-center mb-10">ブロンズスポンサー</p>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-6">
             {bronzeSponsors.map((s, i) => (
-              <div key={i} className="flex items-center justify-center">
+              <div
+                key={i}
+                className="flex items-center justify-center transform transition-all duration-300 hover:scale-105"
+              >
                 <a href={s.linkUrl}>
-                  <img src={s.src} alt={s.alt} className="h-12 w-auto object-contain" />
+                  <img src={s.src} alt={s.alt} className="h-16 w-auto object-contain" />
                 </a>
               </div>
             ))}
@@ -556,7 +575,7 @@ function App() {
                   href={proposal.speaker.twitter ? `https://x.com/${proposal.speaker.twitter}` : proposal.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex flex-col items-center justify-start"
+                  className="flex flex-col items-center justify-start transform transition-all duration-300 hover:scale-105"
                 >
                   <img
                     src={proposal.speaker.avatar_url || 'https://placehold.jp/200x200.png'}
@@ -587,7 +606,12 @@ function App() {
               <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6">
                 {members.map((member) => (
                   <div key={member.id} className="flex flex-col items-center justify-center text-center min-h-[160px]">
-                    <a href={member.url} target="_blank" rel="noopener noreferrer" className="block">
+                    <a
+                      href={member.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block transform transition-all duration-300 hover:scale-105"
+                    >
                       <img
                         src={member.avatar_url || 'https://placehold.jp/200x200.png'}
                         alt={member.name}
@@ -607,14 +631,24 @@ function App() {
       <footer className="bg-[#46AA65] text-white py-12">
         <div className="max-w-6xl mx-auto px-6">
           <div className="flex flex-col items-center mb-8">
-            <img src={elemaru} alt="えれ丸" className="h-20 w-20 mb-4 object-contain" />
+            <img src={elemaru} alt="えれ丸" className="h-20 w-20 mb-4 object-contain animate-bounce-slow" />
             <h2 className="text-2xl font-bold">PHPカンファレンス関西2025</h2>
           </div>
           <div className="flex justify-center space-x-4 mb-8">
-            <a href="https://x.com/phpcon_kansai" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://x.com/phpcon_kansai"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="transform transition-all duration-300 hover:scale-110"
+            >
               <img src={XIcon} alt="X" className="w-6 h-6" />
             </a>
-            <a href="https://note.com/phpcon_kansai" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://note.com/phpcon_kansai"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="transform transition-all duration-300 hover:scale-110"
+            >
               <img src={noteIcon} alt="Note" className="w-6 h-6" />
             </a>
           </div>
