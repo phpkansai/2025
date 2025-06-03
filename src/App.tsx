@@ -592,7 +592,7 @@ function App() {
       </section>
 
       {/* Supporter */}
-      <section className="bg-gray-50 py-20 px-6">
+      <section className="bg-white py-20 px-6">
         <h2 className="text-3xl font-bold text-center mb-10 text-[#46AA65]">INDIVIDUAL SPONSORS</h2>
         <div className="max-w-4xl mx-auto">
           <p className="text-lg mb-8 text-center">
