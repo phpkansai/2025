@@ -11,13 +11,16 @@ import kokucho_logo from './assets/kokucho_bro_logo.png';
 import LKGlogo from './assets/LKG_bro_logo.png';
 import karabiner_bro_logo from './assets/karabiner_bro_logo.png';
 import rakko_bro_logo from './assets/rakko_bro_logo.png';
+import eustyle_bro_logo from './assets/eustyle_bro_logo.png';
 import phpnintei_bro_logo from './assets/phpnintei_bro_logo.png';
 import horizontal_blue from './assets/horizontal_silv_logo.png';
 import HireRoo_silv_logo from './assets/HireRoo_silv_logo.png';
 import iplug_silv_logo from './assets/iplug_silv_logo.png';
 import kaonavi_silv_logo from './assets/kaonavi_silv_logo.png';
+import sacraya_silv_logo from './assets/sacraya_silv_logo.png';
 import sakura_logo from './assets/sakura_gold_logo.png';
 import samuraism_gold_logo from './assets/samuraism_gold_logo.png';
+import lamp_gold_logo from './assets/lamp_gold_logo.png';
 import RouteZero_pla_logo from './assets/RouteZero_pla_logo.png';
 import gigmatch_logo from './assets/gigmatch_snac_logo .png';
 import open_logo from './assets/open.png';
@@ -143,9 +146,9 @@ function App() {
       linkUrl: 'https://samuraism.com/',
     },
     {
-      src: completed_logo,
-      alt: 'スポンサー企業ロゴ',
-      linkUrl: 'https://2025.kphpug.jp/',
+      src: lamp_gold_logo,
+      alt: '株式会社ランプ',
+      linkUrl: 'https://lamp.jp/',
     },
     {
       src: completed_logo,
@@ -182,10 +185,10 @@ function App() {
       linkUrl: 'https://corp.kaonavi.jp/',
     },
     {
-      src: completed_logo,
-      alt: 'スポンサー企業ロゴ',
+      src: sacraya_silv_logo,
+      alt: '有限会社咲楽屋',
       className: 'h-16 w-auto object-contain',
-      linkUrl: 'https://2025.kphpug.jp/',
+      linkUrl: 'https://www.sacraya.co.jp/',
     },
     {
       src: completed_logo,
@@ -243,9 +246,9 @@ function App() {
       linkUrl: 'https://www.phpexam.jp/',
     },
     {
-      src: open_logo,
-      alt: 'スポンサー企業ロゴ',
-      linkUrl: 'https://2025.kphpug.jp/',
+      src: eustyle_bro_logo,
+      alt: 'ユースタイルラボラトリー株式会社',
+      linkUrl: 'https://eustylelab.co.jp/',
     },
     {
       src: open_logo,
