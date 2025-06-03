@@ -2,6 +2,8 @@ import { ExternalLink } from 'lucide-react';
 import noteIcon from './assets/note.svg';
 import XIcon from './assets/x.svg';
 import { useState, useEffect } from 'react';
+import personalSponsors from "./data/personal_sponsors.json";
+import motttoouenSponsors from "./data/motto_ouen_sponsors.json";
 import elemaru from './assets/elemaru.png';
 import babyjob_logo_yoko from './assets/babyjob_bro_logo.png';
 import vaddy_logo from './assets/vaddy_bro_logo.png';
@@ -9,13 +11,16 @@ import kokucho_logo from './assets/kokucho_bro_logo.png';
 import LKGlogo from './assets/LKG_bro_logo.png';
 import karabiner_bro_logo from './assets/karabiner_bro_logo.png';
 import rakko_bro_logo from './assets/rakko_bro_logo.png';
+import eustyle_bro_logo from './assets/eustyle_bro_logo.png';
 import phpnintei_bro_logo from './assets/phpnintei_bro_logo.png';
 import horizontal_blue from './assets/horizontal_silv_logo.png';
 import HireRoo_silv_logo from './assets/HireRoo_silv_logo.png';
 import iplug_silv_logo from './assets/iplug_silv_logo.png';
 import kaonavi_silv_logo from './assets/kaonavi_silv_logo.png';
+import sacraya_silv_logo from './assets/sacraya_silv_logo.png';
 import sakura_logo from './assets/sakura_gold_logo.png';
 import samuraism_gold_logo from './assets/samuraism_gold_logo.png';
+import lamp_gold_logo from './assets/lamp_gold_logo.png';
 import RouteZero_pla_logo from './assets/RouteZero_pla_logo.png';
 import gigmatch_logo from './assets/gigmatch_snac_logo .png';
 import open_logo from './assets/open.png';
@@ -141,9 +146,9 @@ function App() {
       linkUrl: 'https://samuraism.com/',
     },
     {
-      src: completed_logo,
-      alt: 'スポンサー企業ロゴ',
-      linkUrl: 'https://2025.kphpug.jp/',
+      src: lamp_gold_logo,
+      alt: '株式会社ランプ',
+      linkUrl: 'https://lamp.jp/',
     },
     {
       src: completed_logo,
@@ -180,10 +185,10 @@ function App() {
       linkUrl: 'https://corp.kaonavi.jp/',
     },
     {
-      src: completed_logo,
-      alt: 'スポンサー企業ロゴ',
+      src: sacraya_silv_logo,
+      alt: '有限会社咲楽屋',
       className: 'h-16 w-auto object-contain',
-      linkUrl: 'https://2025.kphpug.jp/',
+      linkUrl: 'https://www.sacraya.co.jp/',
     },
     {
       src: completed_logo,
@@ -241,9 +246,9 @@ function App() {
       linkUrl: 'https://www.phpexam.jp/',
     },
     {
-      src: open_logo,
-      alt: 'スポンサー企業ロゴ',
-      linkUrl: 'https://2025.kphpug.jp/',
+      src: eustyle_bro_logo,
+      alt: 'ユースタイルラボラトリー株式会社',
+      linkUrl: 'https://eustylelab.co.jp/',
     },
     {
       src: open_logo,
@@ -579,6 +584,68 @@ function App() {
                   <p className="text-xs min-h-[1.25rem]">
                     {proposal.speaker.twitter ? `@${proposal.speaker.twitter}` : '\u00A0'}
                   </p>
+                </a>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Supporter */}
+      <section className="bg-white py-20 px-6">
+        <h2 className="text-3xl font-bold text-center mb-10 text-[#46AA65]">INDIVIDUAL SPONSORS</h2>
+        <div className="max-w-4xl mx-auto">
+          <p className="text-lg mb-8 text-center">
+            PHPカンファレンス関西2025にご支援いただいた個人スポンサーの皆様です。温かいご支援をありがとうございます！
+          </p>
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6">
+            {personalSponsors.map((sponsor, index) => (
+              <div key={index} className="flex flex-col items-center justify-start text-center min-h-[160px]">
+                <a
+                  href={`https://x.com/${sponsor.x_id}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex flex-col items-center justify-start transform transition-all duration-300 hover:scale-105"
+                >
+                  <img
+                    src={`https://unavatar.io/twitter/${sponsor.x_id}`}
+                    alt={sponsor.name}
+                    className="h-24 w-24 object-cover rounded-full mb-2"
+                    onError={(e) => (e.currentTarget.src = '/default-avatar.png')}
+                  />
+                  <p className="text-sm font-medium">{sponsor.name}</p>
+                  <p className="text-xs text-gray-600">@{sponsor.x_id}</p>
+                </a>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+       {/* Supporter */}
+      <section className="bg-gray-50 py-20 px-6">
+        <h2 className="text-3xl font-bold text-center mb-10 text-[#46AA65]">SPECIAL SUPPORTERS</h2>
+        <div className="max-w-4xl mx-auto">
+          <p className="text-lg mb-8 text-center">
+            PHPカンファレンス関西2025のもっと応援券を購入してくださった皆様です。温かい応援をありがとうございます！
+          </p>
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6">
+            {motttoouenSponsors.map((sponsor, index) => (
+              <div key={index} className="flex flex-col items-center justify-start text-center min-h-[160px]">
+                <a
+                  href={`https://x.com/${sponsor.x_id}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex flex-col items-center justify-start transform transition-all duration-300 hover:scale-105"
+                >
+                  <img
+                    src={`https://unavatar.io/twitter/${sponsor.x_id}`}
+                    alt={sponsor.name}
+                    className="h-24 w-24 object-cover rounded-full mb-2"
+                    onError={(e) => (e.currentTarget.src = '/default-avatar.png')}
+                  />
+                  <p className="text-sm font-medium">{sponsor.name}</p>
+                  <p className="text-xs text-gray-600">@{sponsor.x_id}</p>
                 </a>
               </div>
             ))}
