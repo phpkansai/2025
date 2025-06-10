@@ -13,14 +13,18 @@ import karabiner_bro_logo from './assets/karabiner_bro_logo.png';
 import rakko_bro_logo from './assets/rakko_bro_logo.png';
 import eustyle_bro_logo from './assets/eustyle_bro_logo.png';
 import phpnintei_bro_logo from './assets/phpnintei_bro_logo.png';
-import horizontal_blue from './assets/horizontal_silv_logo.png';
+import cybozu_bro_logo from './assets/cybozu_bro_logo.png';
+import horizontal_silv_logo from './assets/horizontal_silv_logo.png';
 import HireRoo_silv_logo from './assets/HireRoo_silv_logo.png';
 import iplug_silv_logo from './assets/iplug_silv_logo.png';
 import kaonavi_silv_logo from './assets/kaonavi_silv_logo.png';
 import sacraya_silv_logo from './assets/sacraya_silv_logo.png';
+import betterplace_silv_logo from './assets/betterplace_silv_logo.png';
+import BTM_silv_logo from './assets/BTM_silv_logo.png';
 import sakura_logo from './assets/sakura_gold_logo.png';
 import samuraism_gold_logo from './assets/samuraism_gold_logo.png';
 import lamp_gold_logo from './assets/lamp_gold_logo.png';
+import smaregi_gold_logo from './assets/smaregi_gold_logo.png';
 import RouteZero_pla_logo from './assets/RouteZero_pla_logo.png';
 import gigmatch_logo from './assets/gigmatch_snac_logo .png';
 import open_logo from './assets/open.png';
@@ -151,9 +155,9 @@ function App() {
       linkUrl: 'https://lamp.jp/',
     },
     {
-      src: completed_logo,
-      alt: 'スポンサー企業ロゴ',
-      linkUrl: 'https://2025.kphpug.jp/',
+      src: smaregi_gold_logo,
+      alt: '株式会社スマレジ',
+      linkUrl: 'https://corp.smaregi.jp/',
     },
   ];
   const snackSponsors = [
@@ -165,7 +169,7 @@ function App() {
   ];
   const silverSponsors = [
     {
-      src: horizontal_blue,
+      src: horizontal_silv_logo,
       alt: '株式会社coco',
       linkUrl: 'https://thecoco.jp/',
     },
@@ -191,16 +195,16 @@ function App() {
       linkUrl: 'https://www.sacraya.co.jp/',
     },
     {
-      src: completed_logo,
-      alt: 'スポンサー企業ロゴ',
+      src: betterplace_silv_logo,
+      alt: '株式会社ベター・プレイス',
       className: 'h-16 w-auto object-contain',
-      linkUrl: 'https://2025.kphpug.jp/',
+      linkUrl: 'https://bpcom.jp/',
     },
     {
-      src: open_logo,
-      alt: 'スポンサー企業ロゴ',
+      src: BTM_silv_logo,
+      alt: '株式会社BTM',
       className: 'h-16 w-auto object-contain',
-      linkUrl: 'https://2025.kphpug.jp/',
+      linkUrl: 'https://www.b-tm.co.jp/',
     },
     {
       src: open_logo,
@@ -251,9 +255,9 @@ function App() {
       linkUrl: 'https://eustylelab.co.jp/',
     },
     {
-      src: open_logo,
-      alt: 'スポンサー企業ロゴ',
-      linkUrl: 'https://2025.kphpug.jp/',
+      src: cybozu_bro_logo,
+      alt: 'サイボウズ株式会社',
+      linkUrl: 'https://tech.cybozu.io/',
     },
     {
       src: open_logo,
