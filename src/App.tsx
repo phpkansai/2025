@@ -164,7 +164,7 @@ function App() {
     {
       src: gigmatch_logo,
       alt: '株式会社YUZURIHA',
-      linkUrl: 'https://yzrh.jp/',
+      linkUrl: 'https://gigmatch.jp/',
     },
   ];
   const silverSponsors = [
