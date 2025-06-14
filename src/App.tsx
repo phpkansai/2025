@@ -28,7 +28,6 @@ import smaregi_gold_logo from './assets/smaregi_gold_logo.png';
 import RouteZero_pla_logo from './assets/RouteZero_pla_logo.png';
 import gigmatch_logo from './assets/gigmatch_snac_logo .png';
 import open_logo from './assets/open.png';
-import completed_logo from './assets/completed.png';
 
 interface StaffMember {
   id: string;
