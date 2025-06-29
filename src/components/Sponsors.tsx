@@ -20,7 +20,6 @@ import lamp_gold_logo from '../assets/lamp_gold_logo.png';
 import smaregi_gold_logo from '../assets/smaregi_gold_logo.png';
 import RouteZero_pla_logo from '../assets/RouteZero_pla_logo.png';
 import gigmatch_logo from '../assets/gigmatch_snac_logo .png';
-import open_logo from '../assets/open.png';
 
 const platinumSponsors = [
     {
@@ -97,12 +96,6 @@ const silverSponsors = [
         className: 'h-16 w-auto object-contain',
         linkUrl: 'https://www.b-tm.co.jp/',
     },
-    {
-        src: open_logo,
-        alt: 'スポンサー企業ロゴ',
-        className: 'h-16 w-auto object-contain',
-        linkUrl: 'https://2025.kphpug.jp/',
-    },
 ];
 const bronzeSponsors = [
     {
@@ -149,21 +142,6 @@ const bronzeSponsors = [
         src: cybozu_bro_logo,
         alt: 'サイボウズ株式会社',
         linkUrl: 'https://tech.cybozu.io/',
-    },
-    {
-        src: open_logo,
-        alt: 'スポンサー企業ロゴ',
-        linkUrl: 'https://2025.kphpug.jp/',
-    },
-    {
-        src: open_logo,
-        alt: 'スポンサー企業ロゴ',
-        linkUrl: 'https://2025.kphpug.jp/',
-    },
-    {
-        src: open_logo,
-        alt: 'スポンサー企業ロゴ',
-        linkUrl: 'https://2025.kphpug.jp/',
     },
 ];
 
