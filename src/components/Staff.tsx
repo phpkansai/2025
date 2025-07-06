@@ -11,13 +11,48 @@ interface StaffData {
   [category: string]: StaffMember[];
 }
 
+// Committee chair IDs
+const COMMITTEE_CHAIR_IDS = [
+  '592f23d2-c58c-4363-8dce-072c93811400', // あかつか (実行委員長)
+  '4d60423c-9ddc-4225-9441-83eb8a483cf9', // SAW (副委員長)
+  '8e2d4573-82b1-4fe6-8151-b3fd16f71438', // Kaho Michimae (副委員長)
+];
+
+// Committee chair roles
+const COMMITTEE_CHAIR_ROLES: Record<string, string> = {
+  '592f23d2-c58c-4363-8dce-072c93811400': '実行委員長',
+  '4d60423c-9ddc-4225-9441-83eb8a483cf9': '副委員長',
+  '8e2d4573-82b1-4fe6-8151-b3fd16f71438': '副委員長',
+};
+
 export default function Staff() {
   const [staff, setStaff] = useState<StaffData>({});
+  const [committeeChairs, setCommitteeChairs] = useState<StaffMember[]>([]);
+
   useEffect(() => {
     const fetchStaff = async () => {
       try {
         const response = await fetch('https://fortee.jp/phpcon-kansai2025/api/staff?type=simple');
         const data = await response.json();
+
+        // Extract committee chairs from all staff members
+        const chairs: StaffMember[] = [];
+
+        // Look through all categories to find committee chairs
+        (Object.values(data.staff) as StaffMember[][]).forEach((categoryMembers) => {
+          categoryMembers.forEach((member) => {
+            if (COMMITTEE_CHAIR_IDS.includes(member.id)) {
+              chairs.push(member);
+            }
+          });
+        });
+
+        // Sort committee chairs to maintain consistent order
+        const sortedChairs = chairs.sort((a, b) => {
+          return COMMITTEE_CHAIR_IDS.indexOf(a.id) - COMMITTEE_CHAIR_IDS.indexOf(b.id);
+        });
+
+        setCommitteeChairs(sortedChairs);
         setStaff(data.staff);
       } catch (error) {
         console.error('Failed to fetch staff:', error);
@@ -35,31 +70,25 @@ export default function Staff() {
           PHPカンファレンス関西2025のスタッフは、エンジニアを中心とするボランティアメンバーで構成されています。
         </p>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 justify-center items-center mb-16">
-          <div className="flex flex-col items-center justify-center text-center">
-            <a href="https://twitter.com/aki_artisan" target="_blank" rel="noopener noreferrer" className="block">
-              <img
-                src="https://fortee.jp/files/phpcon-kansai2025/avatar/592f23d2-c58c-4363-8dce-072c93811400.jpg"
-                alt="あかつか"
-                className="h-28 w-28 object-cover rounded-full mb-2"
-              />
-              <p className="text-base font-bold text-black">あかつか</p>
-              <span className="text-sm text-white bg-[#46AA65] px-2 py-1 rounded-full mt-1">実行委員長</span>
-            </a>
+        {committeeChairs.length > 0 && (
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-10 justify-center items-center mb-16">
+            {committeeChairs.map((chair) => (
+              <div key={chair.id} className="flex flex-col items-center justify-center text-center">
+                <a href={chair.url} target="_blank" rel="noopener noreferrer" className="block">
+                  <img
+                    src={chair.avatar_url || 'https://placehold.jp/200x200.png'}
+                    alt={chair.name}
+                    className="h-28 w-28 object-cover rounded-full mb-2"
+                  />
+                  <p className="text-base font-bold text-black">{chair.name}</p>
+                  <span className="text-sm text-white bg-[#46AA65] px-2 py-1 rounded-full mt-1">
+                    {COMMITTEE_CHAIR_ROLES[chair.id]}
+                  </span>
+                </a>
+              </div>
+            ))}
           </div>
-
-          <div className="flex flex-col items-center justify-center text-center">
-            <a href="https://twitter.com/kaho_eng" target="_blank" rel="noopener noreferrer" className="block">
-              <img
-                src="https://fortee.jp/files/phpcon-kansai2025/avatar/8e2d4573-82b1-4fe6-8151-b3fd16f71438.jpg"
-                alt="Kaho Michimae"
-                className="h-28 w-28 object-cover rounded-full mb-2"
-              />
-              <p className="text-base font-bold text-black">Kaho Michimae</p>
-              <span className="text-sm text-white bg-[#46AA65] px-2 py-1 rounded-full mt-1">副委員長</span>
-            </a>
-          </div>
-        </div>
+        )}
 
         {Object.entries(staff).map(([category, members]) => (
           <div key={category} className="mb-12">
@@ -67,9 +96,7 @@ export default function Staff() {
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6">
               {members
                 .filter(
-                  (member) =>
-                    member.id !== '592f23d2-c58c-4363-8dce-072c93811400' && 
-                    member.id !== '8e2d4573-82b1-4fe6-8151-b3fd16f71438'    
+                  (member) => !COMMITTEE_CHAIR_IDS.includes(member.id)
                 )
                 .map((member) => (
                   <div key={member.id} className="flex flex-col items-center justify-center text-center min-h-[160px]">
