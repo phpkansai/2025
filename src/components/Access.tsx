@@ -2,7 +2,7 @@ import { ExternalLink } from 'lucide-react';
 
 export default function Access() {
   return (
-    <section id="access" className="bg-gray-50 py-20 px-6 scroll-mt-16">
+    <section id="access" className="py-20 px-6 scroll-mt-16">
         <h2 className="text-3xl font-bold text-[#46AA65] text-center mb-10">ACCESS</h2>
         <div className="max-w-4xl mx-auto">
           <div className="aspect-w-16 aspect-h-9 mb-8">
