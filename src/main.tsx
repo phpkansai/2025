@@ -5,7 +5,7 @@ import Layout from './components/Layout';
 import NonHomeLayout from './components/NonHomeLayout';
 import App from './App.tsx';
 import ProposalCountdown from './pages/proposal_countdown';
-import StickerCollection from './pages/sticker-collection';
+import StickerCollection from './pages/campaign/sticker-collection';
 import './index.css';
 
 createRoot(document.getElementById('root')!).render(
