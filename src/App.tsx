@@ -2,6 +2,7 @@ import Header from './components/Header';
 import Hero from './components/Hero';
 import News from './components/News';
 import About from './components/About';
+import Keynote from './components/Keynote';
 import Access from './components/Access';
 import Sponsors from './components/Sponsors';
 import Speakers from './components/Speakers';
@@ -28,6 +29,7 @@ export default function App() {
       <Hero />
       <News />
       <About />
+      <Keynote />
       <Access />
       <Sponsors />
       <Speakers />

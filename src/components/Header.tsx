@@ -14,7 +14,7 @@ export default function Header({ isScrolled, menuOpen, setMenuOpen }: HeaderProp
         <img src={elemaru} alt="えれ丸" className="h-8 w-8 md:h-12 md:w-12 object-contain" />
         <h1 className="text-base md:text-xl font-bold">PHPカンファレンス関西2025</h1>
       </div>
-      <div className="hidden md:flex space-x-4">
+      <div className="hidden md:flex items-center space-x-4">
         <a href="https://fortee.jp/phpcon-kansai2025/timetable/" target="_blank" rel="noopener noreferrer" className={`text-sm font-bold ${isScrolled ? 'text-white' : 'text-[#46AA65]'}`}>タイムテーブル</a>
         <a href="https://note.com/phpcon_kansai" target="_blank" rel="noopener noreferrer" className={`text-sm font-bold ${isScrolled ? 'text-white' : 'text-[#46AA65]'}`}>note</a>
         <a href="https://fortee.jp/phpcon-kansai2025/ticket-shop/index" target="_blank" rel="noopener noreferrer" className="inline-flex items-center bg-[#FFC145] text-white font-bold px-4 py-1 rounded-full hover:bg-opacity-90 transition">
