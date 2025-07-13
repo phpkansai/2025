@@ -1,5 +1,5 @@
 import React, { useState, useMemo, useEffect } from 'react';
-import { Clock, MapPin, User, Tag, Calendar } from 'lucide-react';
+import { Clock, Tag, Calendar } from 'lucide-react';
 import timetableData from '../timetable.json';
 
 interface Track {
@@ -247,7 +247,7 @@ const Timetable: React.FC = () => {
         <table className="w-full border-collapse text-xs print:text-[10px] table-fixed">
           <colgroup>
             <col className="w-16 print:w-12" />
-            {tracks.map((track, index) => (
+            {tracks.map((track) => (
               <col key={track.name} style={{ width: `${Math.floor((100 - 10) / tracks.length)}%` }} />
             ))}
           </colgroup>
@@ -384,7 +384,7 @@ const Timetable: React.FC = () => {
                                 詳細を見る
                               </summary>
                               <div className="mt-1 text-[10px] text-gray-700 space-y-1">
-                                {groupedByTime.ltGroupedItems.get('lt-session')?.map((ltItem, index) => (
+                                {groupedByTime.ltGroupedItems.get('lt-session')?.map((ltItem) => (
                                   <div key={ltItem.uuid} className="border-l-2 border-gray-300 pl-2">
                                     <div className="font-medium">
                                       {formatTime(ltItem.starts_at)} ({ltItem.length_min}分)
