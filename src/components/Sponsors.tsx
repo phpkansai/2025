@@ -7,6 +7,7 @@ import rakko_bro_logo from '../assets/rakko_bro_logo.png';
 import eustyle_bro_logo from '../assets/eustyle_bro_logo.png';
 import phpnintei_bro_logo from '../assets/phpnintei_bro_logo.png';
 import cybozu_bro_logo from '../assets/cybozu_bro_logo.png';
+import Geekneer_bro_logo from '../assets/Geekneer_bro_logo.png';
 import horizontal_silv_logo from '../assets/horizontal_silv_logo.png';
 import HireRoo_silv_logo from '../assets/HireRoo_silv_logo.png';
 import iplug_silv_logo from '../assets/iplug_silv_logo.png';
@@ -142,6 +143,11 @@ const bronzeSponsors = [
         src: cybozu_bro_logo,
         alt: 'サイボウズ株式会社',
         linkUrl: 'https://tech.cybozu.io/',
+    },
+    {
+        src: Geekneer_bro_logo,
+        alt: '株式会社ギークニア',
+        linkUrl: 'https://geekneer.com/',
     },
 ];
 
