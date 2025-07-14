@@ -1,4 +1,4 @@
-// import elemaru from '../assets/elemaru.png';
+import sugimotoKei from '../assets/sugimoto-kei.jpg';
 
 
 export default function Keynote() {
@@ -36,23 +36,21 @@ export default function Keynote() {
             </p>
           </div>
         </div>
-        {/* Speaker profile - image and info side by side at the top */}
-        <div className="flex flex-col md:flex-row gap-8">
-          {/* 基調講演の写真を一旦外しています
-        <div className="md:w-1/3">
-          <div className="rounded-lg overflow-hidden">
-            <img
-              src={elemaru}
-              alt="基調講演者"
-              className="md:w-full h-auto mx-auto object-cover"
-            />
-          </div>
-        </div>
-        */}
-          <div className="md:w-full">
-            <div className="bg-white rounded-lg p-6 border border-gray-100">
+        {/* Speaker profile - image and info in single box */}
+        <div className="bg-white rounded-lg p-6 border border-gray-100">
+          <div className="flex flex-col md:flex-row gap-6">
+            <div className="md:w-1/4">
+              <div className="rounded-lg overflow-hidden aspect-square">
+                <img
+                  src={sugimotoKei}
+                  alt="杉本 啓"
+                  className="w-full h-full object-cover object-top"
+                />
+              </div>
+            </div>
+            <div className="md:w-3/4">
               <h3 className="text-xl font-bold text-[#46AA65] mb-3">杉本 啓</h3>
-              <div className="text-base space-y-3 mb-6">
+              <div className="text-base space-y-3">
                 <p>株式会社フュージョンズ代表取締役 CEO。</p>
                 <p>コンサルティング会社アーサー・アンダーセン（現アクセンチュア/PwC）にて、生産管理、会計およびそれらの周辺領域で、システム開発／業務改革プロジェクト多数を推進。連結会計パッケージソフトウェアの開発責任者を務める。独立して経営管理クラウドfusion_placeを開発。事業展開のためフュージョンズを創業。現役プログラマー。</p>
                 <div className="flex flex-col sm:flex-row sm:space-x-4">
