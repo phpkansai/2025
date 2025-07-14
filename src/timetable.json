@@ -1,0 +1,1110 @@
+{
+  "timetable": [
+    {
+      "type": "timeslot",
+      "uuid": "7da25a39-0b96-4420-9f3e-5b04c6da4c6c",
+      "title": "開場",
+      "abstract": null,
+      "track": {
+        "name": "ルームA",
+        "sort": 1
+      },
+      "starts_at": "2025-07-18T16:00:00+09:00",
+      "length_min": 5
+    },
+    {
+      "type": "timeslot",
+      "uuid": "e5de8e5a-7cd0-4461-bb36-0aa9d38dc47d",
+      "title": "オープニング",
+      "abstract": null,
+      "track": {
+        "name": "ルームA",
+        "sort": 1
+      },
+      "starts_at": "2025-07-18T16:30:00+09:00",
+      "length_min": 15
+    },
+    {
+      "type": "talk",
+      "uuid": "f6be843a-5ba9-4798-8eba-a1207a9d1e85",
+      "url": "https://fortee.jp/phpcon-kansai2025/proposal/f6be843a-5ba9-4798-8eba-a1207a9d1e85",
+      "title": "PHPからはじめるコンピュータアーキテクチャ",
+      "abstract": "現代のコンピュータはハードウェアから私たちプログラマが書くプログラムの動作までの間が多くのレイヤーに分けられて動作しています。\r\nレイヤーは自分より下を抽象化し、下のレイヤーを詳しく理解しなくても多くの場合プログラマはプログラムを書けます。\r\n一方、プログラムが期待した様に動作しない時には下のレイヤーの動作の理解が問題の解決の助けになることもあります。\r\n\r\nこのトークでは私たちが愛するPHPをスタート地点にして、「VMって何？」「 PHPやJavaとC言語の根本的な違い」など、コンピュータプログラムがどの様に動作するのかを解説します。\r\n\r\nコンピュータのレイヤー構造を理解すると、いままでは見えていなかった角度からプログラミングを楽しめるようになります。\r\nこのトークを通じて、低レイヤーが好きになったり、いろいろなレイヤーで面白いことをしたりする方が増えることを期待しています！",
+      "accepted": true,
+      "track": {
+        "name": "ルームA",
+        "sort": 1
+      },
+      "starts_at": "2025-07-18T17:00:00+09:00",
+      "length_min": 20,
+      "tags": [
+        {
+          "name": "初心者向け",
+          "color_text": "#ffffff",
+          "color_background": "#50cd89"
+        }
+      ],
+      "speaker": {
+        "name": "長谷川智希",
+        "kana": "ハセガワトモキ",
+        "twitter": "tomzoh",
+        "avatar_url": "https://fortee.jp/files/phpcon-kansai2025/speaker/d7bbc0ba-b0fe-4844-bfc4-03a2f70ffe82.jpg"
+      },
+      "fav": false,
+      "fav_count": 4,
+      "feedback": {
+        "open": true,
+        "url": "https://fortee.jp/phpcon-kansai2025/me/feedback/f6be843a-5ba9-4798-8eba-a1207a9d1e85"
+      }
+    },
+    {
+      "type": "talk",
+      "uuid": "eaf0770d-8abb-41fa-be5b-7a2139185676",
+      "url": "https://fortee.jp/phpcon-kansai2025/proposal/eaf0770d-8abb-41fa-be5b-7a2139185676",
+      "title": "PHPUnitの限界をPlaywrightで補完するテストアプローチ",
+      "abstract": "PHPアプリケーション開発では主にPHPUnitを使い、ユニットテストを書いていると思います。\r\nPHPUnitは個々のクラスやメソッドをテストするのが得意なツールですが、実際のユーザがブラウザを通して体験するJSやCSSまで含めたレンダリング結果や、複数のページ遷移を伴う複雑なフローへのテストは苦手です。\r\nこんな時にPlaywrightを使うとフロントエンドのテストが効率的にできます。実際にブラウザを動かしてテストを行うツールであり、ユニットテストが苦手としている領域をカバーすることができます。\r\n一方でPHPUnitと比べ実行速度は遅く、メンテナンスのコストも高くなる傾向があります。\r\n\r\n本トークではPlaywrightでできることを紹介しつつ、PHPUnitとPlaywrightの特性に沿ってテストをかき分けることでテスト時間を短縮し、より安心してリリースできる環境作りを紹介します。",
+      "accepted": true,
+      "track": {
+        "name": "ルームA",
+        "sort": 1
+      },
+      "starts_at": "2025-07-18T17:30:00+09:00",
+      "length_min": 20,
+      "tags": [
+        {
+          "name": "初心者向け",
+          "color_text": "#ffffff",
+          "color_background": "#50cd89"
+        }
+      ],
+      "speaker": {
+        "name": "ゆずねり",
+        "kana": "ユズネリ",
+        "twitter": "yuzneri",
+        "avatar_url": "https://fortee.jp/files/phpcon-kansai2025/speaker/ab55d485-8b81-4f40-b571-7da34d63d486.jpg"
+      },
+      "fav": true,
+      "fav_count": 4,
+      "feedback": {
+        "open": true,
+        "url": "https://fortee.jp/phpcon-kansai2025/me/feedback/eaf0770d-8abb-41fa-be5b-7a2139185676"
+      }
+    },
+    {
+      "type": "talk",
+      "uuid": "e1684a11-eebe-480c-bca2-b847d329b227",
+      "url": "https://fortee.jp/phpcon-kansai2025/proposal/e1684a11-eebe-480c-bca2-b847d329b227",
+      "title": "抽象化という思考のツール -理解と実践-",
+      "abstract": "「抽象化していますか？」ーー抽象化と聞くと、設計やモデリングをイメージするかもしれません。他にも、interface のような言語機能を利用することを思い浮かべる方もいるかもしれません。たしかにこれらも抽象化の一つですが、それだけではありません。また、抽象化には難しそうなイメージを持たれがちですが、実はソフトウェア開発を行なっている私たちにとっては日々利用している身近なものです。\r\n\r\n本セッションでは、抽象化（と具体化）という考え方を整理し、設計や言語機能だけでなく、物事の理解や共有、課題解決、トラブルシューティングといった開発現場の広い場面でも活用できる「思考の技術」として具体的な例とともに紹介します。\r\n\r\n「使える思考のツール」として抽象化を一緒に見ていきましょう。",
+      "accepted": true,
+      "track": {
+        "name": "ルームA",
+        "sort": 1
+      },
+      "starts_at": "2025-07-18T18:00:00+09:00",
+      "length_min": 45,
+      "tags": [
+        {
+          "name": "関西",
+          "color_text": "#ffffff",
+          "color_background": "#ff8f00"
+        },
+        {
+          "name": "初心者向け",
+          "color_text": "#ffffff",
+          "color_background": "#50cd89"
+        }
+      ],
+      "speaker": {
+        "name": "新原雅司",
+        "kana": "シンバラマサシ",
+        "twitter": "shin1x1",
+        "avatar_url": "https://fortee.jp/files/phpcon-kansai2025/speaker/64a43fc5-0f5f-492c-a5ce-eee98303fe42.png"
+      },
+      "fav": true,
+      "fav_count": 5,
+      "feedback": {
+        "open": true,
+        "url": "https://fortee.jp/phpcon-kansai2025/me/feedback/e1684a11-eebe-480c-bca2-b847d329b227"
+      }
+    },
+    {
+      "type": "timeslot",
+      "uuid": "47633a15-fd54-4f9a-b07a-fd2c2b39ecc9",
+      "title": "開場",
+      "abstract": null,
+      "track": {
+        "name": "ルームA",
+        "sort": 1
+      },
+      "starts_at": "2025-07-19T09:30:00+09:00",
+      "length_min": 5
+    },
+    {
+      "type": "timeslot",
+      "uuid": "598d6ba7-85b9-4f40-90f7-96da997cd3f5",
+      "title": "オープニング",
+      "abstract": null,
+      "track": {
+        "name": "ルームA",
+        "sort": 1
+      },
+      "starts_at": "2025-07-19T10:00:00+09:00",
+      "length_min": 20
+    },
+    {
+      "type": "timeslot",
+      "uuid": "27b77366-bece-4f6e-9f5f-a3925c1985c9",
+      "title": "スポンサーブース",
+      "abstract": null,
+      "track": {
+        "name": "スポンサーブース",
+        "sort": 6
+      },
+      "starts_at": "2025-07-19T10:00:00+09:00",
+      "length_min": 360
+    },
+    {
+      "type": "talk",
+      "uuid": "5d2c3e17-c9b1-4287-a0cf-9762b58a385b",
+      "url": "https://fortee.jp/phpcon-kansai2025/proposal/5d2c3e17-c9b1-4287-a0cf-9762b58a385b",
+      "title": "ソフトウェア・デザインに向かおう\r\n～　世界を（ちょっとだけ）変えるソフトウェアを目指して　～",
+      "abstract": "ソフトウェアを作る仕事は労苦以外の何物でもありません。\r\n労苦は、複雑な世界に向けて使いやすい道具を作るという仕事の本質的な難しさに起因していて、技術や手法を洗練すれば除去できるものではありません。\r\nアジャイルにすれば楽になると思いきや、開発にまつわる周辺的な複雑さが緩和されることによって、役に立つモノを作ること自体に内在する難しさが却って際立ってきます。\r\n我々は、何のために、労苦を甘受してソフトウェアを作るのでしょうか。\r\n労苦を軽減することも大事ですが、労苦の意味を知ることはそれ以上に重要です。\r\n自分たちが作るソフトウェアの存在意義が腑に落ちなければ、私たちはけっして労苦を乗り越えられず、真っ当なソフトウェアを創り得ないでしょう。\r\nこの基調講演では、その糸口として、ソフトウェア作りとは何か、どうして私たちはソフトウェアを作るのか、それを踏まえてソフトウェアをデザインするとはどういうことか、といったことがらについて、一緒に考えてみましょう。\r\n\r\n我々の仕事には意味があります。",
+      "accepted": true,
+      "track": {
+        "name": "ルームA",
+        "sort": 1
+      },
+      "starts_at": "2025-07-19T10:20:00+09:00",
+      "length_min": 50,
+      "tags": [],
+      "speaker": {
+        "name": "杉本啓",
+        "kana": "スギモトケイ",
+        "twitter": "sugimoto_kei",
+        "avatar_url": "https://fortee.jp/files/phpcon-kansai2025/speaker/161cbf04-23a9-4933-bc70-0dfeec0fc9b4.png"
+      },
+      "fav": true,
+      "fav_count": 6,
+      "feedback": {
+        "open": true,
+        "url": "https://fortee.jp/phpcon-kansai2025/me/feedback/5d2c3e17-c9b1-4287-a0cf-9762b58a385b"
+      }
+    },
+    {
+      "type": "talk",
+      "uuid": "168dffee-512b-428a-8b5d-aaa61982704b",
+      "url": "https://fortee.jp/phpcon-kansai2025/proposal/168dffee-512b-428a-8b5d-aaa61982704b",
+      "title": "PHPでお金を扱う時、終わりのない謎の1円調査の旅にでなくて済む方法 ~ドメインコードの具体例を交えて~",
+      "abstract": "## 話すこと\r\n* PHPでstring, float, intを相互変換するとどのような問題が起きるのか、どのように実行されているのか\r\n* センシティブな数値を扱う時、どのように扱うべきなのか\r\n* UseCase、Domainの各層で具体的にどのように書くのか\r\n\r\n## 説明\r\n会計システムを作る時にPHPの数値仕様をしっかり理解した上で作らないと、後々大変なことになってしまう可能性があります。\r\n小数点以下の誤差によって1円が消えたり増えたりしてしまうことがあり、1円の行方を巡って終わりのない、解決もしない調査の旅に身を投じることになるでしょう。\r\nそれが今なのか、いつなのかは分かりませんが、知っていれば防げる問題でもあります。\r\n\r\n本セッションでは数値にはどんな問題があり、扱う時に何を気をつける必要があって、さらに扱いやすくするためにおすすめの方法をお話しします。",
+      "accepted": true,
+      "track": {
+        "name": "ルームB",
+        "sort": 2
+      },
+      "starts_at": "2025-07-19T11:20:00+09:00",
+      "length_min": 45,
+      "tags": [
+        {
+          "name": "関西",
+          "color_text": "#ffffff",
+          "color_background": "#ff8f00"
+        },
+        {
+          "name": "初心者向け",
+          "color_text": "#ffffff",
+          "color_background": "#50cd89"
+        }
+      ],
+      "speaker": {
+        "name": "なっかー",
+        "kana": "ナッカー",
+        "twitter": "konsent_nakka",
+        "avatar_url": "https://fortee.jp/files/phpcon-kansai2025/speaker/45683003-7921-433d-8d48-561aeb91be26.jpg"
+      },
+      "fav": true,
+      "fav_count": 11,
+      "feedback": {
+        "open": true,
+        "url": "https://fortee.jp/phpcon-kansai2025/me/feedback/168dffee-512b-428a-8b5d-aaa61982704b"
+      }
+    },
+    {
+      "type": "talk",
+      "uuid": "ea0b4340-31e3-4ca6-a151-505c8dc40c91",
+      "url": "https://fortee.jp/phpcon-kansai2025/proposal/ea0b4340-31e3-4ca6-a151-505c8dc40c91",
+      "title": "階層化自動テストで開発に機動力を",
+      "abstract": "- 自動テストの改修コストが高くリリース速度が落ちてる\r\n- xUnitでどこまで書けばよいのか判らない\r\n- E2Eで回してるけど本当に確認したいのは単純なI/Oだけなんだけど\r\n\r\nこれらのお悩みを纏めて解決する、よくばりテスト技法として「階層化自動テスト」戦略についてお話します。\r\n\r\n本トークは過去に登壇した「『\"品質\"が高いコード』って何？」と「「兵法」から見る\"質とスピード\"」を前提に進みます。\r\nより理解を深めたい方は次のXのURLからそれぞれの資料を事前にご覧ください。\r\nhttps://x.com/effy_staffs/status/1942218381840802191\r\n\r\nこのトークで得られる知見\r\n\r\n- 品質管理の一環としての統合的なテスト戦略\r\n- 「テストをどこに書けばよいのか」問題への指針\r\n\r\nこのトークで扱わない内容\r\n\r\n- ツールの使い方や実装ノウハウ",
+      "accepted": true,
+      "track": {
+        "name": "ルームD",
+        "sort": 4
+      },
+      "starts_at": "2025-07-19T11:20:00+09:00",
+      "length_min": 45,
+      "tags": [],
+      "speaker": {
+        "name": "wakaba",
+        "kana": "ワカバ",
+        "twitter": "effy_staffs",
+        "avatar_url": "https://fortee.jp/files/phpcon-kansai2025/speaker/5249224f-f2a6-4390-bdf3-23eccda6b322.png"
+      },
+      "fav": true,
+      "fav_count": 7,
+      "feedback": {
+        "open": true,
+        "url": "https://fortee.jp/phpcon-kansai2025/me/feedback/ea0b4340-31e3-4ca6-a151-505c8dc40c91"
+      }
+    },
+    {
+      "type": "talk",
+      "uuid": "868f9f9d-4244-4743-93c2-03abb3525421",
+      "url": "https://fortee.jp/phpcon-kansai2025/proposal/868f9f9d-4244-4743-93c2-03abb3525421",
+      "title": "どこまで違う？！PHP実行環境パフォーマンス対決 - mod_php vs php-fpm vs Swoole vs FrankenPHP",
+      "abstract": "# 概要\r\nPHPの実行環境は、アプリケーションのパフォーマンスやスケーラビリティに大きく影響します。\r\n本セッションでは、Laravelで作成したCRUDアプリを用いて、次の環境のパフォーマンスを比較します。\r\n\r\n対象の比較環境\r\n- mod_php + Apache\r\n- Nginx + php-fpm\r\n- Swoole\r\n- FrankenPHP\r\n\r\n各実行環境の特徴と、ユースケースごとの適性を実測データに基づいて比較・考察して、結果を共有し、\r\n実行環境を選定するさいの実践的な知見を持ち帰っていただくこと目標にしています。\r\n\r\n## 対象者\r\n- PHP開発者  \r\n- パフォーマンス最適化に関心のあるアプリケーションエンジニア  \r\n\r\n# 話さないこと\r\n- パフォーマンスチューニングにおける個別パラメーターの詳細説明  \r\n- 実行環境の構築手順・設定方法",
+      "accepted": true,
+      "track": {
+        "name": "ルームA",
+        "sort": 1
+      },
+      "starts_at": "2025-07-19T11:20:00+09:00",
+      "length_min": 45,
+      "tags": [
+        {
+          "name": "関西",
+          "color_text": "#ffffff",
+          "color_background": "#ff8f00"
+        }
+      ],
+      "speaker": {
+        "name": "ma_me",
+        "kana": "マメ",
+        "twitter": "ma_me",
+        "avatar_url": "https://fortee.jp/files/phpcon-kansai2025/speaker/92101e1b-2744-43f0-bdc4-b8f9a1f08633.jpg"
+      },
+      "fav": true,
+      "fav_count": 4,
+      "feedback": {
+        "open": true,
+        "url": "https://fortee.jp/phpcon-kansai2025/me/feedback/868f9f9d-4244-4743-93c2-03abb3525421"
+      }
+    },
+    {
+      "type": "timeslot",
+      "uuid": "14e285ac-1d1c-4785-89c3-0b416e6192d7",
+      "title": "交流スペース",
+      "abstract": null,
+      "track": {
+        "name": "交流スペース",
+        "sort": 5
+      },
+      "starts_at": "2025-07-19T12:10:00+09:00",
+      "length_min": 280
+    },
+    {
+      "type": "talk",
+      "uuid": "6710c3a4-64be-409e-9d35-73639b4f9ff2",
+      "url": "https://fortee.jp/phpcon-kansai2025/proposal/6710c3a4-64be-409e-9d35-73639b4f9ff2",
+      "title": "全日本PHPersコミュニティーサミット",
+      "abstract": "全国各地で開催されているPHP勉強会の主催者が集まって話し合う史上初？のパネルディスカッションです。\r\n東京、関西、福岡、名古屋、新潟をはじめ、PHP Lovers Meetup、PHPer Tea Night、PHPxTKYからもパネリストが参戦。\r\nこれからコミュニティに参加してみたい方、新しく地域コミュニティを立ち上げてみたい方にもオススメです。\r\n\r\n■モデレーター\r\nPHP勉強会@東京 chihiroさん\r\n\r\n■パネリスト\r\n関西PHP勉強会 あかつかさん\r\nFukuoka.php\tseike460さん\r\nNagoya.php たつきちさん\r\nniigata.php 沼(nicozetsche)さん\r\nPHPer Tea Night おかしょいさん\r\nPHP Lovers Meetup chatiiさん\r\nPHPxTKY スーさん\r\nand more.",
+      "accepted": true,
+      "track": {
+        "name": "ルームA",
+        "sort": 1
+      },
+      "starts_at": "2025-07-19T12:25:00+09:00",
+      "length_min": 45,
+      "tags": [
+        {
+          "name": "ランチセッション",
+          "color_text": "#ffffff",
+          "color_background": "#46aa65"
+        }
+      ],
+      "speaker": {
+        "name": "PHPカンファレンス関西",
+        "kana": "ペチコンカンサイ",
+        "twitter": "phpcon_kansai",
+        "avatar_url": "https://fortee.jp/files/phpcon-kansai2025/speaker/1c2a59ac-51b5-4843-acfa-27135c3fbc5b.jpg"
+      },
+      "fav": false,
+      "fav_count": 3,
+      "feedback": {
+        "open": true,
+        "url": "https://fortee.jp/phpcon-kansai2025/me/feedback/6710c3a4-64be-409e-9d35-73639b4f9ff2"
+      }
+    },
+    {
+      "type": "timeslot",
+      "uuid": "ba9a379b-0dd0-4781-b67c-64cc56baf573",
+      "title": "ランチセッション",
+      "abstract": null,
+      "track": {
+        "name": "ルームA",
+        "sort": 1
+      },
+      "starts_at": "2025-07-19T12:25:00+09:00",
+      "length_min": 45
+    },
+    {
+      "type": "talk",
+      "uuid": "44d7c3a3-1137-482a-9f44-33c0371dbfb9",
+      "url": "https://fortee.jp/phpcon-kansai2025/proposal/44d7c3a3-1137-482a-9f44-33c0371dbfb9",
+      "title": "PHPでやってみよう！テストだけじゃない、デシジョンテーブル（決定表）実装の勘所",
+      "abstract": "デシジョンテーブル（決定表）といえばテスト設計の手法として知られていますが、PHPでの実装パターンとしても非常に強力です！\r\n複雑な条件分岐をif文の入れ子で書くと保守性が低下しますが、決定表を使えば条件と結果の組み合わせを表形式で美しく整理できます。\r\n\r\n登壇者は実際の業務で、条件の組み合わせが数千パターンにも及ぶ大規模な決定表を実装してきました。\r\nこの経験から得たノウハウと実践的なテクニックをご紹介します。\r\n\r\n* 複雑な条件をわかりやすく可読性を上げる\r\n* 決定表の定義誤りを防ぐ\r\n* 時系列で変化する決定表の表現方法\r\n* 決定表の評価のバグを検知する\r\n* 決定表をアプリケーションだけでなく、テストでも活用する\r\n\r\n明日のプロジェクトですぐに活用できる実装パターンをお伝えします。\r\n難解なビジネスロジックをクリアに表現できるPHPのデシジョンテーブル実装に、ぜひチャレンジしてみましょう！",
+      "accepted": true,
+      "track": {
+        "name": "ルームB",
+        "sort": 2
+      },
+      "starts_at": "2025-07-19T13:20:00+09:00",
+      "length_min": 20,
+      "tags": [],
+      "speaker": {
+        "name": "katzumi",
+        "kana": "カツミ",
+        "twitter": "katzchum",
+        "avatar_url": "https://fortee.jp/files/phpcon-kansai2025/speaker/411edc71-cd84-4853-81a6-06aff4144204.jpg"
+      },
+      "fav": false,
+      "fav_count": 3,
+      "feedback": {
+        "open": true,
+        "url": "https://fortee.jp/phpcon-kansai2025/me/feedback/44d7c3a3-1137-482a-9f44-33c0371dbfb9"
+      }
+    },
+    {
+      "type": "talk",
+      "uuid": "c75cef45-8278-4613-8d3d-21a3b9a8dff2",
+      "url": "https://fortee.jp/phpcon-kansai2025/proposal/c75cef45-8278-4613-8d3d-21a3b9a8dff2",
+      "title": "遊びながら強くなる！コードゴルフで学ぶPHPの言語仕様",
+      "abstract": "コードゴルフという競技をご存知でしょうか？\r\n与えられたお題に対して、どれだけ“短く”コードを書けるかを競うもので、今年3月のPHPerKaigi 2025では「PHPerコードバトル」として開催され、大いに盛り上がりました。\r\n\r\nコードゴルフでは、可読性や保守性は重視されず、むしろ犠牲にしてでも短く書くことが求められます。\r\n一見実務とは無縁に思えるかもしれませんが、実はこの競技、PHPの文法や関数についての深い知識が求められるため、楽しんでいるうちに言語仕様に詳しくなってしまうという学習効果もあるのです。\r\n\r\nこのセッションでは、コードゴルフで実際に使われるトリッキーなテクニックと、それを支えるPHPの言語仕様や関数の挙動について解説します。\r\n例えば、PHPの文と式の違い、普段あまり使わないマイナーな関数の仕様など、ちょっとした遊びからPHPの理解が深まる世界をご紹介します！",
+      "accepted": true,
+      "track": {
+        "name": "ルームA",
+        "sort": 1
+      },
+      "starts_at": "2025-07-19T13:20:00+09:00",
+      "length_min": 20,
+      "tags": [
+        {
+          "name": "関西",
+          "color_text": "#ffffff",
+          "color_background": "#ff8f00"
+        }
+      ],
+      "speaker": {
+        "name": "荒巻拓哉",
+        "kana": "アラマキタクヤ",
+        "twitter": "takaram71",
+        "avatar_url": "https://fortee.jp/files/phpcon-kansai2025/speaker/f7bd5593-563c-48ed-aec6-87fb288373c8.png"
+      },
+      "fav": true,
+      "fav_count": 6,
+      "feedback": {
+        "open": true,
+        "url": "https://fortee.jp/phpcon-kansai2025/me/feedback/c75cef45-8278-4613-8d3d-21a3b9a8dff2"
+      }
+    },
+    {
+      "type": "talk",
+      "uuid": "2454bec7-7931-45b9-a626-f19fc9be83c7",
+      "url": "https://fortee.jp/phpcon-kansai2025/proposal/2454bec7-7931-45b9-a626-f19fc9be83c7",
+      "title": "MySQL9でベクトルカラム登場！ PHP×AWSでのAI/類似検索はこう変わる",
+      "abstract": "MySQL9でのベクトルカラム/ベクトル検索サポートは、PHPアプリケーションにおけるAI活用や類似性検索を大きく変える可能性を秘めています。\r\nプロポーザル提出時は、AWSのRDSで取り扱い可能なバージョンは、8系が最新ですが、特にAWS (RDS/Aurora) 環境での利用が現実味を帯びる中、そのインパクトは計り知れません。\r\n本セッションは、ミドルレベルのPHPエンジニアを対象に、この「ベクトルカラム」導入に焦点を絞ります。ベクトルデータの基本的な概念から、MySQL9で予想されるベクトル型・専用インデックス・検索関数の概要、そしてPHPからこれらをどう扱うか、パフォーマンス考慮点、AWS環境特有の設定や制約についてを説明します。推薦システム、画像検索、セマンティック検索といった機能の実装がどう変化するのか？何を学び、どう備えるべきか？ 未来のキラー機能開発に向けた勘所をお伝えします。",
+      "accepted": true,
+      "track": {
+        "name": "ルームD",
+        "sort": 4
+      },
+      "starts_at": "2025-07-19T13:20:00+09:00",
+      "length_min": 20,
+      "tags": [],
+      "speaker": {
+        "name": "スー",
+        "kana": "スー",
+        "twitter": "suguru_ohki",
+        "avatar_url": "https://fortee.jp/files/phpcon-kansai2025/speaker/6f8b8993-fc67-4623-b5de-a7b9cff0b57c.jpg"
+      },
+      "fav": true,
+      "fav_count": 4,
+      "feedback": {
+        "open": true,
+        "url": "https://fortee.jp/phpcon-kansai2025/me/feedback/2454bec7-7931-45b9-a626-f19fc9be83c7"
+      }
+    },
+    {
+      "type": "talk",
+      "uuid": "9bacdd07-6876-4b5d-b416-c7250f828258",
+      "url": "https://fortee.jp/phpcon-kansai2025/proposal/9bacdd07-6876-4b5d-b416-c7250f828258",
+      "title": "PHPStan 型付け体験教室",
+      "abstract": "PHPStanは簡単に使い始められる便利なツールですが、レベルを上げようとするとPHPStanの型付けの特性について学ばなければ効果的に型をつけることはできません。本ワークショップではブラウザから動かせるPHPStan Playground上で問題を解くことでPHPStanの型についての理解を進めます。\r\n\r\nこのワークショップではブラウザ上で動作するPlaygroundとPHPが動作するローカルマシンのどちらでも取り組むことができます。\r\n(ローカル環境でのPHP開発環境について本編時間内ではサポートできません)\r\n\r\nPHPの文法について基本的に理解していると望ましいですが、可能な限りサポートします。",
+      "accepted": true,
+      "track": {
+        "name": "ルームC",
+        "sort": 3
+      },
+      "starts_at": "2025-07-19T13:20:00+09:00",
+      "length_min": 100,
+      "tags": [
+        {
+          "name": "初心者向け",
+          "color_text": "#ffffff",
+          "color_background": "#50cd89"
+        }
+      ],
+      "speaker": {
+        "name": "うさみけんた",
+        "kana": "ウサミケンタ",
+        "twitter": "tadsan",
+        "avatar_url": "https://fortee.jp/files/phpcon-kansai2025/speaker/bb5337c1-f734-49e1-958e-d7e55e59c9da.jpg"
+      },
+      "fav": true,
+      "fav_count": 5,
+      "feedback": {
+        "open": true,
+        "url": "https://fortee.jp/phpcon-kansai2025/me/feedback/9bacdd07-6876-4b5d-b416-c7250f828258"
+      }
+    },
+    {
+      "type": "talk",
+      "uuid": "65e8ee9a-2057-422c-97e3-00d74f094eec",
+      "url": "https://fortee.jp/phpcon-kansai2025/proposal/65e8ee9a-2057-422c-97e3-00d74f094eec",
+      "title": "プロトコル実装を楽しもう！ PHPで始めるsocketプログラミング",
+      "abstract": "PHPのsocket拡張を利用するとsocketプログラミングができ、通信プロトコルもPHPで実装できます。\r\nさらに、RAW socketという機能を使うとOSが管理しているTCP/IPプロトコルもPHPで実装可能です。\r\n\r\n今回のセッションでは、\r\n- PHPのsocketプログラミングの基本\r\n- HTTPの実装\r\n- TCP/IPの実装\r\nの話を通して、はまりポイントやプロトコル実装の楽しさを共有したいと思います。\r\n\r\nプロトコルは仕様が決まっていて、その仕様を見てひたすら実装し、最終的にはサーバやクライアントと通信できるようになります。この通信できた時の喜びは非常に大きく、かつ大変勉強になります。通信できるまでの過程も含めて楽しさが伝えられたらと思います。",
+      "accepted": true,
+      "track": {
+        "name": "ルームA",
+        "sort": 1
+      },
+      "starts_at": "2025-07-19T13:50:00+09:00",
+      "length_min": 20,
+      "tags": [],
+      "speaker": {
+        "name": "cakephper市川",
+        "kana": "ケイクペチパー　イチカワ",
+        "twitter": "cakephper",
+        "avatar_url": "https://fortee.jp/files/phpcon-kansai2025/speaker/32831acc-0f2e-4b25-a253-6cc9f951a005.jpg"
+      },
+      "fav": true,
+      "fav_count": 6,
+      "feedback": {
+        "open": true,
+        "url": "https://fortee.jp/phpcon-kansai2025/me/feedback/65e8ee9a-2057-422c-97e3-00d74f094eec"
+      }
+    },
+    {
+      "type": "talk",
+      "uuid": "f9664f60-ec52-442b-9b4a-317e8e6830cc",
+      "url": "https://fortee.jp/phpcon-kansai2025/proposal/f9664f60-ec52-442b-9b4a-317e8e6830cc",
+      "title": "コードは育つ、僕も育つ。 PHPと歩んだ設計物語",
+      "abstract": "PHPを社会人になって初めて触りました。またLaravelというフレームワークを知りました。そして新卒だった自分はアプリの初期開発でフレームワークの自由さに魅了され、振り回され、恥の多いコードを書きました。その後、過去の自分が未来の自分を苦しめ、改善を決意し、小さく小さくコツコツと改善を進めました。\r\n\r\n本セッションでは自分がどんな恥の多いコードを書いてきたのか、どうやってコード的な側面、非コード的な側面からシステムを改善していけるかを実体験をもとにご紹介していきます。\r\nセッションを聞いた方が「自分と似た経験をしないための知識」、「しくじりを自分の成長に変えていける引き出し」を得られたら幸いです。\r\n\r\n話すこと(変更の可能性あり)\r\n・ 設計を知らないで実装をするとこんなことしちゃう\r\n・ 自分が行った小さな改善作業(技術側面、非技術側面)",
+      "accepted": true,
+      "track": {
+        "name": "ルームB",
+        "sort": 2
+      },
+      "starts_at": "2025-07-19T13:50:00+09:00",
+      "length_min": 20,
+      "tags": [
+        {
+          "name": "しくじり",
+          "color_text": "#ffffff",
+          "color_background": "#f1416c"
+        }
+      ],
+      "speaker": {
+        "name": "Capi(かぴ)",
+        "kana": "カピ(カピ)",
+        "twitter": "ysssssss98",
+        "avatar_url": "https://fortee.jp/files/phpcon-kansai2025/speaker/ced2b7a9-6f34-4bc9-9ab1-20855f661b84.jpg"
+      },
+      "fav": false,
+      "fav_count": 3,
+      "feedback": {
+        "open": true,
+        "url": "https://fortee.jp/phpcon-kansai2025/me/feedback/f9664f60-ec52-442b-9b4a-317e8e6830cc"
+      }
+    },
+    {
+      "type": "talk",
+      "uuid": "f1dec853-4070-44ad-8eda-ef8b127dda3f",
+      "url": "https://fortee.jp/phpcon-kansai2025/proposal/f1dec853-4070-44ad-8eda-ef8b127dda3f",
+      "title": "副作用と戦う PHP リファクタリング ─ ドメインイベントでビジネスロジックを解きほぐす",
+      "abstract": "副作用が絡み合うロジックを触るたび「どこで何が起きるか分からない」――そんな不安をドメインイベントで断ち切ります！\r\n\r\nドメインイベントは「〇〇が起きた」という事実をクラス化し、処理の流れを“出来事”をベースに組み立て直すことで、依存を一方向に整えることができます。\r\n\r\n本トークでは実務でのリファクタリングを題材に、\r\n\r\n1. 従来のメソッド分割との違いや限界を体感\r\n2. 同期イベント導入\r\n3. 非同期化\r\n\r\nの3ステップでリファクタリング前と後のコードで比較しながら順に解説します。\r\n\r\nチームでドメインイベントをわいわい議論できるようになるきっかけを提供します！",
+      "accepted": true,
+      "track": {
+        "name": "ルームD",
+        "sort": 4
+      },
+      "starts_at": "2025-07-19T13:50:00+09:00",
+      "length_min": 20,
+      "tags": [
+        {
+          "name": "初心者向け",
+          "color_text": "#ffffff",
+          "color_background": "#50cd89"
+        }
+      ],
+      "speaker": {
+        "name": "梶川 琢馬",
+        "kana": "カジカワ タクマ",
+        "twitter": "kajitack",
+        "avatar_url": "https://fortee.jp/files/phpcon-kansai2025/speaker/c5fa1a61-abcf-45f3-a77f-c3610fb530c5.jpg"
+      },
+      "fav": false,
+      "fav_count": 3,
+      "feedback": {
+        "open": true,
+        "url": "https://fortee.jp/phpcon-kansai2025/me/feedback/f1dec853-4070-44ad-8eda-ef8b127dda3f"
+      }
+    },
+    {
+      "type": "talk",
+      "uuid": "2138cf97-1407-4e8f-920c-f8e6a5f4e7c2",
+      "url": "https://fortee.jp/phpcon-kansai2025/proposal/2138cf97-1407-4e8f-920c-f8e6a5f4e7c2",
+      "title": "Git by PHP - 作って学ぶバージョン管理システム",
+      "abstract": "普段当たり前のように使っている “Git”、その仕組みを理解していますか？\r\n本セッションでは、Git の内部構造を理解するために「PHP で Git の再現」に挑戦した取り組みを紹介します。\r\n実際に再現してわかった、Gitのデータ構造や差分管理の仕組み、そして再現を通じて学べた本質的な気付きについてお話しします。\r\n\r\n# トーク内容（予定）\r\n- なぜ Git を再現するのか\r\n- なぜ PHP で再現するのか\r\n- どうやって Git を再現したのか\r\n- Git を再現するために必要なもの\r\n- Git の中身はどうなっているのか\r\n- 差分はどのように管理されているのか\r\n- データはどのように保存されているのか\r\n\r\n普段なんとなくGitを使っている方も、このセッションを通じて仕組みへの理解を深めてみませんか？",
+      "accepted": true,
+      "track": {
+        "name": "ルームB",
+        "sort": 2
+      },
+      "starts_at": "2025-07-19T14:20:00+09:00",
+      "length_min": 45,
+      "tags": [
+        {
+          "name": "関西",
+          "color_text": "#ffffff",
+          "color_background": "#ff8f00"
+        }
+      ],
+      "speaker": {
+        "name": "sumire",
+        "kana": "スミレ",
+        "twitter": "sumiresakamoto",
+        "avatar_url": "https://fortee.jp/files/phpcon-kansai2025/speaker/010fe66b-c747-4390-82aa-e83509c11151.jpg"
+      },
+      "fav": false,
+      "fav_count": 7,
+      "feedback": {
+        "open": true,
+        "url": "https://fortee.jp/phpcon-kansai2025/me/feedback/2138cf97-1407-4e8f-920c-f8e6a5f4e7c2"
+      }
+    },
+    {
+      "type": "talk",
+      "uuid": "c71b4b3d-46a0-4dd8-aa1f-339dc555c6b1",
+      "url": "https://fortee.jp/phpcon-kansai2025/proposal/c71b4b3d-46a0-4dd8-aa1f-339dc555c6b1",
+      "title": "構文解析器入門",
+      "abstract": "皆さんは、ご自身が書いたコードがPHPによってどのように解析され、有効な構文として認識されているか気になったことはありませんか？\r\nこの発表では、構文解析の理解を深め、文法ファイルを読み解くスキルを身につけることで、\r\nPHPの文法をより深く知るきっかけにしたいと思います。\r\n\r\n話す内容は以下のことを予定しています：\r\n- パーサーとパーサージェネレーターの基礎知識\r\n- 文法ファイルとbison/yacc形式のBNFの読み方\r\n- 実際の文法ファイルのBNFを眺めながら実際に読む\r\n\r\nこの発表の対象者は、PHPの構文解析のしくみに興味を持つすべてのPHPerです。\r\nこの分野の知識がない方でも理解できる内容にします。\r\n\r\n構文解析器の分野は非常に興味深く、言語設計の奥深さを知る入り口となります。\r\nこの発表を通じて、少しでも多くの方がこの分野に興味を持っていただけることを目指します。",
+      "accepted": true,
+      "track": {
+        "name": "ルームD",
+        "sort": 4
+      },
+      "starts_at": "2025-07-19T14:20:00+09:00",
+      "length_min": 45,
+      "tags": [
+        {
+          "name": "関西",
+          "color_text": "#ffffff",
+          "color_background": "#ff8f00"
+        }
+      ],
+      "speaker": {
+        "name": "ydah",
+        "kana": "ワイダー",
+        "twitter": "ydah_",
+        "avatar_url": "https://fortee.jp/files/phpcon-kansai2025/speaker/d645541c-0652-4a08-893f-7fb5dc4eee1a.jpg"
+      },
+      "fav": false,
+      "fav_count": 6,
+      "feedback": {
+        "open": true,
+        "url": "https://fortee.jp/phpcon-kansai2025/me/feedback/c71b4b3d-46a0-4dd8-aa1f-339dc555c6b1"
+      }
+    },
+    {
+      "type": "talk",
+      "uuid": "4f91183c-b4fc-4e0f-aa77-a83d83218fe0",
+      "url": "https://fortee.jp/phpcon-kansai2025/proposal/4f91183c-b4fc-4e0f-aa77-a83d83218fe0",
+      "title": "「次に何を学べばいいか分からない」あなたへ──若手PHPエンジニアのための学習地図",
+      "abstract": "PHPでの開発に慣れてきた若手エンジニアが次に直面するのは、「何をどう学べばいいのか分からない」という壁です。MVCフレームワーク、リファクタリング、SOLID原則、ペアプロ、ユニットテスト、アジャイル開発といった開発に関する考え方や実践はどこから生まれ、なぜ今も大切にされているのでしょうか？\r\n\r\n本セッションでは、ケント・ベック、マーティン・ファウラー、ボブおじさん、DHHといった人物を中心に、それぞれの技術や手法が生まれた背景、当時の課題、そしてそれらがPHPを含む現在の開発スタイルにどう影響を与えてきたのかを、歴史の視点から紹介します。\r\n\r\nこうした知識は本来「デキる先輩」が後輩に伝えてきたものでした。しかし、周囲にそのような先輩がいない場合もあると思います。このセッションでは、現場の課題を解決するために必要なことを効率よく学ぶための「知識の地図」を提供します。\r\n\r\n",
+      "accepted": true,
+      "track": {
+        "name": "ルームA",
+        "sort": 1
+      },
+      "starts_at": "2025-07-19T14:20:00+09:00",
+      "length_min": 45,
+      "tags": [
+        {
+          "name": "関西",
+          "color_text": "#ffffff",
+          "color_background": "#ff8f00"
+        },
+        {
+          "name": "初心者向け",
+          "color_text": "#ffffff",
+          "color_background": "#50cd89"
+        }
+      ],
+      "speaker": {
+        "name": "プログラミングをするパンダ",
+        "kana": "プログラミングヲスルパンダ",
+        "twitter": "Panda_Program",
+        "avatar_url": "https://fortee.jp/files/phpcon-kansai2025/speaker/1e4097ed-6b3c-42e2-b6b0-21221790490a.png"
+      },
+      "fav": false,
+      "fav_count": 7,
+      "feedback": {
+        "open": true,
+        "url": "https://fortee.jp/phpcon-kansai2025/me/feedback/4f91183c-b4fc-4e0f-aa77-a83d83218fe0"
+      }
+    },
+    {
+      "type": "talk",
+      "uuid": "9ba88ea6-0f96-446d-a184-1d9f87b5659f",
+      "url": "https://fortee.jp/phpcon-kansai2025/proposal/9ba88ea6-0f96-446d-a184-1d9f87b5659f",
+      "title": "PHP 8の文法進化と型の力で学ぶ、“意図が伝わる”コード設計入門",
+      "abstract": "「とりあえず動くPHP」から一歩進みたい初学者へ向けて、PHP 8の文法と型の表現力を通じて、読みやすく・壊れにくいコードの設計を学ぶセッションです。\r\n\r\nmatch 式や readonly プロパティ、union types、named arguments などの機能が、静的解析ツール（PHPStan, Psalm）と組み合わせてどのように活きるのかを具体的なコード例で解説します。\r\n\r\n「型を書くだけで、こんなにミスに気づけるのか」「PHPでも設計って考えられるんだ」と実感できる内容を目指します。\r\n\r\n文法の表面的な知識だけでなく、現場でコードを書く上で意識したい“意図を型で伝える”視点を手に入れましょう。",
+      "accepted": true,
+      "track": {
+        "name": "ルームB",
+        "sort": 2
+      },
+      "starts_at": "2025-07-19T15:15:00+09:00",
+      "length_min": 20,
+      "tags": [
+        {
+          "name": "関西",
+          "color_text": "#ffffff",
+          "color_background": "#ff8f00"
+        },
+        {
+          "name": "初心者向け",
+          "color_text": "#ffffff",
+          "color_background": "#50cd89"
+        }
+      ],
+      "speaker": {
+        "name": "かけ",
+        "kana": "カケ",
+        "twitter": "kake4723",
+        "avatar_url": "https://fortee.jp/files/phpcon-kansai2025/speaker/55f1bab0-0c5e-452e-b963-5fe86848836f.jpg"
+      },
+      "fav": true,
+      "fav_count": 4,
+      "feedback": {
+        "open": true,
+        "url": "https://fortee.jp/phpcon-kansai2025/me/feedback/9ba88ea6-0f96-446d-a184-1d9f87b5659f"
+      }
+    },
+    {
+      "type": "talk",
+      "uuid": "4be1a9d7-1acd-4b5c-8713-0416ac6da233",
+      "url": "https://fortee.jp/phpcon-kansai2025/proposal/4be1a9d7-1acd-4b5c-8713-0416ac6da233",
+      "title": "Laravelで作るWebアプリを普通に真面目にちゃんとAWSにデプロイする方法 〜Franken PHPも試してみるよ〜",
+      "abstract": "平均80点ぐらい取れるAWS構成とその使い所と細かいハマりポイントを紹介します\r\n\r\n## セキュリテイの巻\r\n- rate limitのハマりポイント、WAFとLaravel\r\n- .envに書く内容はパラメーターストアにいれておこう\r\n- ECSはプライベートサブネット(イメージPullできない問題)\r\n\r\n## コストの巻\r\n- 画像類はなるべくS3に置く(公開したくないやつをlaravelでどうやって表示する？)\r\n- t4gインスタンスいいぞ！（昔はPHPとARMの相性悪かったらしいが）\r\n- ほんとにNginxいる？(Franken PHPでコンテナ一個で運用するのはどうだろう、Nextjsと比較)\r\n\r\n## 動作確認の巻\r\n- ローカルスタックのS3は割と使い勝手が良い\r\n- でも、メールはsmtpでmailtrapとか建てたほうが楽かも\r\n- というかその辺Laravelで良い感じにできる\r\n",
+      "accepted": true,
+      "track": {
+        "name": "ルームD",
+        "sort": 4
+      },
+      "starts_at": "2025-07-19T15:15:00+09:00",
+      "length_min": 20,
+      "tags": [
+        {
+          "name": "関西",
+          "color_text": "#ffffff",
+          "color_background": "#ff8f00"
+        }
+      ],
+      "speaker": {
+        "name": "ひずみ",
+        "kana": "ヒズミ",
+        "twitter": "hizumiyazaki",
+        "avatar_url": "https://fortee.jp/files/phpcon-kansai2025/speaker/e4d3470e-3e6c-4d6d-83db-ac7eb9c8452c.jpg"
+      },
+      "fav": false,
+      "fav_count": 2,
+      "feedback": {
+        "open": true,
+        "url": "https://fortee.jp/phpcon-kansai2025/me/feedback/4be1a9d7-1acd-4b5c-8713-0416ac6da233"
+      }
+    },
+    {
+      "type": "talk",
+      "uuid": "1ee1c63d-c6b0-4e02-9f78-d0a727ef07f8",
+      "url": "https://fortee.jp/phpcon-kansai2025/proposal/1ee1c63d-c6b0-4e02-9f78-d0a727ef07f8",
+      "title": "PHPStanへのコントリビュートを通して更にPHPStanに詳しくなった話",
+      "abstract": "PHPStanがどのように解析を行っているのか、型を決定しているのかを普段意識することはほとんど無いと思います。\r\nしかし、仕組みを理解することで活用の幅がもっと広がり、そしてかっこよくなれます！\r\n\r\nそこで本トークでは、PHPStanへのコントリビュートを通して、更にPHPStanに詳しくなった経験についてお話します。\r\n\r\n話す内容\r\n- PHPStanが型を決定する仕組み\r\n- 拡張について\r\n- 実際に提案した内容・追加した内容について\r\n- コントリビュートポイントの探し方\r\n- PR作成からマージまでの流れについて",
+      "accepted": true,
+      "track": {
+        "name": "ルームA",
+        "sort": 1
+      },
+      "starts_at": "2025-07-19T15:15:00+09:00",
+      "length_min": 20,
+      "tags": [
+        {
+          "name": "関西",
+          "color_text": "#ffffff",
+          "color_background": "#ff8f00"
+        }
+      ],
+      "speaker": {
+        "name": "まるすけ",
+        "kana": "マルスケ",
+        "twitter": "malsuke096",
+        "avatar_url": "https://fortee.jp/files/phpcon-kansai2025/speaker/14229c97-e297-4bf7-9578-8d6ac6249c27.jpg"
+      },
+      "fav": false,
+      "fav_count": 4,
+      "feedback": {
+        "open": true,
+        "url": "https://fortee.jp/phpcon-kansai2025/me/feedback/1ee1c63d-c6b0-4e02-9f78-d0a727ef07f8"
+      }
+    },
+    {
+      "type": "timeslot",
+      "uuid": "fb024332-0143-435a-82bc-99ed3eb68e71",
+      "title": "スポンサーセッション",
+      "abstract": null,
+      "track": {
+        "name": "ルームA",
+        "sort": 1
+      },
+      "starts_at": "2025-07-19T15:45:00+09:00",
+      "length_min": 20
+    },
+    {
+      "type": "talk",
+      "uuid": "f89a868b-2dc6-4bbc-b605-c2998ff5b2af",
+      "url": "https://fortee.jp/phpcon-kansai2025/proposal/f89a868b-2dc6-4bbc-b605-c2998ff5b2af",
+      "title": "バイブスあるコーディングで PHP便利ツールをつくるプラクティス",
+      "abstract": "**考えるより感じろ！**\r\n\r\n「今やってるこれ、何度もやってるな…これ、便利ツールにしたら二度と書かなくて済むのでは？」って思う瞬間、ありませんか？\r\n\r\nそんなときにバイブスあるコーディングです！！！\r\n\r\nこのLTでは、そうした**“ノリ”で作る小さなPHPツール**の実装Tips、サクッと役立つテクなどを紹介します。\r\n難しい理論や設計の話はナシ！Vibeのままコードを書いて、便利にして、また次のコードへ。\r\n\r\n今日のバイブスが明日の時短になるかも。",
+      "accepted": true,
+      "track": {
+        "name": "ルームA",
+        "sort": 1
+      },
+      "starts_at": "2025-07-19T16:10:00+09:00",
+      "length_min": 5,
+      "tags": [],
+      "speaker": {
+        "name": "uzulla",
+        "kana": "ウズラ",
+        "twitter": "uzulla",
+        "avatar_url": "https://fortee.jp/files/phpcon-kansai2025/speaker/64007250-f567-4240-b813-f2539adce13f.jpg"
+      },
+      "fav": false,
+      "fav_count": 2,
+      "feedback": {
+        "open": true,
+        "url": "https://fortee.jp/phpcon-kansai2025/me/feedback/f89a868b-2dc6-4bbc-b605-c2998ff5b2af"
+      }
+    },
+    {
+      "type": "talk",
+      "uuid": "6b66561e-8b86-4217-bbc7-be5288e4a724",
+      "url": "https://fortee.jp/phpcon-kansai2025/proposal/6b66561e-8b86-4217-bbc7-be5288e4a724",
+      "title": "５分で説明し切る、メンテナンスしやすいテストコードの書き方",
+      "abstract": "僕はよく思うんです。\r\n\r\n自分が書いたコードで満足することってないなあって。\r\n過去の自分に忸怩たる思いを抱きつつ、今日出せる最高のコードを書き続ける。\r\n\r\nしかしだな、テストコードだけはサラッと書きたい。\r\n何ならAIにだって書かせられる。\r\n\r\n メンテしやすいテストコードについて。今出せるすべてをここに置きたい。\r\n\r\n* テストコードの設計方法\r\n* テストデータの取り扱いについて",
+      "accepted": true,
+      "track": {
+        "name": "ルームA",
+        "sort": 1
+      },
+      "starts_at": "2025-07-19T16:15:00+09:00",
+      "length_min": 5,
+      "tags": [],
+      "speaker": {
+        "name": "スタヰル",
+        "kana": "スタイル",
+        "twitter": "stwile871",
+        "avatar_url": "https://fortee.jp/files/phpcon-kansai2025/speaker/af97b723-94b8-4385-b878-132effe81ca5.jpg"
+      },
+      "fav": true,
+      "fav_count": 6,
+      "feedback": {
+        "open": true,
+        "url": "https://fortee.jp/phpcon-kansai2025/me/feedback/6b66561e-8b86-4217-bbc7-be5288e4a724"
+      }
+    },
+    {
+      "type": "talk",
+      "uuid": "297cec8e-b4b0-4b9c-889d-2d5164387fc2",
+      "url": "https://fortee.jp/phpcon-kansai2025/proposal/297cec8e-b4b0-4b9c-889d-2d5164387fc2",
+      "title": "私たちはなぜ PHP をアップデートしないといけないのか？ 〜攻めと守り、両面から見たバージョンアップの本当の意味〜",
+      "abstract": "PHPのアップデートといえば、新しい文法や関数が使えるようになって開発者体験が向上した！みたいなどちらかというと攻めの意味合いに目が行きがちだと思います。\r\nしかし実際に CVE 対応を検討する中で、OS のバージョンによりパッチの適用に課題が生じた経験から、“守り”の視点の重要性を実感しました。\r\nこのLTでは、アップデートにおける“語られない守り”に光を当て、今を守りながら未来を選び取るための向き合い方を共有します。",
+      "accepted": true,
+      "track": {
+        "name": "ルームA",
+        "sort": 1
+      },
+      "starts_at": "2025-07-19T16:20:00+09:00",
+      "length_min": 5,
+      "tags": [],
+      "speaker": {
+        "name": "まさき。",
+        "kana": "マサキ",
+        "twitter": "myblackcat7112",
+        "avatar_url": "https://fortee.jp/files/phpcon-kansai2025/speaker/d559a4f6-93b2-4c03-b22f-58bb5d538368.jpg"
+      },
+      "fav": true,
+      "fav_count": 3,
+      "feedback": {
+        "open": true,
+        "url": "https://fortee.jp/phpcon-kansai2025/me/feedback/297cec8e-b4b0-4b9c-889d-2d5164387fc2"
+      }
+    },
+    {
+      "type": "talk",
+      "uuid": "6d3a6fd6-f8e1-4362-adad-4f34548b7a9f",
+      "url": "https://fortee.jp/phpcon-kansai2025/proposal/6d3a6fd6-f8e1-4362-adad-4f34548b7a9f",
+      "title": "PHPでResult型（クラス）やってみよう",
+      "abstract": "PHPでResult型（クラス）を再現してみるセッションです。\r\nResult型とは、処理結果を「成功（Ok）」または「失敗（Err）」のいずれかの値として表現し、例外を使わずにエラー処理を構造的に記述するための手法です。\r\n\r\n本セッションでは以下について話す予定です。\r\n・Result型（クラス）の説明\r\n・PHPでResultを実現するとどんな感じになるのか（コード例を交えて解説）\r\n・自分なりに考えるPHPでResult型（クラス）を使うメリット・デメリット",
+      "accepted": true,
+      "track": {
+        "name": "ルームA",
+        "sort": 1
+      },
+      "starts_at": "2025-07-19T16:25:00+09:00",
+      "length_min": 5,
+      "tags": [],
+      "speaker": {
+        "name": "ひがき",
+        "kana": "ヒガキ",
+        "twitter": "higaki_program",
+        "avatar_url": "https://fortee.jp/files/phpcon-kansai2025/speaker/f2b5e501-e192-47d2-a2ad-20315dba6177.jpg"
+      },
+      "fav": false,
+      "fav_count": 3,
+      "feedback": {
+        "open": true,
+        "url": "https://fortee.jp/phpcon-kansai2025/me/feedback/6d3a6fd6-f8e1-4362-adad-4f34548b7a9f"
+      }
+    },
+    {
+      "type": "talk",
+      "uuid": "c615d19c-a57f-4276-901e-354873e24ed4",
+      "url": "https://fortee.jp/phpcon-kansai2025/proposal/c615d19c-a57f-4276-901e-354873e24ed4",
+      "title": "Pythonを使わずPHPでどこまで機械学習を扱えるのか",
+      "abstract": "レコメンド機能や新機能の効果予測など、ウェブアプリケーションで使われる機械学習はエコシステムが出来上がっているpythonで実装されることが多く、ウェブアプリケーション自体はPHPでもデータ取得や推論部分はpythonで実装されていることがほとんどだと思います。\r\n課題は\r\n1. データスキーマをPHPで定義した場合、スキーマを変更したときにデータ取得のpython側でもスキーマを考慮する必要がある\r\n2. ウェブアプリケーションと違う言語なので、頭の切り替えコストが高い\r\n3. python側とのリクエスト/レスポンスの設計が難しく、リアルタイムデータを推論エンジンに与えようとすると、POSTのbodyが超巨大になることもある\r\n\r\nPHPのデータ整形/機械学習エコシステムは砂漠状態のため、どうしてもPHPで機械学習をしたい私がPHPの機械学習でできたこと/できなかったことを紹介します",
+      "accepted": true,
+      "track": {
+        "name": "ルームA",
+        "sort": 1
+      },
+      "starts_at": "2025-07-19T16:30:00+09:00",
+      "length_min": 5,
+      "tags": [
+        {
+          "name": "関西",
+          "color_text": "#ffffff",
+          "color_background": "#ff8f00"
+        },
+        {
+          "name": "初心者向け",
+          "color_text": "#ffffff",
+          "color_background": "#50cd89"
+        }
+      ],
+      "speaker": {
+        "name": "daiki",
+        "kana": "ダイキ",
+        "avatar_url": "https://fortee.jp/files/phpcon-kansai2025/speaker/4a361839-fdd5-463c-87b3-a83f1ea36c7b.jpg"
+      },
+      "fav": false,
+      "fav_count": 4,
+      "feedback": {
+        "open": true,
+        "url": "https://fortee.jp/phpcon-kansai2025/me/feedback/c615d19c-a57f-4276-901e-354873e24ed4"
+      }
+    },
+    {
+      "type": "talk",
+      "uuid": "f3be3049-f89f-4ab2-b67a-d00a07e4e0f5",
+      "url": "https://fortee.jp/phpcon-kansai2025/proposal/f3be3049-f89f-4ab2-b67a-d00a07e4e0f5",
+      "title": "ちょっとした「翻訳ブーム」はこうして始まった",
+      "abstract": "PHP8.4のリリースをきっかけに、日本語ドキュメントの翻訳に参加してみようと思ったのが始まりでした。\r\n\r\nですが、最初の壁となったのは翻訳用の環境構築でした。\r\n自分も悩んでしまった環境構築。その敷居を少しでも下げたいという思いから、誰でも簡単に始められる翻訳支援ツールを作りました。\r\n\r\n短いコマンドで動き、初めての方でも迷わず使えるよう工夫したことで、実際に参加者も増え、小さな翻訳の輪が広がりました。\r\nなかには初めてOSSへの貢献をされた方もおられたようです。\r\nこの取り組みの背景やツールに込めた思い、そして“壁を取り除く”ことで生まれた変化についてお話しします。",
+      "accepted": true,
+      "track": {
+        "name": "ルームA",
+        "sort": 1
+      },
+      "starts_at": "2025-07-19T16:35:00+09:00",
+      "length_min": 5,
+      "tags": [],
+      "speaker": {
+        "name": "田添春樹",
+        "kana": "タゾエハルキ",
+        "twitter": "jdkfx",
+        "avatar_url": "https://fortee.jp/files/phpcon-kansai2025/speaker/c94b7e03-e649-4bb5-aeac-5c83370afc22.jpg"
+      },
+      "fav": true,
+      "fav_count": 7,
+      "feedback": {
+        "open": true,
+        "url": "https://fortee.jp/phpcon-kansai2025/me/feedback/f3be3049-f89f-4ab2-b67a-d00a07e4e0f5"
+      }
+    },
+    {
+      "type": "talk",
+      "uuid": "78b68ac9-c372-4b4c-8590-370c03b8c64f",
+      "url": "https://fortee.jp/phpcon-kansai2025/proposal/78b68ac9-c372-4b4c-8590-370c03b8c64f",
+      "title": "Modernizing Static Method Testing 〜 PHP の静的メソッドテストを現代化する〜",
+      "abstract": "多くのレガシーな PHP コードベースでは、インスタンスクラスを使わず、静的メソッドを関数のように扱うスタイルが一般的に採用されてきました。\r\n\r\nしかしこの設計は、特にユニットテストの観点から見ると、静的メソッドのモックが難しいという課題があります。一般的なテストフレームワークでは静的メソッドのモックがサポートされておらず、そのため開発者は StaticMock のようなライブラリに頼る必要があります。\r\n\r\nただし StaticMock では、モック対象のメソッドが静的解析されないため、IDE のコードジャンプ機能が効かないといった不便さがあります。\r\n\r\nそこで注目したいのが、PHP 8.1 から導入された「第一級 callable」構文です。これを使えば、静的メソッドをクロージャとして渡すことが可能になります。\r\n\r\n本トークでは、この新しいアプローチとその実践的な活用方法について紹介します。",
+      "accepted": true,
+      "track": {
+        "name": "ルームA",
+        "sort": 1
+      },
+      "starts_at": "2025-07-19T16:40:00+09:00",
+      "length_min": 5,
+      "tags": [],
+      "speaker": {
+        "name": "LuckyWind",
+        "kana": "ラッキー",
+        "twitter": "LuckyWind_sck",
+        "avatar_url": "https://fortee.jp/files/phpcon-kansai2025/speaker/e38eac04-a311-47f8-9dee-b72a5fb32474.jpg"
+      },
+      "fav": false,
+      "fav_count": 2,
+      "feedback": {
+        "open": true,
+        "url": "https://fortee.jp/phpcon-kansai2025/me/feedback/78b68ac9-c372-4b4c-8590-370c03b8c64f"
+      }
+    },
+    {
+      "type": "talk",
+      "uuid": "441e4c82-6aca-4b90-bf65-fca050e1be0b",
+      "url": "https://fortee.jp/phpcon-kansai2025/proposal/441e4c82-6aca-4b90-bf65-fca050e1be0b",
+      "title": "PHPコミュニティからやってみたテスターとプログラマーの新たな可能性の探究",
+      "abstract": "皆さん、こんにちは！私は普段テスター/QAとして活動しており、PHPのプロフェッショナルではありません。\r\nそんなテスターの私は、PHPをコア技術とする企業に参画したことを機に、PHP開発者の方々やPHPコミュニティの皆様と交流する機会を得て、大きな刺激を受けています。\r\n\r\n今回のLTでは、テスターである私がPHPコミュニティに参加し、そこで感じた熱い想いを共有させてください。\r\n具体的には、以下の3点についてお話したいと考えています。\r\n\r\n- 開発のための\"テスト\"と品質保証のためのテストという二面性\r\n- テスターとプログラマーが協力し合うことで生まれる、新たな価値創造\r\n- PHPコミュニティの温かさと、そこから得られる学び\r\n\r\nこのLTを通して、テスターとプログラマーが互いに協力し、刺激し合いながら、より良いソフトウェア開発を追求できる未来を皆さんと一緒に描きたいと思います。",
+      "accepted": true,
+      "track": {
+        "name": "ルームA",
+        "sort": 1
+      },
+      "starts_at": "2025-07-19T16:45:00+09:00",
+      "length_min": 5,
+      "tags": [
+        {
+          "name": "関西",
+          "color_text": "#ffffff",
+          "color_background": "#ff8f00"
+        }
+      ],
+      "speaker": {
+        "name": "やまずん",
+        "kana": "ヤマズン",
+        "twitter": "55_ymzn",
+        "avatar_url": "https://fortee.jp/files/phpcon-kansai2025/speaker/2e803b94-de11-45e2-9726-35435c3d946d.jpg"
+      },
+      "fav": true,
+      "fav_count": 6,
+      "feedback": {
+        "open": true,
+        "url": "https://fortee.jp/phpcon-kansai2025/me/feedback/441e4c82-6aca-4b90-bf65-fca050e1be0b"
+      }
+    },
+    {
+      "type": "talk",
+      "uuid": "cc03db1e-6a79-4f8b-a68c-ffb17d745cde",
+      "url": "https://fortee.jp/phpcon-kansai2025/proposal/cc03db1e-6a79-4f8b-a68c-ffb17d745cde",
+      "title": "登壇未経験だった私が「初めてプロポーザルを出してみよう」と思ったときにやったこと",
+      "abstract": "「登壇してみたいけど、プロポーザルの書き方が分からない・・・。」\r\nそのように感じている方はいらっしゃいますか。\r\n\r\n私は「PHPカンファレンス新潟2025」で初めてプロポーザルを出しました。\r\nその結果、採択いただいたばかりでなく、「あのプロポーザルよかったね」とお褒めの言葉をいただきました。\r\n\r\nこのLTでは登壇未経験だった私が、初めて出すプロポーザルをより良いものにするためにやったことをお話しします。\r\n\r\n⚪︎やったこと\r\n・「募集要項」「実行委員長の思い」を確認する\r\n・「プロポーザルの書き方」の資料を参考にする\r\n・採択されているプロポーザルの構成を真似る\r\n・ペルソナを決める\r\n\r\nPHPカンファレンスでの登壇経験のない方が「プロポーザルを出してみよう」と一歩を踏み出すきっかけになれば嬉しいです！",
+      "accepted": true,
+      "track": {
+        "name": "ルームA",
+        "sort": 1
+      },
+      "starts_at": "2025-07-19T16:50:00+09:00",
+      "length_min": 5,
+      "tags": [
+        {
+          "name": "初心者向け",
+          "color_text": "#ffffff",
+          "color_background": "#50cd89"
+        }
+      ],
+      "speaker": {
+        "name": "おさない",
+        "kana": "オサナイ",
+        "twitter": "000sak000",
+        "avatar_url": "https://fortee.jp/files/phpcon-kansai2025/speaker/ef915362-949d-4e64-8c6d-30c86dd0e64f.jpg"
+      },
+      "fav": false,
+      "fav_count": 3,
+      "feedback": {
+        "open": true,
+        "url": "https://fortee.jp/phpcon-kansai2025/me/feedback/cc03db1e-6a79-4f8b-a68c-ffb17d745cde"
+      }
+    },
+    {
+      "type": "talk",
+      "uuid": "6a2fe9e8-3077-44b0-8dcf-60b016ca551c",
+      "url": "https://fortee.jp/phpcon-kansai2025/proposal/6a2fe9e8-3077-44b0-8dcf-60b016ca551c",
+      "title": "カンファレンスに参加したあなたが明日からできること",
+      "abstract": "PHPカンファレンス関西2025ではカンファレンスに初めて来るという方も多くいることと思います。\r\n\r\n私が、カンファレンスに参加したときは知らない世界をたくさん見ることができ、大いに刺激を受けた一方で、レッドピルを飲んで真実を知ってしまったような感覚も味わいました。\r\n\r\n業務で扱うコードは制約もあり、せっかくカンファレンスで学んだことを活かせないことも少なくありません。\r\n\r\nそんな中でも、今日カンファレンスに参加したあなただからこそできることがあります。\r\n\r\nこのトークでは、カンファレンスに参加したあなたが明日から、自分の周りから少しずつ、改善を始める方法をお話しします。",
+      "accepted": true,
+      "track": {
+        "name": "ルームA",
+        "sort": 1
+      },
+      "starts_at": "2025-07-19T16:55:00+09:00",
+      "length_min": 5,
+      "tags": [
+        {
+          "name": "関西",
+          "color_text": "#ffffff",
+          "color_background": "#ff8f00"
+        },
+        {
+          "name": "初心者向け",
+          "color_text": "#ffffff",
+          "color_background": "#50cd89"
+        }
+      ],
+      "speaker": {
+        "name": "あかつか",
+        "kana": "アカツカ",
+        "twitter": "aki_artisan",
+        "avatar_url": "https://fortee.jp/files/phpcon-kansai2025/speaker/5a55b627-6435-4652-8b72-d3e8db593fdc.jpg"
+      },
+      "fav": false,
+      "fav_count": 4,
+      "feedback": {
+        "open": true,
+        "url": "https://fortee.jp/phpcon-kansai2025/me/feedback/6a2fe9e8-3077-44b0-8dcf-60b016ca551c"
+      }
+    },
+    {
+      "type": "timeslot",
+      "uuid": "ac4e65e6-7402-4b49-9dbc-b0c3a9bb7737",
+      "title": "クロージング",
+      "abstract": null,
+      "track": {
+        "name": "ルームA",
+        "sort": 1
+      },
+      "starts_at": "2025-07-19T17:10:00+09:00",
+      "length_min": 20
+    },
+    {
+      "type": "timeslot",
+      "uuid": "bfff870e-58d5-4e1f-868f-c864a5db21de",
+      "title": "懇親会",
+      "abstract": null,
+      "track": {
+        "name": "ルームA",
+        "sort": 1
+      },
+      "starts_at": "2025-07-19T18:00:00+09:00",
+      "length_min": 120
+    }
+  ]
+}

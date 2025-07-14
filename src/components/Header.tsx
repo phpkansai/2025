@@ -14,7 +14,7 @@ export default function Header({ menuOpen, setMenuOpen }: HeaderProps) {
         <h1 className="text-base md:text-xl font-bold">PHPカンファレンス関西2025</h1>
       </div>
       <div className="hidden md:flex items-center space-x-4">
-        <a href="https://fortee.jp/phpcon-kansai2025/timetable/" target="_blank" rel="noopener noreferrer" className="text-sm font-bold text-white">タイムテーブル</a>
+        <a href="/timetable" className="text-sm font-bold text-white">タイムテーブル</a>
         <a href="https://note.com/phpcon_kansai" target="_blank" rel="noopener noreferrer" className="text-sm font-bold text-white">note</a>
         <a href="/code-of-conduct" className="text-sm font-bold text-white">行動規範</a>
         <a href="https://fortee.jp/phpcon-kansai2025/ticket-shop/index" target="_blank" rel="noopener noreferrer" className="inline-flex items-center bg-[#FFC145] text-white font-bold px-4 py-1 rounded-full hover:bg-opacity-90 transition">
@@ -29,7 +29,7 @@ export default function Header({ menuOpen, setMenuOpen }: HeaderProps) {
         </button>
         {menuOpen && (
           <div className="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg z-50">
-            <a href="https://fortee.jp/phpcon-kansai2025/timetable/" target="_blank" rel="noopener noreferrer" className="block px-4 py-2 text-sm font-bold text-gray-700 hover:bg-gray-100">タイムテーブル</a>
+            <a href="/timetable" className="block px-4 py-2 text-sm font-bold text-gray-700 hover:bg-gray-100">タイムテーブル</a>
             <a href="https://note.com/phpcon_kansai" target="_blank" rel="noopener noreferrer" className="block px-4 py-2 text-sm font-bold text-gray-700 hover:bg-gray-100">note</a>
             <a href="/code-of-conduct" className="block px-4 py-2 text-sm font-bold text-gray-700 hover:bg-gray-100">行動規範</a>
             <a href="https://fortee.jp/phpcon-kansai2025/ticket-shop/index" target="_blank" rel="noopener noreferrer" className="block px-4 py-2 text-sm font-bold text-gray-700 hover:bg-gray-100">チケット購入</a>
