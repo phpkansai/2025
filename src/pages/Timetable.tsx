@@ -1,6 +1,7 @@
 import React, { useState, useMemo, useEffect } from 'react';
 import { Clock, Tag, Calendar } from 'lucide-react';
 import timetableData from '../timetable.json';
+import ErrorBoundary from '../components/ErrorBoundary';
 
 interface Track {
   name: string;
@@ -72,6 +73,12 @@ const Timetable: React.FC = () => {
     };
   }, []);
 
+  // Helper function to get the base room name (without room number)
+  const getBaseRoomName = (trackName: string) => {
+    // Extract the base room name (e.g., "ルームA" from "ルームA = 307")
+    return trackName.split('=')[0].trim();
+  };
+
   // Extract unique tracks for the selected day (excluding 交流スペース and スポンサーブース)
   const tracks = useMemo(() => {
     const dayItems = timetableData.timetable.filter((item: TimetableItem) => {
@@ -79,27 +86,39 @@ const Timetable: React.FC = () => {
       const isDay1 = itemDate.getDate() === 18;
       return (selectedDay === 'day1' && isDay1) || (selectedDay === 'day2' && !isDay1);
     });
-    
+
     const uniqueTracks = new Map<string, Track>();
     dayItems.forEach((item: TimetableItem) => {
+      if (!item.track) {
+        console.error('Missing track for item:', item);
+        return;
+      }
+      const baseRoomName = getBaseRoomName(item.track.name);
       // Exclude 交流スペース and スポンサーブース
-      if (item.track.name !== '交流スペース' && item.track.name !== 'スポンサーブース') {
-        if (!uniqueTracks.has(item.track.name)) {
-          uniqueTracks.set(item.track.name, item.track);
+      if (!baseRoomName.includes('交流スペース') && baseRoomName !== 'スポンサーブース') {
+        if (!uniqueTracks.has(baseRoomName)) {
+          uniqueTracks.set(baseRoomName, item.track);
         }
       }
     });
-    return Array.from(uniqueTracks.values()).sort((a, b) => a.sort - b.sort);
+    const result = Array.from(uniqueTracks.values()).sort((a, b) => a.sort - b.sort);
+    console.log('Selected day:', selectedDay, 'Tracks:', result);
+    return result;
   }, [selectedDay]);
 
   // Filter timetable items by day (excluding 交流スペース and スポンサーブース)
   const filteredItems = useMemo(() => {
     return timetableData.timetable.filter((item: TimetableItem) => {
+      if (!item.track) {
+        console.error('Missing track for item in filteredItems:', item);
+        return false;
+      }
       const itemDate = new Date(item.starts_at);
       const isDay1 = itemDate.getDate() === 18;
       const matchesDay = (selectedDay === 'day1' && isDay1) || (selectedDay === 'day2' && !isDay1);
       // Exclude 交流スペース and スポンサーブース
-      return matchesDay && item.track.name !== '交流スペース' && item.track.name !== 'スポンサーブース';
+      const baseRoomName = getBaseRoomName(item.track.name);
+      return matchesDay && !baseRoomName.includes('交流スペース') && baseRoomName !== 'スポンサーブース';
     });
   }, [selectedDay]);
 
@@ -108,40 +127,45 @@ const Timetable: React.FC = () => {
     const timeSlots = new Map<string, Map<string, TimetableItem>>();
     const longSessionsMap = new Map<string, { item: TimetableItem; rowSpan: number; startTime: string }>();
     const ltGroupedItems = new Map<string, TimetableItem[]>();
-    
+
     // Group LT sessions (5-minute sessions from 16:10 onwards on day 2)
     const ltItems: TimetableItem[] = [];
     const sponsorSession = filteredItems.find(item => 
       item.title === 'スポンサーセッション' && 
       item.starts_at === '2025-07-19T15:45:00+09:00'
     );
-    
+
     filteredItems.forEach((item) => {
+      if (!item.track) {
+        console.error('Missing track in groupedByTime:', item);
+        return;
+      }
       const itemDate = new Date(item.starts_at);
       const isDay2 = itemDate.getDate() === 19;
       const isLTTime = isDay2 && itemDate.getHours() >= 16 && item.length_min === 5;
-      
+
       if (isLTTime) {
         ltItems.push(item);
         return; // Skip adding to timeSlots
       }
-      
+
       const timeKey = item.starts_at;
       if (!timeSlots.has(timeKey)) {
         timeSlots.set(timeKey, new Map());
       }
-      timeSlots.get(timeKey)!.set(item.track.name, item);
-      
+      const baseRoomName = getBaseRoomName(item.track.name);
+      timeSlots.get(timeKey)!.set(baseRoomName, item);
+
       // Check for long sessions (more than 60 minutes)
       if (item.length_min > 60) {
         const startTime = new Date(item.starts_at);
         const endTime = new Date(startTime.getTime() + item.length_min * 60000);
-        
+
         // Count how many time slots this session spans
         let rowSpan = 1;
         const allTimeSlots = Array.from(new Set(filteredItems.map(i => i.starts_at))).sort();
         const currentIndex = allTimeSlots.findIndex(t => t === timeKey);
-        
+
         for (let i = currentIndex + 1; i < allTimeSlots.length; i++) {
           const nextSlotTime = new Date(allTimeSlots[i]);
           if (nextSlotTime < endTime) {
@@ -150,26 +174,31 @@ const Timetable: React.FC = () => {
             break;
           }
         }
-        
-        longSessionsMap.set(`${item.track.name}-${timeKey}`, {
+
+        longSessionsMap.set(`${baseRoomName}-${timeKey}`, {
           item,
           rowSpan,
           startTime: timeKey
         });
       }
     });
-    
+
     // Add sponsor session and LT session separately
     if (sponsorSession) {
-      const timeKey = sponsorSession.starts_at;
-      if (!timeSlots.has(timeKey)) {
-        timeSlots.set(timeKey, new Map());
+      if (!sponsorSession.track) {
+        console.error('Sponsor session missing track:', sponsorSession);
+      } else {
+        const timeKey = sponsorSession.starts_at;
+        if (!timeSlots.has(timeKey)) {
+          timeSlots.set(timeKey, new Map());
+        }
+        const baseRoomName = getBaseRoomName(sponsorSession.track.name);
+        timeSlots.get(timeKey)!.set(baseRoomName, sponsorSession);
       }
-      timeSlots.get(timeKey)!.set(sponsorSession.track.name, sponsorSession);
     }
-    
+
     // Add LT session as a single grouped item
-    if (ltItems.length > 0 && sponsorSession) {
+    if (ltItems.length > 0 && sponsorSession && sponsorSession.track) {
       const ltStartTime = '2025-07-19T16:10:00+09:00'; // First LT time
       const ltSession: TimetableItem = {
         type: 'timeslot',
@@ -180,18 +209,31 @@ const Timetable: React.FC = () => {
         length_min: 50, // 16:10-17:00 (50 minutes)
         tags: []
       };
-      
+
       if (!timeSlots.has(ltStartTime)) {
         timeSlots.set(ltStartTime, new Map());
       }
-      timeSlots.get(ltStartTime)!.set(sponsorSession.track.name, ltSession);
-      
+      const baseRoomName = getBaseRoomName(sponsorSession.track.name);
+      timeSlots.get(ltStartTime)!.set(baseRoomName, ltSession);
+
       // Store LT items
-      ltGroupedItems.set('lt-session', ltItems.sort((a, b) => a.starts_at.localeCompare(b.starts_at)));
+      ltGroupedItems.set('lt-session', ltItems.sort((a, b) => {
+        if (!a.starts_at || !b.starts_at) {
+          console.error('LT item missing starts_at:', { a, b });
+          return 0;
+        }
+        return a.starts_at.localeCompare(b.starts_at);
+      }));
     }
-    
+
     return {
-      timeSlots: Array.from(timeSlots.entries()).sort(([a], [b]) => a.localeCompare(b)),
+      timeSlots: Array.from(timeSlots.entries()).sort(([a], [b]) => {
+        if (!a || !b) {
+          console.error('Invalid time slot keys:', { a, b });
+          return 0;
+        }
+        return a.localeCompare(b);
+      }),
       longSessions: longSessionsMap,
       ltGroupedItems
     };
@@ -247,8 +289,8 @@ const Timetable: React.FC = () => {
         <table className="w-full border-collapse text-xs print:text-[10px] table-fixed">
           <colgroup>
             <col className="w-16 print:w-12" />
-            {tracks.map((track) => (
-              <col key={track.name} style={{ width: `${Math.floor((100 - 10) / tracks.length)}%` }} />
+            {tracks.filter(track => track && track.name).map((track) => (
+              <col key={track.name} style={{ width: `${Math.floor((100 - 10) / tracks.filter(t => t && t.name).length)}%` }} />
             ))}
           </colgroup>
           <thead>
@@ -256,8 +298,8 @@ const Timetable: React.FC = () => {
               <th className="border border-gray-300 bg-gray-100 p-2 text-left sticky left-0 z-10 print:static print:p-1">
                 時間
               </th>
-              {tracks.map((track) => (
-                <th key={track.name} className="border border-gray-300 bg-gray-100 p-2 text-center print:p-1">
+              {tracks.filter(track => track && track.name).map((track) => (
+                <th key={getBaseRoomName(track.name)} className="border border-gray-300 bg-gray-100 p-2 text-center print:p-1">
                   {track.name}
                 </th>
               ))}
@@ -279,14 +321,20 @@ const Timetable: React.FC = () => {
                       </div>
                     </div>
                   </td>
-                  {tracks.map((track) => {
-                    const item = trackItems.get(track.name);
-                    const longSessionKey = `${track.name}-${timeKey}`;
+                  {tracks.filter(track => track && track.name).map((track) => {
+                    const baseRoomName = getBaseRoomName(track.name);
+                    const item = trackItems.get(baseRoomName);
+                    const longSessionKey = `${baseRoomName}-${timeKey}`;
                     const longSession = groupedByTime.longSessions.get(longSessionKey);
-                    
+
                     // Check if this cell should be skipped (part of a rowspan from earlier)
                     const shouldSkip = Array.from(groupedByTime.longSessions.values()).some(ls => {
-                      if (ls.item.track.name === track.name && ls.startTime !== timeKey) {
+                      if (!ls.item.track || !ls.item.track.name) {
+                        console.error('Invalid track in longSession item:', ls.item);
+                        return false;
+                      }
+                      const lsBaseRoomName = getBaseRoomName(ls.item.track.name);
+                      if (lsBaseRoomName === baseRoomName && ls.startTime !== timeKey) {
                         const startTime = new Date(ls.startTime);
                         const endTime = new Date(startTime.getTime() + ls.item.length_min * 60000);
                         const currentTime = new Date(timeKey);
@@ -294,20 +342,20 @@ const Timetable: React.FC = () => {
                       }
                       return false;
                     });
-                    
+
                     if (shouldSkip) {
                       return null; // Skip this cell as it's covered by rowspan
                     }
-                    
+
                     if (!item) {
-                      return <td key={track.name} className="border border-gray-300 bg-gray-50"></td>;
+                      return <td key={baseRoomName} className="border border-gray-300 bg-gray-50"></td>;
                     }
-                    
+
                     const rowSpan = longSession ? longSession.rowSpan : 1;
-                    
+
                     return (
                       <td 
-                        key={track.name} 
+                        key={baseRoomName} 
                         className="border border-gray-300 p-2 align-top print:p-1"
                         rowSpan={rowSpan}
                       >
@@ -328,7 +376,7 @@ const Timetable: React.FC = () => {
                               item.title
                             )}
                           </h3>
-                          
+
                           {item.speaker && (
                             <div className="flex items-center mb-1 print:mb-0">
                               <img
@@ -357,10 +405,10 @@ const Timetable: React.FC = () => {
                               {item.tags.map((tag, index) => (
                                 <span
                                   key={index}
-                                  className="inline-flex items-center px-1 py-0.5 rounded text-[10px] font-medium print:text-[9px] print:border print:border-gray-400"
+                                  className="inline-flex items-center px-1 py-0.5 rounded text-[10px] font-medium print:text-[9px]"
                                   style={{
-                                    backgroundColor: isPrintMode ? 'transparent' : tag.color_background,
-                                    color: isPrintMode ? '#000' : tag.color_text,
+                                    backgroundColor: tag.color_background,
+                                    color: tag.color_text,
                                   }}
                                 >
                                   <Tag className="w-2 h-2 mr-0.5 print:hidden" />
@@ -443,4 +491,10 @@ const Timetable: React.FC = () => {
   );
 };
 
-export default Timetable;
+const TimetableWithErrorBoundary: React.FC = () => (
+  <ErrorBoundary>
+    <Timetable />
+  </ErrorBoundary>
+);
+
+export default TimetableWithErrorBoundary;
