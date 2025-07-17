@@ -95,7 +95,7 @@ const Timetable: React.FC = () => {
       }
       const baseRoomName = getBaseRoomName(item.track.name);
       // Exclude 交流スペース and スポンサーブース
-      if (baseRoomName !== '交流スペース' && baseRoomName !== 'スポンサーブース') {
+      if (!baseRoomName.includes('交流スペース') && baseRoomName !== 'スポンサーブース') {
         if (!uniqueTracks.has(baseRoomName)) {
           uniqueTracks.set(baseRoomName, item.track);
         }
@@ -118,7 +118,7 @@ const Timetable: React.FC = () => {
       const matchesDay = (selectedDay === 'day1' && isDay1) || (selectedDay === 'day2' && !isDay1);
       // Exclude 交流スペース and スポンサーブース
       const baseRoomName = getBaseRoomName(item.track.name);
-      return matchesDay && baseRoomName !== '交流スペース' && baseRoomName !== 'スポンサーブース';
+      return matchesDay && !baseRoomName.includes('交流スペース') && baseRoomName !== 'スポンサーブース';
     });
   }, [selectedDay]);
 
@@ -405,10 +405,10 @@ const Timetable: React.FC = () => {
                               {item.tags.map((tag, index) => (
                                 <span
                                   key={index}
-                                  className="inline-flex items-center px-1 py-0.5 rounded text-[10px] font-medium print:text-[9px] print:border print:border-gray-400"
+                                  className="inline-flex items-center px-1 py-0.5 rounded text-[10px] font-medium print:text-[9px]"
                                   style={{
-                                    backgroundColor: isPrintMode ? 'transparent' : tag.color_background,
-                                    color: isPrintMode ? '#000' : tag.color_text,
+                                    backgroundColor: tag.color_background,
+                                    color: tag.color_text,
                                   }}
                                 >
                                   <Tag className="w-2 h-2 mr-0.5 print:hidden" />
