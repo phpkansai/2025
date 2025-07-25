@@ -9,10 +9,10 @@ interface HeaderProps {
 export default function Header({ menuOpen, setMenuOpen }: HeaderProps) {
   return (
     <header className="py-4 px-6 flex justify-between items-center fixed w-[95%] mx-auto left-0 right-0 z-50 transition-all duration-300 bg-[#46AA65] text-white rounded-lg shadow-lg mt-2">
-      <div className="flex items-center space-x-2 md:space-x-4">
+      <a href="/" className="flex items-center space-x-2 md:space-x-4 text-white no-underline">
         <img src={elemaru} alt="えれ丸" className="h-8 w-8 md:h-12 md:w-12 object-contain" />
         <h1 className="text-base md:text-xl font-bold">PHPカンファレンス関西2025</h1>
-      </div>
+      </a>
       <div className="hidden md:flex items-center space-x-4">
         <a href="/timetable" className="text-sm font-bold text-white">タイムテーブル</a>
         <a href="https://photos.app.goo.gl/8y94DTKdm28hLsU77" target="_blank" rel="noopener noreferrer" className="inline-flex items-center text-sm font-bold text-white">
