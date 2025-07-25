@@ -13,6 +13,7 @@ export default function App() {
   return (
     <>
       <Hero />
+      <Photos />
       <News />
       <About />
       <Keynote />
@@ -20,7 +21,6 @@ export default function App() {
       <Sponsors />
       <Speakers />
       <Supporters />
-      <Photos />
       <Staff />
     </>
   );

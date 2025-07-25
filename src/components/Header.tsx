@@ -15,7 +15,12 @@ export default function Header({ menuOpen, setMenuOpen }: HeaderProps) {
       </div>
       <div className="hidden md:flex items-center space-x-4">
         <a href="/timetable" className="text-sm font-bold text-white">タイムテーブル</a>
-        <a href="https://note.com/phpcon_kansai" target="_blank" rel="noopener noreferrer" className="text-sm font-bold text-white">note</a>
+        <a href="https://photos.app.goo.gl/8y94DTKdm28hLsU77" target="_blank" rel="noopener noreferrer" className="inline-flex items-center text-sm font-bold text-white">
+          写真<ExternalLink className="w-3 h-3 ml-1" />
+        </a>
+        <a href="https://note.com/phpcon_kansai" target="_blank" rel="noopener noreferrer" className="inline-flex items-center text-sm font-bold text-white">
+          note<ExternalLink className="w-3 h-3 ml-1" />
+        </a>
         <a href="/code-of-conduct" className="text-sm font-bold text-white">行動規範</a>
         <a href="https://fortee.jp/phpcon-kansai2025/ticket-shop/index" target="_blank" rel="noopener noreferrer" className="inline-flex items-center bg-[#FFC145] text-white font-bold px-4 py-1 rounded-full hover:bg-opacity-90 transition">
           <ExternalLink className="w-4 h-4 mr-2" />チケット購入
@@ -30,7 +35,12 @@ export default function Header({ menuOpen, setMenuOpen }: HeaderProps) {
         {menuOpen && (
           <div className="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg z-50">
             <a href="/timetable" className="block px-4 py-2 text-sm font-bold text-gray-700 hover:bg-gray-100">タイムテーブル</a>
-            <a href="https://note.com/phpcon_kansai" target="_blank" rel="noopener noreferrer" className="block px-4 py-2 text-sm font-bold text-gray-700 hover:bg-gray-100">note</a>
+            <a href="https://photos.app.goo.gl/8y94DTKdm28hLsU77" target="_blank" rel="noopener noreferrer" className="flex items-center px-4 py-2 text-sm font-bold text-gray-700 hover:bg-gray-100">
+              写真<ExternalLink className="w-3 h-3 ml-1" />
+            </a>
+            <a href="https://note.com/phpcon_kansai" target="_blank" rel="noopener noreferrer" className="flex items-center px-4 py-2 text-sm font-bold text-gray-700 hover:bg-gray-100">
+              note<ExternalLink className="w-3 h-3 ml-1" />
+            </a>
             <a href="/code-of-conduct" className="block px-4 py-2 text-sm font-bold text-gray-700 hover:bg-gray-100">行動規範</a>
             <a href="https://fortee.jp/phpcon-kansai2025/ticket-shop/index" target="_blank" rel="noopener noreferrer" className="block px-4 py-2 text-sm font-bold text-gray-700 hover:bg-gray-100">チケット購入</a>
           </div>
