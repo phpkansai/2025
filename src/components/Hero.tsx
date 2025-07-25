@@ -57,12 +57,15 @@ export default function Hero() {
         </p>
         <div className="flex flex-col space-y-4 animate-slide-up-delay-3">
           <div>
-            <span
-              className="inline-flex items-center bg-gray-400 text-white font-bold px-8 py-3 text-lg md:text-xl rounded-full cursor-not-allowed opacity-60"
+            <a
+              href="https://photos.app.goo.gl/8y94DTKdm28hLsU77"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center bg-[#FFC145] text-white font-bold px-8 py-3 text-lg md:text-xl rounded-full hover:bg-opacity-90 transition-all duration-300 hover:scale-105"
             >
               <ExternalLink className="w-5 h-5 mr-2" />
-              参加チケットはこちらから
-            </span>
+              当日の写真を見る
+            </a>
           </div>
         </div>
       </div>
