@@ -49,16 +49,22 @@ export default function Hero() {
           <span className="font-bold text-3xl md:text-5xl">19</span>日(土)
         </p>
         <p className="text-base md:text-xl animate-slide-up-delay-2">神戸駅前研修センター</p>
+        <p className="text-xl md:text-2xl font-bold text-yellow-300 animate-slide-up-delay-2 mt-4">
+          ～ 開催終了しました ～
+        </p>
+        <p className="text-xl md:text-2xl font-bold text-yellow-300 animate-slide-up-delay-2 mt-4">
+          ～ たくさんのご参加ありがとうございました ～
+        </p>
         <div className="flex flex-col space-y-4 animate-slide-up-delay-3">
           <div>
             <a
-              href="https://fortee.jp/phpcon-kansai2025/ticket-shop/index"
+              href="https://photos.app.goo.gl/8y94DTKdm28hLsU77"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center bg-[#FFC145] text-white font-bold px-8 py-3 text-lg md:text-xl rounded-full hover:bg-opacity-90 transition-all duration-300 hover:scale-105"
             >
               <ExternalLink className="w-5 h-5 mr-2" />
-              参加チケットはこちらから
+              当日の写真を見る
             </a>
           </div>
         </div>
