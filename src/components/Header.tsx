@@ -22,9 +22,9 @@ export default function Header({ menuOpen, setMenuOpen }: HeaderProps) {
           note<ExternalLink className="w-3 h-3 ml-1" />
         </a>
         <a href="/code-of-conduct" className="text-sm font-bold text-white">行動規範</a>
-        <a href="https://fortee.jp/phpcon-kansai2025/ticket-shop/index" target="_blank" rel="noopener noreferrer" className="inline-flex items-center bg-[#FFC145] text-white font-bold px-4 py-1 rounded-full hover:bg-opacity-90 transition">
+        <span className="inline-flex items-center bg-gray-400 text-white font-bold px-4 py-1 rounded-full cursor-not-allowed opacity-60">
           <ExternalLink className="w-4 h-4 mr-2" />チケット購入
-        </a>
+        </span>
       </div>
       <div className="md:hidden relative">
         <button className="focus:outline-none text-white" onClick={() => setMenuOpen(!menuOpen)}>
@@ -42,7 +42,7 @@ export default function Header({ menuOpen, setMenuOpen }: HeaderProps) {
               note<ExternalLink className="w-3 h-3 ml-1" />
             </a>
             <a href="/code-of-conduct" className="block px-4 py-2 text-sm font-bold text-gray-700 hover:bg-gray-100">行動規範</a>
-            <a href="https://fortee.jp/phpcon-kansai2025/ticket-shop/index" target="_blank" rel="noopener noreferrer" className="block px-4 py-2 text-sm font-bold text-gray-700 hover:bg-gray-100">チケット購入</a>
+            <span className="block px-4 py-2 text-sm font-bold text-gray-400 cursor-not-allowed">チケット購入</span>
           </div>
         )}
       </div>
