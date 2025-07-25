@@ -7,6 +7,7 @@ import Sponsors from './components/Sponsors';
 import Speakers from './components/Speakers';
 import Supporters from './components/Supporters';
 import Staff from './components/Staff';
+import Photos from './components/Photos';
 
 export default function App() {
   return (
@@ -19,6 +20,7 @@ export default function App() {
       <Sponsors />
       <Speakers />
       <Supporters />
+      <Photos />
       <Staff />
     </>
   );
