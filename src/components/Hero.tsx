@@ -49,6 +49,12 @@ export default function Hero() {
           <span className="font-bold text-3xl md:text-5xl">19</span>日(土)
         </p>
         <p className="text-base md:text-xl animate-slide-up-delay-2">神戸駅前研修センター</p>
+        <p className="text-xl md:text-2xl font-bold text-yellow-300 animate-slide-up-delay-2 mt-4">
+          ～ 開催終了しました ～
+        </p>
+        <p className="text-xl md:text-2xl font-bold text-yellow-300 animate-slide-up-delay-2 mt-4">
+          ～ たくさんのご参加ありがとうございました ～
+        </p>
         <div className="flex flex-col space-y-4 animate-slide-up-delay-3">
           <div>
             <span
